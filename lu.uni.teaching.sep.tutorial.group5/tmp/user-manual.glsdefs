@@ -1,0 +1,600 @@
+\ifglsentryexists{Glossary}{}%
+{%
+\gls@defglossaryentry{Glossary}%
+{%
+name={Glossary},%
+sort={Glossary},%
+type={main},%
+first={Glossary},%
+firstplural={Glossaries},%
+text={Glossary},%
+plural={Glossaries},%
+description={the description of terms that are likely unfamiliar to the audience. The glossary shall include an alphabetical list of terms and definitions. Documentation using abbreviations and acronyms unfamiliar to the audience shall include a list with definitions, which may be integrated with the glossary. Terms included in the glossary should also be defined on their first appearance in printed documentation. Here there is an example of how to include an expression into the glossary: \gls {socialware}.},%
+descriptionplural={the description of terms that are likely unfamiliar to the audience. The glossary shall include an alphabetical list of terms and definitions. Documentation using abbreviations and acronyms unfamiliar to the audience shall include a list with definitions, which may be integrated with the glossary. Terms included in the glossary should also be defined on their first appearance in printed documentation. Here there is an example of how to include an expression into the glossary: \gls {socialware}.},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{Concept Model}{}%
+{%
+\gls@defglossaryentry{Concept Model}%
+{%
+name={Concept Model},%
+sort={Concept Model},%
+type={main},%
+first={Concept Model},%
+firstplural={Concept Models},%
+text={Concept Model},%
+plural={Concept Models},%
+description={the Model that describes the different types required to specify the software system.},%
+descriptionplural={the Model that describes the different types required to specify the software system.},%
+symbol={\msrglsstyle {Concept Model}},%
+symbolplural={\msrglsstyle {Concept Model}},%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{Environment Model}{}%
+{%
+\gls@defglossaryentry{Environment Model}%
+{%
+name={Environment Model},%
+sort={Environment Model},%
+type={main},%
+first={Environment Model},%
+firstplural={Environment Models},%
+text={Environment Model},%
+plural={Environment Models},%
+description={the Model that describes the different actors supposed to interact with the software system.},%
+descriptionplural={the Model that describes the different actors supposed to interact with the software system.},%
+symbol={\msrglsstyle {Environment Model}},%
+symbolplural={\msrglsstyle {Environment Model}},%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{MVC}{}%
+{%
+\gls@defglossaryentry{MVC}%
+{%
+name={Model-View-Controller},%
+sort={Model-View-Controller},%
+type={main},%
+first={Model-View-Controller},%
+firstplural={Model-View-Controllers},%
+text={Model-View-Controller},%
+plural={Model-View-Controllers},%
+description={the pattern followed to design the Graphical User Interfaces of the software system.},%
+descriptionplural={the pattern followed to design the Graphical User Interfaces of the software system.},%
+symbol={\msrglsstyle {Model-View-Controller}},%
+symbolplural={\msrglsstyle {Model-View-Controller}},%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{Design Model}{}%
+{%
+\gls@defglossaryentry{Design Model}%
+{%
+name={Design Model},%
+sort={Design Model},%
+type={main},%
+first={Design Model},%
+firstplural={Design Models},%
+text={Design Model},%
+plural={Design Models},%
+description={The Design Class Model is composed of the contents of all design classes, i.e. their (value) attributes and methods, all the navigable associations between design classes, and the inheritance structure. The Design Class Model has to be modelled as a UML Class Diagram.},%
+descriptionplural={The Design Class Model is composed of the contents of all design classes, i.e. their (value) attributes and methods, all the navigable associations between design classes, and the inheritance structure. The Design Class Model has to be modelled as a UML Class Diagram.},%
+symbol={\msrglsstyle {Design Model}},%
+symbolplural={\msrglsstyle {Design Model}},%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{Interaction Model}{}%
+{%
+\gls@defglossaryentry{Interaction Model}%
+{%
+name={Interaction Model},%
+sort={Interaction Model},%
+type={main},%
+first={Interaction Model},%
+firstplural={Interaction Models},%
+text={Interaction Model},%
+plural={Interaction Models},%
+description={The Interaction Model shows how objects are expected to interact at run-time to support the \emph {system operations} specified in the \emph {Operation Model} made during the Analysis Phase. There must exist an \emph {Interaction Model} for each system operation specified in the \emph {Operation Model}. An Interaction Model has to be modelled as a UML Sequence Diagram.},%
+descriptionplural={The Interaction Model shows how objects are expected to interact at run-time to support the \emph {system operations} specified in the \emph {Operation Model} made during the Analysis Phase. There must exist an \emph {Interaction Model} for each system operation specified in the \emph {Operation Model}. An Interaction Model has to be modelled as a UML Sequence Diagram.},%
+symbol={\msrglsstyle {Interaction Model}},%
+symbolplural={\msrglsstyle {Interaction Model}},%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{Deployment View}{}%
+{%
+\gls@defglossaryentry{Deployment View}%
+{%
+name={Deployment View},%
+sort={Deployment View},%
+type={main},%
+first={Deployment View},%
+firstplural={Deployment Views},%
+text={Deployment View},%
+plural={Deployment Views},%
+description={The physical view depicts the system from a system engineer's point-of-view. It is concerned with the topology of software components on the physical layer, as well as the physical connections between these components. For example, how many nodes are used and what is deployed on what node. A Deployment View is modelled as a UML Deployment Diagram.},%
+descriptionplural={The physical view depicts the system from a system engineer's point-of-view. It is concerned with the topology of software components on the physical layer, as well as the physical connections between these components. For example, how many nodes are used and what is deployed on what node. A Deployment View is modelled as a UML Deployment Diagram.},%
+symbol={\msrglsstyle {Deployment View}},%
+symbolplural={\msrglsstyle {Deployment View}},%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{Implementation View}{}%
+{%
+\gls@defglossaryentry{Implementation View}%
+{%
+name={Implementation View},%
+sort={Implementation View},%
+type={main},%
+first={Implementation View},%
+firstplural={Implementation Views},%
+text={Implementation View},%
+plural={Implementation Views},%
+description={This view describes the software system components. It focuses on software modules and subsystems. It describes the hierarchies or layers for components. This view is modelled as a UML Component Diagram.},%
+descriptionplural={This view describes the software system components. It focuses on software modules and subsystems. It describes the hierarchies or layers for components. This view is modelled as a UML Component Diagram.},%
+symbol={\msrglsstyle {Implementation View}},%
+symbolplural={\msrglsstyle {Implementation View}},%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{Processing View}{}%
+{%
+\gls@defglossaryentry{Processing View}%
+{%
+name={Processing View},%
+sort={Processing View},%
+type={main},%
+first={Processing View},%
+firstplural={Processing Views},%
+text={Processing View},%
+plural={Processing Views},%
+description={This view deals with the dynamic aspects of the system. It is aimed at describing processes taking part at runtime and, in particular, how such process communicate among each other. A Processing View is modelled as a UML Sequence Diagram.},%
+descriptionplural={This view deals with the dynamic aspects of the system. It is aimed at describing processes taking part at runtime and, in particular, how such process communicate among each other. A Processing View is modelled as a UML Sequence Diagram.},%
+symbol={\msrglsstyle {Processing View}},%
+symbolplural={\msrglsstyle {Processing View}},%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{Use-Case Instance View}{}%
+{%
+\gls@defglossaryentry{Use-Case Instance View}%
+{%
+name={Use-Case Instance View},%
+sort={Use-Case Instance View},%
+type={main},%
+first={Use-Case Instance View},%
+firstplural={Use-Case Instance Views},%
+text={Use-Case Instance View},%
+plural={Use-Case Instance Views},%
+description={The description of an architecture is illustrated using a small set of use-case instances (or scenarios). The scenarios describe sequences of interactions between objects, and between processes. They are used to identify architectural elements and to illustrate and validate the architecture design. They also serve as a starting point for tests of an architecture prototype. A scenario has to be modelled as a UML Sequence Diagram.},%
+descriptionplural={The description of an architecture is illustrated using a small set of use-case instances (or scenarios). The scenarios describe sequences of interactions between objects, and between processes. They are used to identify architectural elements and to illustrate and validate the architecture design. They also serve as a starting point for tests of an architecture prototype. A scenario has to be modelled as a UML Sequence Diagram.},%
+symbol={\msrglsstyle {Use-Case Instance View}},%
+symbolplural={\msrglsstyle {Use-Case Instance View}},%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{real number}{}%
+{%
+\gls@defglossaryentry{real number}%
+{%
+name={Real number},%
+sort={Real number},%
+type={main},%
+first={Real number},%
+firstplural={reals},%
+text={Real number},%
+plural={reals},%
+description={name of the set of real numbers.},%
+descriptionplural={name of the set of real numbers.},%
+symbol={\ensuremath {\mathbb {R}}},%
+symbolplural={\ensuremath {\mathbb {R}}},%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{system operation}{}%
+{%
+\gls@defglossaryentry{system operation}%
+{%
+name={System Operation},%
+sort={System Operation},%
+type={main},%
+first={System Operation},%
+firstplural={system operations},%
+text={System Operation},%
+plural={system operations},%
+description={a functionality of the system that can be triggered by a message sent by an actor belonging to the environment.},%
+descriptionplural={a functionality of the system that can be triggered by a message sent by an actor belonging to the environment.},%
+symbol={\msrglsstyle {system operation}},%
+symbolplural={\msrglsstyle {system operation}},%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{societics}{}%
+{%
+\gls@defglossaryentry{societics}%
+{%
+name={Societics},%
+sort={Societics},%
+type={main},%
+first={Societics},%
+firstplural={Societicss},%
+text={Societics},%
+plural={Societicss},%
+description={Represents the fields of hardware/software systems used for the society extension.},%
+descriptionplural={Represents the fields of hardware/software systems used for the society extension.},%
+symbol={\msrglsstyle {societics}},%
+symbolplural={\msrglsstyle {societics}},%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{direct actor}{}%
+{%
+\gls@defglossaryentry{direct actor}%
+{%
+name={Direct Actor},%
+sort={Direct Actor},%
+type={main},%
+first={Direct Actor},%
+firstplural={direct actors},%
+text={Direct Actor},%
+plural={direct actors},%
+description={an actor that interacts directly with the system. It thus belongs to the environment.},%
+descriptionplural={an actor that interacts directly with the system. It thus belongs to the environment.},%
+symbol={\msrglsstyle {direct actor}},%
+symbolplural={\msrglsstyle {direct actor}},%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{indirect actor}{}%
+{%
+\gls@defglossaryentry{indirect actor}%
+{%
+name={Indirect Actor},%
+sort={Indirect Actor},%
+type={main},%
+first={Indirect Actor},%
+firstplural={indirect actors},%
+text={Indirect Actor},%
+plural={indirect actors},%
+description={an actor that interacts indirectly with the system through a direct actor. It thus belongs the domain but not to the environment.},%
+descriptionplural={an actor that interacts indirectly with the system through a direct actor. It thus belongs the domain but not to the environment.},%
+symbol={\msrglsstyle {indirect actor}},%
+symbolplural={\msrglsstyle {indirect actor}},%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{abstract actor}{}%
+{%
+\gls@defglossaryentry{abstract actor}%
+{%
+name={Abstract Actor},%
+sort={Abstract Actor},%
+type={main},%
+first={Abstract Actor},%
+firstplural={abstract actors},%
+text={Abstract Actor},%
+plural={abstract actors},%
+description={an actor that does not exist in real life.},%
+descriptionplural={an actor that does not exist in real life.},%
+symbol={\msrglsstyle {abstract actor}},%
+symbolplural={\msrglsstyle {abstract actor}},%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{socext}{}%
+{%
+\gls@defglossaryentry{socext}%
+{%
+name={Society extension},%
+sort={Society extension},%
+type={main},%
+first={Society extension},%
+firstplural={Society extensions},%
+text={Society extension},%
+plural={Society extensions},%
+description={The society obtained by grouping people using natural means extended with artificial means.},%
+descriptionplural={The society obtained by grouping people using natural means extended with artificial means.},%
+symbol={\msrglsstyle {societics}},%
+symbolplural={\msrglsstyle {societics}},%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{usecase}{}%
+{%
+\gls@defglossaryentry{usecase}%
+{%
+name={Use case},%
+sort={Use case},%
+type={main},%
+first={Use case},%
+firstplural={Use cases},%
+text={Use case},%
+plural={Use cases},%
+description={A use case describes a sequence of actions that provide something of measurable value to an actor. and is drawn as a horizontal ellipse.},%
+descriptionplural={A use case describes a sequence of actions that provide something of measurable value to an actor. and is drawn as a horizontal ellipse.},%
+symbol={\msrglsstyle {Use case}},%
+symbolplural={\msrglsstyle {Use case}},%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{actor}{}%
+{%
+\gls@defglossaryentry{actor}%
+{%
+name={Actor},%
+sort={Actor},%
+type={main},%
+first={Actor},%
+firstplural={actors},%
+text={Actor},%
+plural={actors},%
+description={An actor is a person, organization, or external system that plays a role in one or more interactions with the system.},%
+descriptionplural={An actor is a person, organization, or external system that plays a role in one or more interactions with the system.},%
+symbol={\msrglsstyle {actor}},%
+symbolplural={\msrglsstyle {actor}},%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{socialware}{}%
+{%
+\gls@defglossaryentry{socialware}%
+{%
+name={Societics},%
+sort={Societics},%
+type={main},%
+first={Societics},%
+firstplural={Societicss},%
+text={Societics},%
+plural={Societicss},%
+description={Represents the fields of hardware/software systems used for the society extension.},%
+descriptionplural={Represents the fields of hardware/software systems used for the society extension.},%
+symbol={\msrglsstyle {Societics}},%
+symbolplural={\msrglsstyle {Societics}},%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+}%
