@@ -1,93 +1,154 @@
-\section{System Administrator}
-\label{operation:System Administrator}
+\section{Librarian}
+\label{operation:Librarian}
 
 This subsection provides a detailed description of librarian specific
 functionalities.
 
-\subsection{Add Librarian}
+\subsection{Search Customer}
 
-The add librarian functionality is only available for the system administrator. As the title suggests, the system administrator creates and adds a new librarian account being informed from organization/library. 
+The ''Search Customer'' functionality is only available for librarians. As the
+title suggests, the librarian is able to look for customers using the
+customers ID
 
 \begin{description}
 
-\item \textbf{Parameters:} ID (Randomly generated), First Name, Last Name, Date of Birth
+\item \textbf{Parameters:} Customer ID (provided by the customer), or other
+identifable information
 
-\item \textbf{Precondition:} The system administrator must be logged into the system and must have received the information about the librarian too add. 
+\item \textbf{Precondition:} The librarian must be logged into the system and
+received the necessary information to look up the customer.
 
-\item \textbf{Post-condition:} The new librarian account been added to the database system and the librarian and the organization have received an automated notification so that the account can be finalized. 
+\item \textbf{Post-condition:} The librarian is now able to further inspect the
+customer and take further actions
 
-\item \textbf{Output messages:} The librarian and the organization will receive an automated notification informing that the account can now be finalized. 
+\item \textbf{Output messages:} Prints the results in a table containing First
+name, Last name, internal Customer ID as well as account status (Active,
+Overdue, Suspended).
 
 \item \textbf{Triggering:}
 \begin{enumerate}
-
-\item From the users main window, click on the â€œAdd Librarianâ€� button to open the add librarian page. 
-
-\item Once the add librarian page opens, fill out all the required parameters with information related to the new librarian that is being created. 
-
-\item Click on the â€œSubmitâ€� button to add the new librarians
-information to a database.
-
+\item Enter the customer ID or any identfiable information into the search bar.
+\item Select ''Customer'' from the adjoining dropdown menu.
+\item Hit the ''Search'' button and a list of all customers matching the query
+will be displayed
 \end{enumerate}
 
 \end{description}
 
+\subsection{Inspect Customer}
 
-subsection{Edit Librarian}
-
-The edit librarian functionality is used when editing user information. This includes but is not limited to the first name, last name and date of birth as well as password eventually. The goal of this feature is to allow the system administrator to edit a librarians information at the request of the librarian. 
+The ''Inspect'' button becomes available as soon as the librarian has searched
+for a customer, so he can check the info available on a customer
 
 \begin{description}
 
-\item \textbf{Parameters:} ID, First Name, Last Name
+\item \textbf{Parameters:} None
 
-\item \textbf{Precondition:} The system administrator must be logged in, at the users page and must have the different information of the librarian that needs to be edited.
+\item \textbf{Precondition:} The librarian must be logged into the system,
+received the necessary information to look up the customer and started a query
+for said customer.
 
-\item \textbf{Post-condition:} The edits for the librarian have been saved and a system popup appears starting that the librarian information has successfully been edited and saved. 
+\item \textbf{Post-condition:} The librarian is now able to grant loans to the
+inspected customers, initiate a book return or suspend his account.
 
-\item \textbf{Output messages:} The system administrator will see a system popup informing the system administrator that the librarian information has successfully been edited and saved.
+\item \textbf{Output messages:} None.
+
+\item \textbf{Triggering:} Press the ''Inspect'' button after searching for
+customers and selecting the one you want to inspect.
+
+\end{description}
+
+\subsection{Search Book}
+
+The ''Search Book'' functionality is available for the librarian. As the title
+suggest the librarian is able to view the books in the catalogue as well as
+perform other book related tasks.
+
+\begin{description}
+
+\item \textbf{Parameters:} Book name, ISBN, author, or nothing if he intends to
+see the full catalogue
+
+\item \textbf{Precondition:} The librarian must be logged into the system and
+received the necessary information to look up the book (if applicable).
+
+\item \textbf{Post-condition:} The librarian is now able to check the status of
+all the books matching the search term, as well as add books to the catalogue,
+or remove one from it.
+
+\item \textbf{Output messages:} Prints the results in a table containing ISBN,
+Author, full name, internal ID, as well as loan status (available, loaned,
+overdue).
 
 \item \textbf{Triggering:}
 \begin{enumerate}
-
-\item Click on the "Edit Librarian" button that is found in the users main page.
-
-\item Once the edit librarian page has opened, either find the user manually or search the user via the search field at the top.
-
-\item Click on the Librarian ID to open up the edit details page. 
-
-\item Edit the necessary details of the user that need to be edited. Click submit when complete. You will be automatically be taken back to the users page.
-
+\item Enter the ISBN or any identfiable information into the search bar.
+\item Select ''Book'' from the adjoining dropdown menu.
+\item Hit the ''Search'' button and a list of all books matching the query
+will be displayed
 \end{enumerate}
 
 \end{description}
 
+\subsection{Add Book}
 
-\subsection{Delete Librarian}
-
-The delete librarian is once again only available for the system administrator. The delete librarian functionality is used when deleting an existing librarian account that will no longer be used due to different reasons such as; the librarian no longer works, an unfortunate event has happened to the librarian.
+The ''Add Book'' functionality is available for the librarian. As the title
+suggest the librarian is able to add books to the catalogue after opening the
+latter through the ''Search Book'' functionality.
 
 \begin{description}
 
-\item \textbf{Parameters:} ID (Randomly generated), First Name, Last Name
+\item \textbf{Parameters:} ISBN
 
-\item \textbf{Precondition:} The system administrator must be logged into the system and must have received the information about the librarian too remove. 
+\item \textbf{Precondition:} The librarian must be logged into the system,
+opened the book catalogue and pressed ''Add book''.
 
-\item \textbf{Post-condition:} The new librarian account been added to the database system and the librarian and the organization have received an automated notification so that the account can be finalized. 
+\item \textbf{Post-condition:} The librarian is now able to add a book to the
+catalogue by entering the books ISBN number into the popup windows and
+confirming with the ''Add book'' button again. The system will automatically
+gather the author and book name from a server and assign it a random internal
+ID.
 
-\item \textbf{Output messages:} The librarian and the organization will receive an automated notification informing that the account can now be finalized. 
+\item \textbf{Output messages:} None.
 
 \item \textbf{Triggering:}
 \begin{enumerate}
+\item Open the library catalogue with the ''Search book'' functionality by
+either searching for a specific book or viewing the whole catalogue by leaving
+the search field blank.
+\item Select ''Add book'' from under the table.
+\item Enter the ISBN of the new book into the input field and confirm with ''Add
+book'' to add it to the catalogue.
+\end{enumerate}
 
-\item Click on the â€œDelete Librarianâ€� button at the bottom of the users main window to open the users deletion page.
+\end{description}
 
-\item Once in the users deletion page, find the user that needs to be deleted manually or via the search field.
+\subsection{Remove Book}
 
-\item Once the user has been found, click the red â€œxâ€� to remove the user permanently from the database system. 
+The ''Remove Book'' functionality is available for the librarian. As the title
+suggest the librarian is able to remove books from the catalogue after opening
+the latter through the ''Search Book'' functionality.
 
-\item Click on the "back/done" button to return to users page.
+\begin{description}
 
+\item \textbf{Parameters:} None
+
+\item \textbf{Precondition:} The librarian must be logged into the system,
+opened the book catalogue.
+
+\item \textbf{Post-condition:} The librarian is now able to remove a book from
+the catalogue by selecting it in the catalogue and pressing ''Remove book''
+under the catalogue display.
+
+\item \textbf{Output messages:} None.
+
+\item \textbf{Triggering:}
+\begin{enumerate}
+\item Open the library catalogue with the ''Search book'' functionality by
+either searching for a specific book or viewing the whole catalogue by leaving
+the search field blank.
+\item Select a book from the catalogue.
+\item Select ''Remove book'' from under the table.
 \end{enumerate}
 
 \end{description}
