@@ -1,0 +1,97 @@
+%-------------------------------------------------------------------------------
+% Copyright (c) 2015-2016 University of Luxembourg.
+% All rights reserved. This program and the accompanying materials
+% are made available under the terms of the Eclipse Public License v1.0
+% which accompanies this distribution, and is available at
+% http://www.eclipse.org/legal/epl-v10.html
+% 
+% Contributors:
+%     Alfredo Capozucca - initial API and implementation
+%     Benoit Ries - minor updates
+%     Nicolas Guelfi - most content from messirbook
+%-------------------------------------------------------------------------------
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\PassOptionsToPackage{usenames,svgnames,table}{xcolor}
+\documentclass[graybox,envcountchap,sectrefs]{./../lu.uni.lassy.excalibur.standard.report.libraries/styles/svmono}  
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% DO NOT CHANGE THE ORDER
+\usepackage{./../lu.uni.lassy.excalibur.standard.report.libraries/styles/style-messir-common}
+\usepackage{./../lu.uni.lassy.excalibur.standard.report.libraries/styles/style-messir-report-post}
+\usepackage{breakurl} 
+%--------------------------------------------
+  
+% DOCUMENT BEGIN
+%--------------------------------------------
+\begin{document}
+%-------------------------------------------------------------------------------
+ 
+\newgeometry{textwidth=17cm,textheight=23.7cm} 
+ 
+\input{./../lu.uni.lassy.excalibur.standard.report.libraries/defs/msr-def.tex}
+\input{defs/user-manual-def.tex}
+\input{doc/glossary/glossary.tex} 
+
+%TITLE
+\input{doc/title-page/title-page.tex}
+\maketitle
+\newpage
+
+%TOC
+\setcounter{tocdepth}{2}
+\addtocounter{secnumdepth}{2}
+\tableofcontents
+\newpage
+
+%TOF
+\listoffigures
+\newpage
+
+% No requiered by the standard
+%TOL
+%\lstlistoflistings
+%\newpage
+
+%DOCUMENT STRUCTURE
+
+% General Information
+\input{doc/information/information.tex}
+\newpage
+
+% Introduction
+\input{doc/introduction/introduction.tex}
+\newpage
+
+% User guide
+\input{doc/user-guide/user-guide.tex}
+\newpage
+
+% Software operations
+\input{doc/software-operations/software-operations.tex}
+\newpage
+  
+% Error messages and problem resolution
+\input{doc/error-messages/error-messages.tex}
+\newpage
+
+%APPENDICES
+\appendix
+\input{doc/appendix/appendix.tex}
+\newpage
+ 
+    
+%GLOSSARY
+%Uncomment the line below if you want to print all glossaries no matter if they
+% appear in the document
+%\glsaddall
+\printglossaries
+\newpage
+
+
+%BIBLIOGRAPHY
+\cleardoublepage 
+\bibliographystyle{./../lu.uni.lassy.excalibur.standard.report.libraries/styles/lncs} 
+\bibliography{./../lu.uni.lassy.excalibur.standard.report.libraries/defs/references/messir,doc/bibliography/user-manual}
+\label{sec:references}
+
+ 
+\end{document}

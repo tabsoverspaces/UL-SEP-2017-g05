@@ -1,0 +1,20 @@
+% ***************************************
+% test-case schema template
+\newenvironment{lyxlist}[1]
+  {\begin{list}{}
+    {\settowidth{\labelwidth}{#1}
+      \setlength{\leftmargin}{\labelwidth}
+      \addtolength{\leftmargin}{\labelsep}
+      \renewcommand{\makelabel}[1]{##1\hfil}}
+      \setlength{\itemsep}{0ex}
+      \addtolength{\baselineskip}{-5pt}
+			\setlength{\parskip}{0pt}
+			\setlength{\parsep}{0pt}}
+  {\end{list}}
+  
+  
+  \def\Remark{\noindent\textbf{Remark-}}
+  
+  \DeclareRobustCommand{\mysystemname}{\textbf{\textit{{\color{MediumPurple}MySystem
+  (v1.0)}}}~}
+  

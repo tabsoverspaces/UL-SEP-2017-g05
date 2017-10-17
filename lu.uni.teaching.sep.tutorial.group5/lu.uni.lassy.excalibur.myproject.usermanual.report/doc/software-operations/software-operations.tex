@@ -1,0 +1,46 @@
+\chapter{Software operations}
+\label{chap:soptware_operations}
+
+
+Explain each allowed software operations (i.e. an atomic unit of treatment, a service, a functionality) including a brief description of the operation, required parameters, optional parameters, default options, required steps to trigger the operation, assumptions upon request of the operation and expected results of executing such operation.
+Describe how to recognise that the operation has successfully been executed or
+abnormally terminated. The template given below (i.e. section \ref{operation:MyOperation} has to be used).
+
+Group the operations devoted to the needs of specific actors. Common
+operations to several actors may be grouped and presented once to avoid redundancy.
+
+
+\section{MyOperation}
+\label{operation:MyOperation}
+The system operator creates and adds a new crisis to the system after being
+informed by a third party (citizen, organization) and selects a crisis handler for the crisis.
+
+\begin{description}
+
+\item \textbf{Parameters:} Reporter Personal Information, Crisis Information, Crisis Handler
+\item \textbf{Precondition:} The system operator is logged in and has received information from a reporter.
+\item \textbf{Post-condition:} A new crisis has been added to the system and the new crisis has been assigned to a crisis handler, the Handler has received an automatic notification from the system.
+\item \textbf{Output messages:} The selected Crisis Handler will be notified
+automatically once the crisis has been created.
+
+\item \textbf{Triggering:}
+\begin{enumerate}
+\item From within the crisis management window fill out the required entries related to the personal information of the reporter such as name and phone number.
+\item Fill out the entries related to the crisis type, impacted area, priority, description, GPS coordinates, address and finally choose a Crisis Handler from the combo box.
+\item Click on the “Submit” button in and add the entry to the database.
+\end{enumerate}
+
+ 
+\end{description}
+
+ 
+\subsection{MyExample1}
+Examples should illustrate the use of \textbf{complex operations}.
+
+Each example must show how the actor uses the software operation under
+description to achieve (at least one of) its expected outcome.
+
+It might be required to include GUI screenshots to illustrate the example.
+
+
+
