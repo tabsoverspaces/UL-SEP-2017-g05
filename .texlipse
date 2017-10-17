@@ -1,0 +1,14 @@
+#TeXlipse project settings
+#Tue Oct 17 17:14:42 CEST 2017
+markTmpDer=true
+builderNum=6
+outputDir=lu.uni.teaching.sep.tutorial.group5/lu.uni.lassy.excalibur.myproject.usermanual.report/
+makeIndSty=
+bibrefDir=
+outputFormat=pdf
+tempDir=lu.uni.teaching.sep.tutorial.group5/lu.uni.lassy.excalibur.myproject.usermanual.report
+mainTexFile=user-manual.tex
+outputFile=user-manual.pdf
+langSpell=
+markDer=true
+srcDir=lu.uni.teaching.sep.tutorial.group5/lu.uni.lassy.excalibur.myproject.usermanual.report/
