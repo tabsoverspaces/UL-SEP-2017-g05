@@ -1,0 +1,111 @@
+\section{Clients}
+\label{operation:Clients}
+
+This subsection provides a detailed description of the client
+mobile application's specific functionalities.
+
+%%%%%%%%%%%%%%%%
+\subsection{Request book loan}
+
+When browsing books, the user has the option to request a book loan. The
+request is sent to the main server, where it will wait for a librarian's input, whether
+the loan is allowed or not.
+
+\begin{description}
+
+\item \textbf{Parameters: } ISBN number, Book name
+
+\item \textbf{Precondition: } The library has at least one physical copy
+available of the required book in store
+
+\item \textbf{Post-condition: } 
+
+\item \textbf{Output messages: } The client receives a confirmation of his
+request being sent successfully
+
+\item \textbf{Triggering:}
+\begin{enumerate}
+\item  User opens the list of available books via the interface button on the
+bottom of the screen.
+
+\item  He then proceeds to click on a book of his choice.
+
+\item In the newly opened screen, the user clicks on the Request loan button.
+
+\item When the user clicks Request loan, the request is sent to the server and
+it then awaits for further confirmation.
+\end{enumerate}
+\end{description}
+
+%%%%%%%%%%%%%%%%%
+\subsection{Request book reservation}
+
+ When browsing books, the user has the option to request a reservation for a
+ book that is currently unavailable.
+ The request is sent to the main server, where it will wait for a copy of the
+ book to be returned back, and then the loan can be confirmed.
+
+\begin{description}
+
+\item \textbf{Parameters: } ISBN number, Book name, Date of reservation
+
+\item \textbf{Precondition: } The library has no physical copies available for the
+said book.
+
+\item \textbf{Post-condition:}  
+
+\item \textbf{Output messages:} The client receives a confirmation of his
+reservation request being sent successfully.
+
+\item \textbf{Triggering:}
+\begin{enumerate}
+
+\item User opens the list of available books via the interface button on the
+bottom of the screen.
+
+\item He then proceeds to click on a book of his choice.
+
+\item The user can clicks on the Request reservation button on the newly opened
+screen.
+
+\item When the user clicks Request loan, the request is put in a queue,
+awaiting for his turn to receive a copy of the book.
+\end{enumerate}
+\end{description}
+
+%%%%%%%%%%%%%%%%
+\subsection{Cancel book reservation}
+
+ Apart from being able to send a book reservation request, the user also has the
+ option to cancel one. The cancelation is effective immediately.
+
+\begin{description}
+
+\item \textbf{Parameters:} Book name
+
+\item \textbf{Precondition:} The user has sent at least one request for a book
+reservation.
+
+\item \textbf{Post-condition:} The reservation request is removed from the
+queue in the server.
+
+\item \textbf{Output messages:} The user receives a message saying that his
+cancelation has been successful and is returned to the reservation-browsing
+screen.
+
+\item \textbf{Triggering:}
+\begin{enumerate}
+\item Click on the Browse loans button at the bottom of the main screen.
+
+\item Click on the Reservation button in the top half of the screen.
+
+\item  In the list of reservations, click on the book's reservation that is to
+be cancelled.
+
+\item In the newly opened screen, click on the Cancel reservation button.
+
+\item The user is returned back to the reservation list screen.
+
+\end{enumerate}
+
+\end{description}
