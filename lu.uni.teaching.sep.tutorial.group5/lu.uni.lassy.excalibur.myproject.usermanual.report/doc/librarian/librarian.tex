@@ -4,31 +4,55 @@
 This subsection provides a detailed description of librarian specific
 functionalities.
 
-\subsection{Search Customer}
+\subsection{Access Customer Database}
 
-The ''Search Customer'' functionality is only available for librarians. As the
-title suggests, the librarian is able to look for customers using the
-customers ID
+The ''Access Customer Database'' functionality is only available for
+librarians. As the title suggests, the librarian is able to access the database
+with all the customers in it and search for a specific customer to perform
+certain actions
 
 \begin{description}
 
-\item \textbf{Parameters:} Customer ID (provided by the customer), or other
-identifable information
+\item \textbf{Parameters:} None
+
+\item \textbf{Precondition:} The librarian must be logged into the system.
+
+\item \textbf{Post-condition:} The librarian is now able to look for a specific
+customer using either their first name, last name, customer ID or account status
+(active, overdue, suspended, banned) and inspect them to perform certain actions
+on their account.
+
+\item \textbf{Output messages:} None.
+
+\item \textbf{Triggering:} Press the ''Customers'' button after logging into
+your librarian account.
+
+\end{description}
+
+\subsection{Search Customer}
+
+The ''Search Customer'' functionality is only available for librarians. As the
+title suggests, the librarian is able to look for customers using either their
+first name, last name, customer ID or account status (active, overdue, suspended, banned).
+
+\begin{description}
+
+\item \textbf{Parameters:} First name, last name, customer ID, account status or nothing if he intends to
+see the full database. 
 
 \item \textbf{Precondition:} The librarian must be logged into the system and
-received the necessary information to look up the customer.
+chosen to access the customer database.
 
 \item \textbf{Post-condition:} The librarian is now able to further inspect the
-customer and take further actions
+customer and take further actions.
 
 \item \textbf{Output messages:} Prints the results in a table containing First
-name, Last name, internal Customer ID as well as account status (Active,
-Overdue, Suspended).
+name, Last name, customer ID as well as account status (active, overdue, suspended, banned).
 
 \item \textbf{Triggering:}
 \begin{enumerate}
-\item Enter the customer ID or any identfiable information into the search bar.
-\item Select ''Customer'' from the adjoining dropdown menu.
+\item Enter the first name, last name, customer ID or account status into the search bar.
+\item Select the relevant property from the adjoining dropdown menu.
 \item Hit the ''Search'' button and a list of all customers matching the query
 will be displayed
 \end{enumerate}
@@ -49,7 +73,8 @@ received the necessary information to look up the customer and started a query
 for said customer.
 
 \item \textbf{Post-condition:} The librarian is now able to grant loans to the
-inspected customers, initiate a book return or suspend his account.
+inspected customers, initiate a book return, suspend and reinstate his account,
+add notes and put in a request to either ban or unban his account.
 
 \item \textbf{Output messages:} None.
 
@@ -58,22 +83,253 @@ customers and selecting the one you want to inspect.
 
 \end{description}
 
+\subsection{Add Loan}
+
+The ''Add Loan'' functionality is available for the librarian. As the title
+suggest the librarian is able to add a loan to a customers account after
+inspecting the latter.
+
+\begin{description}
+
+\item \textbf{Parameters:} Book ID
+
+\item \textbf{Precondition:} The librarian must be in the inspect window for a
+customer and press the ''Add loan'' button.
+
+\item \textbf{Post-condition:} The librarian has now added a loan to the
+customers account with the loan starting date automatically being set and the
+standard loan due date being 2 days from start.
+
+\item \textbf{Output messages:} None.
+
+\item \textbf{Triggering:}
+\begin{enumerate}
+\item Open the inspect window for the customer who wants to loan a book.
+\item Select ''Add loan'' button from the bottom of the window.
+\item Enter the book ID of the book the customer wants to loan.
+\end{enumerate}
+
+\end{description}
+
+\subsection{Return Book}
+
+The ''Return Book'' functionality is available for the librarian. As the title
+suggest the librarian is able to let a customer return a book he loaned and add
+it back to the pool of available books.
+
+\begin{description}
+
+\item \textbf{Parameters:} None
+
+\item \textbf{Precondition:} The librarian must be in the inspect window for a
+customer and have the currents loans being displayed, then choose the book to
+return and click the ''Return book'' button.
+
+\item \textbf{Post-condition:} The librarian has now successfully returned a
+book from the customer to the book database and that book loan is added to the
+loan history.
+
+\item \textbf{Output messages:} None.
+
+\item \textbf{Triggering:}
+\begin{enumerate}
+\item Open the inspect window for the customer who wants to loan a book.
+\item Confirm you are shown the current loan and not the loan history.
+\item Select the book to be returned.
+\item Select ''Return book'' button from the bottom of the window.
+\end{enumerate}
+
+\end{description}
+
+\subsection{Suspend Customer}
+
+The ''Suspend Customer'' functionality is available for the librarian. As the
+title suggest the librarian is able to suspend a customer disallowing him to
+make further loans until his account is reinstated at a librarians discretion
+(i.e. by paying a fine).
+
+\begin{description}
+
+\item \textbf{Parameters:} None
+
+\item \textbf{Precondition:} The librarian must be in the inspect window for a
+customer click the ''Suspend Customer'' button. Furthermore, this button won't
+be displayed if the customer is already suspended, instead a ''Reinstate
+Customer'' button will be shown.
+
+\item \textbf{Post-condition:} The librarian has now suspended a customer and he
+is unable to make further loans until he is reinstated.
+
+\item \textbf{Output messages:} None.
+
+\item \textbf{Triggering:}
+\begin{enumerate}
+\item Open the inspect window for the customer to be suspended.
+\item Select ''Suspend Customer'' button from the bottom of the window.
+\end{enumerate}
+
+\end{description}
+
+\subsection{Reinstate Customer}
+
+The ''Reinstate Customer'' functionality is available for the librarian. As the
+title suggest the librarian is able to reinstate a customer reallowing him to
+make further loans.
+
+\begin{description}
+
+\item \textbf{Parameters:} None
+
+\item \textbf{Precondition:} The librarian must be in the inspect window for a
+customer click the ''Reinstate Customer'' button.
+
+\item \textbf{Post-condition:} The librarian has now reinstated a customer and
+he can once again request loans.
+
+\item \textbf{Output messages:} None.
+
+\item \textbf{Triggering:}
+\begin{enumerate}
+\item Open the inspect window for the customer to be reinstated.
+\item Select ''Reinstate Customer'' button from the bottom of the window.
+\end{enumerate}
+
+\end{description}
+
+\subsection{Request to ban customer}
+
+The ''Ban Customer'' functionality is available for the librarian. With this
+functionality, the librarian is able to put in a request to ban the currently
+inspected customer by providing a small paragraph as to why the customer should
+be banned.
+
+\begin{description}
+
+\item \textbf{Parameters:} None
+
+\item \textbf{Precondition:} The librarian must be in the inspect window for a
+customer click the ''Ban Customer'' button.
+
+\item \textbf{Post-condition:} The librarian has now issued a request to ban the
+customer in question.
+
+\item \textbf{Output messages:} None.
+
+\item \textbf{Triggering:}
+\begin{enumerate}
+\item Open the inspect window for the customer to be banned.
+\item Select ''Ban Customer'' button from the bottom of the window.
+\item A new window opens where the librarian can enter a reason as to why the
+customer should be banned.
+\item Finally the librarian clicks the ''Send'' which sends his request off for
+review by a higher ranked person.
+\end{enumerate}
+
+\end{description}
+
+\subsection{Request to unban customer}
+
+The ''Unban Customer'' functionality is available for the librarian. With this
+functionality, the librarian is able to put in a request to unban the currently
+inspected customer by providing a small paragraph as to why the customer should
+be unbanned.
+
+\begin{description}
+
+\item \textbf{Parameters:} None
+
+\item \textbf{Precondition:} The librarian must be in the inspect window of a
+currently banned customer and click the ''Unban Customer'' button.
+
+\item \textbf{Post-condition:} The librarian has now issued a request to ban the
+customer in question.
+
+\item \textbf{Output messages:} None.
+
+\item \textbf{Triggering:}
+\begin{enumerate}
+\item Open the inspect window for the customer to be unbanned.
+\item Select ''Unban Customer'' button from the bottom of the window.
+\item A new window opens where the librarian can enter a reason as to why the
+customer should be unbanned.
+\item Finally the librarian clicks the ''Send'' which sends his request off for
+review by a higher ranked person.
+\end{enumerate}
+
+\end{description}
+
+\subsection{Notes}
+
+The ''Notes'' functionality is available for the librarian. With this
+functionality, the librarian is able to add notes to a customer account like why
+he has been suspended and what he has to do to be reinstated so the librarian
+doing his reinstation knows why he was suspended in this example.
+
+\begin{description}
+
+\item \textbf{Parameters:} None
+
+\item \textbf{Precondition:} The librarian must be in the inspect window of a
+customer and click into the input field at the bottom to allow notes to be added
+to his account.
+
+\item \textbf{Post-condition:} The librarian has now added a note to the
+customers account.
+
+\item \textbf{Output messages:} None.
+
+\item \textbf{Triggering:}
+\begin{enumerate}
+\item Open the inspect window for a customer.
+\item Click into the input field at the bottom of the window.
+\item The librarian can now add comments to the customers account.
+\item When the librarian is done adding comments and notes to the customers
+account, no further actions need to be taken.
+\end{enumerate}
+
+\end{description}
+
+\subsection{Access Book Database}
+
+The ''Access Books Database'' functionality is only available for
+librarians. As the title suggests, the librarian is able to access the database
+with all the customers in it and search for a specific customer to perform
+certain actions
+
+\begin{description}
+
+\item \textbf{Parameters:} None
+
+\item \textbf{Precondition:} The librarian must be logged into the system.
+
+\item \textbf{Post-condition:} The librarian is now able to look for a specific
+book using either the ISBN, the author or the title. Furthermore he is able to
+add books to the database and remove some.
+
+\item \textbf{Output messages:} None.
+
+\item \textbf{Triggering:}Press the ''Books'' button after logging into
+your librarian account.
+
+\end{description}
+
 \subsection{Search Book}
 
 The ''Search Book'' functionality is available for the librarian. As the title
-suggest the librarian is able to view the books in the catalogue as well as
+suggest the librarian is able to view the books in the database as well as
 perform other book related tasks.
 
 \begin{description}
 
 \item \textbf{Parameters:} Book name, ISBN, author, or nothing if he intends to
-see the full catalogue
+see the full database.
 
-\item \textbf{Precondition:} The librarian must be logged into the system and
-received the necessary information to look up the book (if applicable).
+\item \textbf{Precondition:} The librarian must be logged into the system,
+chosen to access the book database and received the necessary information to
+look up the book (if applicable).
 
 \item \textbf{Post-condition:} The librarian is now able to check the status of
-all the books matching the search term, as well as add books to the catalogue,
+all the books matching the search term, as well as add books to the database,
 or remove one from it.
 
 \item \textbf{Output messages:} Prints the results in a table containing ISBN,
@@ -82,8 +338,8 @@ overdue).
 
 \item \textbf{Triggering:}
 \begin{enumerate}
-\item Enter the ISBN or any identfiable information into the search bar.
-\item Select ''Book'' from the adjoining dropdown menu.
+\item Enter the book name, ISBN, author into the search bar.
+\item Select the relevant property from the adjoining dropdown menu.
 \item Hit the ''Search'' button and a list of all books matching the query
 will be displayed
 \end{enumerate}
@@ -93,7 +349,7 @@ will be displayed
 \subsection{Add Book}
 
 The ''Add Book'' functionality is available for the librarian. As the title
-suggest the librarian is able to add books to the catalogue after opening the
+suggest the librarian is able to add books to the database after opening the
 latter through the ''Search Book'' functionality.
 
 \begin{description}
@@ -101,10 +357,10 @@ latter through the ''Search Book'' functionality.
 \item \textbf{Parameters:} ISBN
 
 \item \textbf{Precondition:} The librarian must be logged into the system,
-opened the book catalogue and pressed ''Add book''.
+opened the book database and pressed ''Add book''.
 
 \item \textbf{Post-condition:} The librarian is now able to add a book to the
-catalogue by entering the books ISBN number into the popup windows and
+database by entering the books ISBN number into the popup windows and
 confirming with the ''Add book'' button again. The system will automatically
 gather the author and book name from a server and assign it a random internal
 ID.
@@ -113,12 +369,12 @@ ID.
 
 \item \textbf{Triggering:}
 \begin{enumerate}
-\item Open the library catalogue with the ''Search book'' functionality by
-either searching for a specific book or viewing the whole catalogue by leaving
+\item Open the library database with the ''Search book'' functionality by
+either searching for a specific book or viewing the whole database by leaving
 the search field blank.
 \item Select ''Add book'' from under the table.
 \item Enter the ISBN of the new book into the input field and confirm with ''Add
-book'' to add it to the catalogue.
+book'' to add it to the database.
 \end{enumerate}
 
 \end{description}
@@ -126,7 +382,7 @@ book'' to add it to the catalogue.
 \subsection{Remove Book}
 
 The ''Remove Book'' functionality is available for the librarian. As the title
-suggest the librarian is able to remove books from the catalogue after opening
+suggest the librarian is able to remove books from the database after opening
 the latter through the ''Search Book'' functionality.
 
 \begin{description}
@@ -134,20 +390,20 @@ the latter through the ''Search Book'' functionality.
 \item \textbf{Parameters:} None
 
 \item \textbf{Precondition:} The librarian must be logged into the system,
-opened the book catalogue.
+opened the book database.
 
 \item \textbf{Post-condition:} The librarian is now able to remove a book from
-the catalogue by selecting it in the catalogue and pressing ''Remove book''
-under the catalogue display.
+the database by selecting it in the database and pressing ''Remove book''
+under the database display.
 
 \item \textbf{Output messages:} None.
 
 \item \textbf{Triggering:}
 \begin{enumerate}
-\item Open the library catalogue with the ''Search book'' functionality by
-either searching for a specific book or viewing the whole catalogue by leaving
+\item Open the library database with the ''Search book'' functionality by
+either searching for a specific book or viewing the whole database by leaving
 the search field blank.
-\item Select a book from the catalogue.
+\item Select a book from the database.
 \item Select ''Remove book'' from under the table.
 \end{enumerate}
 
