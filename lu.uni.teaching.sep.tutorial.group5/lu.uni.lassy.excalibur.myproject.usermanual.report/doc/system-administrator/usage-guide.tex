@@ -1,0 +1,218 @@
+\section{System Administrator}
+\label{chap:usage_guide}
+
+\subsection{Multi-procedures}
+
+\vspace{0.5cm}
+\hrule
+\begin{lyxlist}{PC1}
+\small{
+\item [\textbf{Procedure:}] System Administrator login
+\item [\textbf{Scope:}] System Administrator Desktop Application (\emph{SADA})
+\item [\textbf{Primary Actor}:] Sysadmin
+\item [\textbf{Secondary Actor(s)}:] LoginSystem LS
+\item [\textbf{Goal:}] The intention of the User is to login into the system in
+order to use the services of the application.
+\item [\textbf{Level}:] User-goal level
+\item [\textbf{Main~Success~Scenario}]:\\
+1. \emph{Sysadmin} enters the user name and password in the respective
+fields.\\
+2. \emph{Sysadmin} clicks the \emph{Sign in} button which sends a login
+request message to \emph{LS}.\\
+3. \emph{LS} logs the \emph{Sysadmin} into the application.\\'
+4. \emph{Sysadmin} is taken to the main panel. \\
+
+
+\item [\textbf{Extensions}]:\\
+3.a \emph{Sysadmin} username not found\\
+\hspace*{0.5cm} 3.a.1 \emph{LGS} returns a message informing that either the
+user name or password is incorrect. \\
+\hspace*{0.5cm} \textbf{procedure returns to step 1}
+
+3.b \emph{Sysadmin} password not correct \\
+\hspace*{0.5cm} 3.b.1 \emph{LGS} returns a message informing that either the
+user name or password is incorrect. \\
+\hspace*{0.5cm} \textbf{procedure returns to step 1}
+
+}
+
+\end{lyxlist}
+\hrule
+
+\vspace{0.5cm}
+\hrule
+\begin{lyxlist}{PC1}
+\small{
+\item [\textbf{Procedure:}] Send Message
+\item [\textbf{Scope:}] System Administrator Desktop Application (\emph{SADA})
+\item [\textbf{Primary Actor}:] Sysadmin
+\item [\textbf{Secondary Actor(s)}:] MessagingSystem MSGS,
+\item [\textbf{Goal:}] The intention of the System Administrator to send a
+message to a librarian.
+\item [\textbf{Level}:] User-goal level
+\item [\textbf{Main~Success~Scenario}]:\\
+1. \emph{Sysadmin} is on the messages functionality and has important
+information to pass on to a given librarian.
+\\
+2. \emph{Sysadmin} clicks on the \emph{new message} button. \\
+3. A new panel is shown where \emph{Sysadmin} can choose which librarian to
+send a message to and which librarian, if any, to BCc in that message. The
+\emph{Sysadmin} can also write the message that needs to be sent.
+\\
+4. \emph{Sysadmin} clicks on the 'Send' button. \\
+5. \emph{MSGS} send the contents of the message to the librarians set in the
+'To' and 'BCc' fields.
+6. \emph{MSGS} displays the messages that the \emph{Sysadmin} sent in the chat.
+\\
+7. \emph{Sysadmin} is returned to the messages panel. \\
+
+
+
+\item [\textbf{Extensions}]: \\
+4.a The content of the message is empty.\\
+\hspace*{0.5cm} 3.a.1 The application shows a notification popup to
+\emph{Sysadmin} informing that the content of the message is empty. \\
+\hspace*{0.5cm} \textbf{procedure returns to step 3}
+
+4.b No librarian selected as the recipient for the message.
+\hspace*{0.5cm} 4.b.1 \emph{Sysadmin} receives a notification informing that
+no librarian has been selected as the recipient for the message.\\
+\hspace*{0.5cm} \textbf{procedure returns to step 3}}
+
+\end{lyxlist}
+\hrule
+
+%%
+%%
+
+\vspace{0.5cm}
+\hrule
+\begin{lyxlist}{PC1}
+\small{
+\item [\textbf{Procedure:}] Create and Add Librarian
+\item [\textbf{Scope:}] System Administrator Desktop Application (\emph{SADA})
+\item [\textbf{Primary Actor}:] Sysadmin
+\item [\textbf{Secondary Actor(s)}:] LibrarianManagementSystem MLS,
+DatabaseSystem DBS
+\item [\textbf{Goal:}] The intention of the System Administrator to create and
+add a new Librarian Account.
+\item [\textbf{Level}:] User-goal level
+\item [\textbf{Main~Success~Scenario}]:\\
+1. \emph{Sysadmin} is on Librarian panel where he can view all the current
+librarians.
+\\
+2. \emph{Sysadmin} clicks on the \emph{Add Librarian} button. \\
+3. A new panel is shown where \emph{Sysadmin} can enter the Librarian details
+into the corresponding fields.
+\\
+4. \emph{Sysadmin} clicks on the 'new' button. \\
+5. A new panel is shown where the \emph{Sysadmin} can confirm all the librarian
+details to be added.\\
+6. \emph{Sysadmin} clicks on the 'Confirm' button. \\
+7. \emph{LMS} sends a request to the \emph{DBS} to create and add the librarian
+to the database.
+\\
+8. \emph{DBS} accepts \emph{LMS}'s request and adds the librarian to the
+database. \\
+9. \emph{LMS} sends a notification via email to the librarian
+informing account has been created. (To be implemented)
+\\
+10. \emph{Sysadmin} is returned to the users panel. \\
+
+
+
+\item [\textbf{Extensions}]: \\
+6.a Details of librarian to be added empty.\\
+\hspace*{0.5cm} 6.a.1 \emph{Sysadmin} receives a notification from
+the \emph{LMS} informing that some of the details of the librarian trying to be
+added are missing. \\
+\hspace*{0.5cm} \textbf{procedure returns to step 3}
+
+6.b Duplicate Librarian.
+\hspace*{0.5cm} 6.b.1 \emph{Sysadmin} receives a notification from
+the \emph{LMS} informing that the librarian trying to be added has already been
+added or the librarian details are the same to one that already exists.\\
+\hspace*{0.5cm} \textbf{procedure returns to step 3}}
+
+\end{lyxlist}
+\hrule
+
+
+\vspace{0.5cm}
+\hrule
+\begin{lyxlist}{PC1}
+\small{
+\item [\textbf{Procedure:}] Edit Librarian
+\item [\textbf{Scope:}] System Administrator Desktop Application (\emph{SADA})
+\item [\textbf{Primary Actor}:] Sysadmin
+\item [\textbf{Secondary Actor(s)}:] LibrarianManagementSystem MLS,
+DatabaseSystem DBS
+\item [\textbf{Goal:}] The intention of the System Administrator to
+edit an already existing Librarian Account.
+\item [\textbf{Level}:] User-goal level
+\item [\textbf{Main~Success~Scenario}]:\\
+1. \emph{Sysadmin} is on Librarian panel where he can view all the current
+librarians.
+\\
+2. \emph{Sysadmin} clicks on the \emph{Edit Librarian} button. \\
+3. A new panel is shown where the \emph{Sysadmin} can selected the librarian
+that needs to be edited by selecting their \emph{ID}.
+\\
+4. \emph{LMS} sends a request to retrieve the details of the librarian to be
+edited to the \emph{DBS}. 
+\\
+5. \emph{DBS} accepts and sends the details of the Librarian to be edited to the
+\emph{LMS}. \\
+6. \emph{LMS} displays the librarians information in its appropriate fields.
+7. A new panel is shown where the \emph{Sysadmin} can edit the
+librarian details. \\
+8. \emph{Sysadmin} clicks on the 'Confirm' button. \\
+9. \emph{LMS} edits the librarian details in the database. \\
+10. \emph{Sysadmin} is returned to the users panel. \\
+
+
+
+\item [\textbf{Extensions}]: \\
+8.a Details of librarian to be edited empty.\\
+\hspace*{0.5cm} 8.a.1 \emph{Sysadmin} receives a notification from
+the \emph{LMS} informing that some of the details of the librarian trying to be
+edited are empty. \\
+\hspace*{0.5cm} \textbf{procedure returns to step 7}.\\
+}
+\end{lyxlist}
+\hrule
+
+
+\vspace{0.5cm}
+\hrule
+\begin{lyxlist}{PC1}
+\small{
+\item [\textbf{Procedure:}] Delete Librarian
+\item [\textbf{Scope:}] System Administrator Desktop Application (\emph{SADA})
+\item [\textbf{Primary Actor}:] Sysadmin
+\item [\textbf{Secondary Actor(s)}:] LibrarianManagementSystem MLS,
+DatabaseSystem DBS
+\item [\textbf{Goal:}] The intention of the System Administrator to
+delete a Librarian Account.
+\item [\textbf{Level}:] User-goal level
+\item [\textbf{Main~Success~Scenario}]:\\
+1. \emph{Sysadmin} is on Librarian panel where he can view all the current
+librarians.
+\\
+2. \emph{Sysadmin} clicks on the \emph{Delete Librarian} button. \\
+3. A new panel is shown where the \emph{Sysadmin} can selected the red cross in
+the row of the librarians that needs to be deleted.
+\\
+4. \emph{Sysadmin} deletes one or more librarians. 
+\\
+5. \emph{LMS} sends a request to the \emph{DBS} to delete the librarians.
+\\
+6. \emph{DBS} accepts and deletes the librarian accounts mentioned in the
+request.
+\\
+7. \emph{Sysadmin} is returned to the users panel. \\
+}
+\end{lyxlist}
+\hrule
+
+\subsection{Mono-procedures}
