@@ -1,0 +1,439 @@
+\section{Librarians}
+\label{chap:usage_guide}
+
+\subsection{Multi-procedures}
+
+\vspace{0.5cm}
+\hrule
+\begin{lyxlist}{PC1}
+\small{
+\item [\textbf{Procedure:}] Librarian login
+\item [\textbf{Scope:}] LibrarianSystem (\emph{LibSys})
+\item [\textbf{Primary Actor}:] Librarian Smith
+\item [\textbf{Secondary Actor(s)}:] LoginSystem LS
+\item [\textbf{Goal:}] The intention of the User is to login into the
+system in order to use the services of the application.
+\item [\textbf{Level}:] User-goal level
+\item [\textbf{Main~Success~Scenario}]:\\
+1. \emph{Smith} enters the user name and password in the respective fields\\
+2. \emph{Smith} presses on the login button which sends a login request message
+to \emph{LS}\\
+3. \emph{LS} logs \emph{Smith} into the application\\
+
+
+\item [\textbf{Extensions}]:\\
+3.a Username of \emph{Smith} not found\\
+\hspace*{0.5cm} 3.a.1 \emph{LS} returns a message stating that the user name
+or password is not correct \\
+\hspace*{0.5cm} \textbf{procedure returns to step 1}
+
+3.b Password of \emph{Smith} not correct \\
+\hspace*{0.5cm} 3.b.1 \emph{LS} returns a message stating that the user name
+or password is not correct \\
+\hspace*{0.5cm} \textbf{procedure returns to step 1}
+
+}
+
+\end{lyxlist}
+\hrule
+
+\vspace{0.5cm}
+\hrule
+\begin{lyxlist}{PC1}
+\small{
+\item [\textbf{Procedure:}] Grant book loan
+\item [\textbf{Scope:}] LibrarianSystem (\emph{LibSys})
+\item [\textbf{Primary Actor}:] Librarian Smith
+\item [\textbf{Secondary Actor(s)}:] Customer John
+\item [\textbf{Goal:}] The intention of the User is to grant a loan for a book
+requested by a customer.
+\item [\textbf{Level}:] User-goal level
+\item [\textbf{Main~Success~Scenario}]:\\
+1. \emph{John} is approaching the librarian with a book he wants to loan. \\
+2. \emph{John} gives the librarian his ID so the librarian can look up his
+account\\
+3. \emph{Smith} opens up \emph{John}'s account and clicks on ''Add loan''. \\
+4. \emph{Smith} enters the book ID in the popup window and clicks on ''Add
+Loan''.\\
+
+\item [\textbf{Extensions}]:\\
+2.a The librarian cannot verify the customer account\\
+3.a \emph{Smith} decides not to allow the loan, either due to too many active
+loans, or because a suspended or banned account.\\
+\hspace*{0.5cm} 3.a.1 \emph{John} gets told by \emph{Smith} that he cannot
+currently loan a book and why.\\ 
+\hspace*{0.5cm} \textbf{procedure \emph{ends}}
+
+}
+
+\end{lyxlist}
+\hrule
+
+%
+
+\vspace{0.5cm}
+\hrule
+\begin{lyxlist}{PC1}
+\small{
+\item [\textbf{Procedure:}] Close book loan
+\item [\textbf{Scope:}] LibrarianSystem (\emph{LibSys})
+\item [\textbf{Primary Actor}:] Librarian Smith
+\item [\textbf{Secondary Actor(s)}:] Customer John
+\item [\textbf{Goal:}] The intention of the User is to close a loan for a book
+returned by a customer.
+\item [\textbf{Level}:] User-goal level
+\item [\textbf{Main~Success~Scenario}]:\\
+1. \emph{John} is approaching the librarian with a book he wants to return. \\
+2. \emph{John} gives the librarian his ID so the librarian can look up his
+account\\
+3. \emph{Smith} opens up \emph{John}'s account and selects the book \emph{John}
+wants to return.\\
+4. \emph{Smith} then clicks on ''Return Book''.\\
+
+\item [\textbf{Extensions}]:\\
+2.a The librarian cannot verify the customer account\\
+3.a \emph{Smith} sees that either the book \emph{John} wants to return is
+overdue and John needs to pay a fine, or due to too many overdues his account
+has been suspended/banned.\\
+\hspace*{0.5cm} 3.a.1 \emph{John} gets told by \emph{Smith} that he needs to
+pay fine since the books is overdue or his account is suspended/banned.\\
+\hspace*{0.5cm} \textbf{procedure \emph{ends}}
+
+}
+
+\end{lyxlist}
+\hrule
+
+%%
+%%
+
+\vspace{0.5cm}
+\hrule
+\begin{lyxlist}{PC1}
+\small{
+\item [\textbf{Procedure:}] Suspend Customer
+\item [\textbf{Scope:}] LibrarianSystem (\emph{LibSys})
+\item [\textbf{Primary Actor}:] Librarian Smith
+\item [\textbf{Secondary Actor(s)}:] Customer John
+\item [\textbf{Goal:}] The intention of the User is to suspend the customer
+account until a certain fine is paid.
+\item [\textbf{Level}:] User-goal level
+\item [\textbf{Main~Success~Scenario}]:\\
+1. \emph{Smith} has been made aware of a customer with multiple
+overdue books.\\
+2. \emph{Smith} opens this customers account and clicks on ''Suspend
+Customer''\\
+3. \emph{Smith} enters a small descriptive note in the text field on the
+customer page.\\
+4. \emph{John} now can't loan any more books until the fine is paid off and
+every librarian accessign his account sees what the fine is.\\
+
+}
+
+\end{lyxlist}
+\hrule
+
+\vspace{0.5cm}
+\hrule
+\begin{lyxlist}{PC1}
+\small{
+\item [\textbf{Procedure:}] Reinstate Customer
+\item [\textbf{Scope:}] LibrarianSystem (\emph{LibSys})
+\item [\textbf{Primary Actor}:] Librarian Smith
+\item [\textbf{Secondary Actor(s)}:] Customer John
+\item [\textbf{Goal:}] The intention of the User is to reinstate a suspended
+customer account.
+\item [\textbf{Level}:] User-goal level
+\item [\textbf{Main~Success~Scenario}]:\\
+1. \emph{John} has been made aware that his customer account got suspended
+and he needs to pay a fine to reinstate it.\\
+2. \emph{John} goes to the library and gives \emph{Smith} his customer ID so
+he can pull up his account.\\
+3. \emph{Smith} opens this customers account and checks the fine \emph{John}
+needs to pay.\\
+4. \emph{Jonh} pays \emph{Smith} the fine.\\
+5. \emph{Smith} receives the payment and clicks on ''Reinstate Account''.\\
+
+\item [\textbf{Extensions}]:\\
+4.a \emph{John} doesn't have enough money on him to pay the fine and thus
+cannot complete the reinstation of his customer account.\\
+}
+
+\end{lyxlist}
+\hrule
+
+\vspace{0.5cm}
+\hrule
+\begin{lyxlist}{PC1}
+\small{
+\item [\textbf{Procedure:}] Ban Customer
+\item [\textbf{Scope:}] LibrarianSystem (\emph{LibSys})
+\item [\textbf{Primary Actor}:] Librarian Smith
+\item [\textbf{Secondary Actor(s)}:] LibrarianSupervisor Jane, SysAdmin Fil
+\item [\textbf{Goal:}] The intention of the User is to put in a request to ban a
+customer.
+\item [\textbf{Level}:] User-goal level
+\item [\textbf{Main~Success~Scenario}]:\\
+1. \emph{Smith} has been made aware of a deviant customer with multiple
+infractions.\\
+2. \emph{Smith} opens this customers account and click on ''Ban Customer''\\
+3. \emph{Smith} enters a small descriptive text and clicks ''Send''.\\
+4. \emph{Jane} receives this request and approves this.\\
+5. \emph{Fil} sees the request has been approved and closes the customer
+account.\\
+
+\item [\textbf{Extensions}]:\\
+4.a \emph{Jane} denies the request to close the account and thus \emph{Fil}
+never gets involved.\\
+}
+
+\end{lyxlist}
+\hrule
+
+\vspace{0.5cm}
+\hrule
+\begin{lyxlist}{PC1}
+\small{
+\item [\textbf{Procedure:}] Unban Customer
+\item [\textbf{Scope:}] LibrarianSystem (\emph{LibSys})
+\item [\textbf{Primary Actor}:] Librarian Smith
+\item [\textbf{Secondary Actor(s)}:] LibrarianSupervisor Jane, SysAdmin Fil,
+Customer John
+\item [\textbf{Goal:}] The intention of the User is to put in a request to unban
+a customer.
+\item [\textbf{Level}:] User-goal level
+\item [\textbf{Main~Success~Scenario}]:\\
+1. \emph{John} has paid off all his fines at the library and his ban has been
+in effect for quite some time and he wants to be unbanned and promises to
+follow the rules.\\
+2. \emph{Smith} opens this customers account and click on ''Unban Customer''\\
+3. \emph{Smith} enters a small descriptive text and clicks ''Send''.\\
+4. \emph{Jane} receives this request and approves this.\\
+5. \emph{Fil} sees the request has been approved and reopens the customer
+account.\\
+
+\item [\textbf{Extensions}]:\\
+1.a \emph{Smith} sees that \emph{John} actually hasn't paid of all his fines or
+for whatever reason doesn't think \emph{John} shouldn't be allowed to put in a
+request to reopen his account.\\
+4.a \emph{Jane} denies the request to reopen the account and thus \emph{Fil}
+never gets involved.\\
+}
+
+\end{lyxlist}
+\hrule
+
+\subsection{Mono-procedures}
+
+\vspace{0.5cm}
+\hrule
+\begin{lyxlist}{PC1}
+\small{
+\item [\textbf{Procedure:}] Search books list
+\item [\textbf{Scope:}] LibrarianSystem (\emph{LibSys})
+\item [\textbf{Primary Actor}:] Librarian Smith
+\item [\textbf{Secondary Actor(s)}:] 
+\item [\textbf{Goal:}] The intention of the User is to search the book database
+for a specific book.
+\item [\textbf{Level}:] User-goal level
+\item [\textbf{Main~Success~Scenario}]:\\
+1. \emph{Smith} is at the home panel of the application after logging in.\\
+2. \emph{Smith} now clicks on the button ''Books'' to get to the book database
+and search for books.\\
+3. In the search field on top \emph{Smith} enters either the book name, ISBN or
+author of the book he wants to find.\\
+4. In the dropdown menu next to the search field \empgh{Smith} chooses which
+property he just entered.\\
+5. \emph{Smith} presses ''Search'' to get a list of all the books matching his
+search query.\\
+
+
+\item [\textbf{Extensions}]:\\
+5.a \emph{Smith} left the search field blank, which then prints him a list of
+all the books in the book database.\\
+}
+
+%%
+
+\end{lyxlist}
+\hrule
+
+\vspace{0.5cm}
+\hrule
+\begin{lyxlist}{PC1}
+\small{
+\item [\textbf{Procedure:}] Search customer list
+\item [\textbf{Scope:}] LibrarianSystem (\emph{LibSys})
+\item [\textbf{Primary Actor}:] Librarian Smith
+\item [\textbf{Secondary Actor(s)}:] 
+\item [\textbf{Goal:}] The intention of the User is to search the customer
+database for a specific customer.
+\item [\textbf{Level}:] User-goal level
+\item [\textbf{Main~Success~Scenario}]:\\
+1. \emph{Smith} is at the home panel of the application after logging in.\\
+2. \emph{Smith} now clicks on the button ''Customers'' to get to the customer
+database and search for customers.\\
+3. In the search field on top \emph{Smith} enters either the first name, last
+name, customer ID or account status of the customer he wants to find.\\
+4. In the dropdown menu next to the search field \empgh{Smith} chooses which
+property he just entered.\\
+5. \emph{Smith} presses ''Search'' to get a list of all the customers matching
+his search query.\\
+
+
+\item [\textbf{Extensions}]:\\
+5.a \emph{Smith} left the search field blank, which then prints him a list of
+all the customers in the customer database.\\
+}
+
+\end{lyxlist}
+\hrule
+
+%%
+
+\vspace{0.5cm}
+\hrule
+\begin{lyxlist}{PC1}
+\small{
+\item [\textbf{Procedure:}] Inspect customer
+\item [\textbf{Scope:}] LibrarianSystem (\emph{LibSys})
+\item [\textbf{Primary Actor}:] Librarian Smith
+\item [\textbf{Secondary Actor(s)}:] 
+\item [\textbf{Goal:}] The intention of the User is to inspect a customers
+profile to get further information about current or past loans, comments from
+other librarians, or take further actions with his account.
+\item [\textbf{Level}:] User-goal level
+\item [\textbf{Main~Success~Scenario}]:\\
+1. \emph{Smith} successfully launched a search query on the customer database.\\
+2. \emph{Smith} now selects the customer he wishes to inspect from the list
+displayed in the application matching his search query.\\
+3. A new window will popup displaying per default current loans, with the
+possibility to show past loans instead, as well as giving the librarian
+the possibility to grant a loan, make a book return, suspend or reinstate the
+account, request a ban or unban and add notes to his page.\\
+
+
+\item [\textbf{Extensions}]:\\
+}
+
+\end{lyxlist}
+\hrule
+
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%
+
+\vspace{0.5cm}
+\hrule
+\begin{lyxlist}{PC1}
+\small{
+\item [\textbf{Procedure:}] Show loan history
+\item [\textbf{Scope:}] LibrarianSystem (\emph{LibSys})
+\item [\textbf{Primary Actor}:] Librarian Smith
+\item [\textbf{Secondary Actor(s)}:] 
+\item [\textbf{Goal:}] The intention of the User is to check a customers loan
+history
+\item [\textbf{Level}:] User-goal level
+\item [\textbf{Main~Success~Scenario}]:\\
+1. \emph{Smith} is at the account page of a customer.\\
+2. \emph{Smith} clicks the button on the bottom right titled ''History'' which
+replaces the current table of current loans which a table of past loans as well
+as replacing the button with another one to get back to current loans.
+
+
+\item [\textbf{Extensions}]:\\
+}
+
+\end{lyxlist}
+\hrule
+
+
+%%%%%%%%%%%%%%%%%%%%%%
+
+\vspace{0.5cm}
+\hrule
+\begin{lyxlist}{PC1}
+\small{
+\item [\textbf{Procedure:}] Edit customer notes.
+\item [\textbf{Scope:}] LibrarianSystem (\emph{LibSys})
+\item [\textbf{Primary Actor}:] Librarian Smith
+\item [\textbf{Secondary Actor(s)}:] 
+\item [\textbf{Goal:}] The intention of the User is to edit the notes and
+comments on a customers account page.
+\item [\textbf{Level}:] User-goal level
+\item [\textbf{Main~Success~Scenario}]:\\
+1. \emph{Smith} is at the account page of a customer.\\
+2. \emph{Smith} clicks in the text box on the bottom of the window and adds his
+notes and comments on the customers in this field like fines to be paid or
+suspension issued at date DD/MM/YYYY.
+
+
+\item [\textbf{Extensions}]:\\
+}
+
+\end{lyxlist}
+\hrule
+
+%%%%%%%%%%%%%%%%%%%
+
+\vspace{0.5cm}
+\hrule
+\begin{lyxlist}{PC1}
+\small{
+\item [\textbf{Procedure:}] Add book.
+\item [\textbf{Scope:}] LibrarianSystem (\emph{LibSys})
+\item [\textbf{Primary Actor}:] Librarian Smith
+\item [\textbf{Secondary Actor(s)}:] 
+\item [\textbf{Goal:}] The intention of the User is to add a book to the
+book database.
+\item [\textbf{Level}:] User-goal level
+\item [\textbf{Main~Success~Scenario}]:\\
+1. \emph{Smith} is at the book database menu.\\
+2. \emph{Smith} clicks on the button labeled ''Add Book''.\\
+3. \emph{Smith} enters the books ISBN into the popup window and clicks on ''Add
+Book''.\\
+4. The system now automatically adds a new entry for this book, looking up the
+author and title associated with the ISBN and generating a new book ID for this
+book.\\
+
+
+\item [\textbf{Extensions}]:\\
+3.a \emph{Smith} entered a wrong ISBN prompting him to either cancel the
+procedure or manually adding book name and author name.\\
+}
+
+\end{lyxlist}
+\hrule
+
+
+%%%%%%%%%%
+
+\vspace{0.5cm}
+\hrule
+\begin{lyxlist}{PC1}
+\small{
+\item [\textbf{Procedure:}] Remove book.
+\item [\textbf{Scope:}] LibrarianSystem (\emph{LibSys})
+\item [\textbf{Primary Actor}:] Librarian Smith
+\item [\textbf{Secondary Actor(s)}:] 
+\item [\textbf{Goal:}] The intention of the User is to remove a book from the
+book database.
+\item [\textbf{Level}:] User-goal level
+\item [\textbf{Main~Success~Scenario}]:\\
+1. \emph{Smith} is at the book database menu.\\
+2. \emph{Smith} selects the book he wishes to remove from the book database.\\
+3. \emph{Smith} clicks on the button labeled ''Remove Book''.\\
+4. The system now removes this particular copy of a book from the
+database.\\
+
+
+\item [\textbf{Extensions}]:\\
+3.a \emph{Smith} chose a book currently being loaned which will bring up a
+prompt telling him he can't remove this copy from the database.\\
+3.b \emph{Smith} chose a book currently being reserved by a customer which will
+bring up a prompt if he really wants to remove this book from the database as
+this will cancel the reservation.\\
+}
+
+\end{lyxlist}
+\hrule
+
