@@ -1,0 +1,4 @@
+ImportedPackages=\\lu.uni.lassy.excalibur.standard.specification.libraries\\library\\calendar.msr,lu.uni.lassy.messir.libraries.calendar;\\lu.uni.lassy.excalibur.standard.specification.libraries\\library\\math.msr,lu.uni.lassy.messir.libraries.math;\\lu.uni.lassy.excalibur.standard.specification.libraries\\library\\primitives.msr,lu.uni.lassy.messir.libraries.primitives;\\lu.uni.lassy.excalibur.standard.specification.libraries\\library\\string.msr,lu.uni.lassy.messir.libraries.string;
+StandardLibrariesProjectName=lu.uni.lassy.excalibur.standard.specification.libraries
+eclipse.preferences.version=1
+enableProjectSpecificMsrLicenseFolding=false

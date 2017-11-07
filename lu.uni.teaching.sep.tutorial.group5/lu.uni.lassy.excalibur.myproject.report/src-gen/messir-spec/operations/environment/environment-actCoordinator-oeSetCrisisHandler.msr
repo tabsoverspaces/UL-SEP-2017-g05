@@ -1,0 +1,15 @@
+package icrash.operations.environment.actCoordinator.oeSetCrisisHandler {
+
+import lu.uni.lassy.messir.libraries.primitives
+import lu.uni.lassy.messir.libraries.math
+import lu.uni.lassy.messir.libraries.string
+import lu.uni.lassy.messir.libraries.calendar
+import icrash.concepts.primarytypes.datatypes
+
+Operation Model {
+
+operation: icrash.environment.actCoordinator.outactCoordinator.oeSetCrisisHandler(AdtCrisisID:dtCrisisID):ptBoolean
+prolog:"src/Operations/Environment/OUT/outactCoordinator-oeSetCrisisHandler.pl"
+
+}
+}

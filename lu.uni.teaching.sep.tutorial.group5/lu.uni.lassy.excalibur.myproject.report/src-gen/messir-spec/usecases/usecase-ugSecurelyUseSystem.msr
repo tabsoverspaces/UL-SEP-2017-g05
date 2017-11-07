@@ -1,0 +1,25 @@
+package icrash.usecases.ugSecurelyUseSystem {
+
+	import icrash.environment
+	import icrash.usecases.subfunctions
+
+Use Case Model {
+
+use case system usergoal 
+  ugSecurelyUseSystem() {
+	
+	primary actor actAuthenticated[active]
+
+	reuse oeLogin
+	reuse oeLogout
+
+	step a: actAuthenticated 
+	     executes oeLogin
+	step b: actAuthenticated 
+	     executes oeLogout
+	
+	ordering constraint 
+	   "step (a) must always precede step (b)."
+		}
+	}
+}
