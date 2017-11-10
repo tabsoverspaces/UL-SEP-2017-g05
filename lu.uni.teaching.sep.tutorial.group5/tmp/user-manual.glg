@@ -1,18 +1,18 @@
-;; This logfile was generated automatically by `xindy'
-;; at 07.11.2017  20:19:33
-;; Indexstyle: "C:\\Users\\nicentra\\git\\UL-SEP-2017-g05\\lu.uni.teaching.sep.tutorial.group5\\tmp\\aUAMYsoXc0", Rawindex: "C:\\Users\\nicentra\\git\\UL-SEP-2017-g05\\lu.uni.teaching.sep.tutorial.group5\\tmp\\DlgXcyWUX3", Output: "user-manual.gls"
 
 
-Building indexentry-tree:
-Hierdepth of index is :TREE
+*** Unable to execute: '"xindy"  -L english -C utf8 -I xindy -M "user-manual" -t "user-manual.glg" -o "user-manual.gls" "user-manual.glo"' ***
 
-sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
-sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
+Failed with error code 127.
 
-Forming letter-groups:
-Letter-group: "´ÃÐÐ€Ëí" -> "G"
-Letter-group: "€†ÚÃË" -> "A"
-sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
-Letter-group: "€†ÚÃË" -> "A"
-sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
-Letter-group: "´ÃÐÐ€Ëí" -> "G"
+Status report:
+
+sh: xindy: command not found
+
+xindy didn't create a transcript.
+Check that xindy has been installed and
+is on your system's PATH.
+Your PATH environment variable is set to: 
+/usr/bin:/bin:/usr/sbin:/sbin
+Try manually running:
+"xindy"  -L english -C utf8 -I xindy -M "user-manual" -t "user-manual.glg" -o "user-manual.gls" "user-manual.glo"
+
