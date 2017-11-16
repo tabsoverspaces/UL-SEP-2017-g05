@@ -7,45 +7,10 @@
 \hrule
 \begin{lyxlist}{PC1}
 \small{
-\item [\textbf{Procedure:}] User login
-\item [\textbf{Scope:}] Library mobile application (\emph{LMA})
-\item [\textbf{Primary Actor}:] User John
-\item [\textbf{Secondary Actor(s)}:] LoginSystem LS
-\item [\textbf{Goal:}] The intention of the User is to login into the system in
-order to use the services of the application.
-\item [\textbf{Level}:] User-goal level
-\item [\textbf{Main~Success~Scenario}]:\\
-1. \emph{John} enters the user name and password in the respective fields\\
-2. \emph{John} presses on the login button which sends a login request message
-to \emph{LS}\\
-3. \emph{LS} logs \emph{John} into the application\\
-
-
-\item [\textbf{Extensions}]:\\
-3.a Username of \emph{John} not found\\
-\hspace*{0.5cm} 3.a.1 \emph{LS} returns a message stating that the user name
-or password is not correct \\
-\hspace*{0.5cm} \textbf{procedure returns to step 1}
-
-3.b Password of \emph{John} not correct \\
-\hspace*{0.5cm} 3.b.1 \emph{LS} returns a message stating that the user name
-or password is not correct \\
-\hspace*{0.5cm} \textbf{procedure returns to step 1}
-
-}
-
-\end{lyxlist}
-\hrule
-
-\vspace{0.5cm}
-\hrule
-\begin{lyxlist}{PC1}
-\small{
 \item [\textbf{Procedure:}] Request book loan
 \item [\textbf{Scope:}] Library mobile application (\emph{LMA})
 \item [\textbf{Primary Actor}:] User John
-\item [\textbf{Secondary Actor(s)}:] LibrarianSystem LibSys,
-Librarian Smith
+\item [\textbf{Secondary Actor(s)}:] Librarian Smith
 \item [\textbf{Goal:}] The intention of the User is to request a loan for a book
 he is interested in.
 \item [\textbf{Level}:] User-goal level
@@ -57,7 +22,7 @@ request a loan or not. \\
 4. \emph{John} presses on the 'Send loan request' button. \\
 5. A request is sent to \emph{LibSys} and it is stored in the database. \\
 6. \emph{Smith}  processes the request and allows the loan to \emph{John}.\\ 
-7. \emph{LibSys} sends a notification to \emph{John} saying that his loan is
+7. The system sends a notification to \emph{John} saying that his loan is
 approved and he can pick up his book at the library .\\
 
 
@@ -72,84 +37,6 @@ reservation}
 \hspace*{0.5cm} 6.a.1 \emph{John} receives a notification saying that his loan
 request has been denied.\\
 \hspace*{0.5cm} \textbf{procedure \emph{ends}}
-
-}
-
-\end{lyxlist}
-\hrule
-
-%
-
-\vspace{0.5cm}
-\hrule
-\begin{lyxlist}{PC1}
-\small{
-\item [\textbf{Procedure:}] Request book reservation
-\item [\textbf{Scope:}] Library mobile application (\emph{LMA})
-\item [\textbf{Primary Actor}:] User John
-\item [\textbf{Secondary Actor(s)}:] LibrarianSystem LibSys,
-Librarian Smith
-\item [\textbf{Goal:}] The intention of the User is to request a reservation for
-a book he is interested in.
-\item [\textbf{Level}:] User-goal level
-\item [\textbf{Main~Success~Scenario}]:\\
-1. \emph{John} is browsing the library's list of books. \\
-2. \emph{John} clicks on a book he wants to request a loan for, but the book has
-zero(0) physical copies available.\\
-3. A new panel is shown where \emph{John} can choose whether he wants to
-request a reservation or not. \\
-4. \emph{John} presses on the 'Send reservation request' button. \\
-5. A request is sent to \emph{LibSys} and it is stored in the database. \\
-6. \emph{LibSys} puts \emph{John's} request in a queue for the selected book. \\ 
-7. When \emph{John} is the first in the queue for the reserved book, a
-notification is sent, asking whether \emph{John} wants to confirm and get the
-loan, or cancel it. \\
-
-}
-
-\end{lyxlist}
-\hrule
-
-%%
-%%
-
-\vspace{0.5cm}
-\hrule
-\begin{lyxlist}{PC1}
-\small{
-\item [\textbf{Procedure:}] Edit phone number
-\item [\textbf{Scope:}] Library mobile application (\emph{LMA})
-\item [\textbf{Primary Actor}:] User John
-\item [\textbf{Secondary Actor(s)}:] PhoneVerificationSystem VerSys
-\item [\textbf{Goal:}] The intention of the User is to change his phone number
-that is connected to the library account.
-\item [\textbf{Level}:] User-goal level
-\item [\textbf{Main~Success~Scenario}]:\\
-1. \emph{John} is at the home panel of the application after logging in.\\
-2. \emph{John} presses either his profile picture icon, or his name on the
-top of the screen.\\
-3. \emph{John's} personal information, as well as the buttons to change it are
-now visible.\\
-4. \emph{John} clicks on the 'Change phone number' button.\\
-5. \emph{John} enters his new phone number in the first input field marked as
-'New phone number'. \\
-6. \emph{John} presses the 'Send SMS' button which makes VerSys send a code to
-the number that has been input in the first input field.
-\\
-7. \emph{John} receives a 4-pin code on the phone that has the new number. \\
-8. \emph{John} inputs the received pin code in the second input field marked
-as 'Code received'. \\
-9. \emph{John} presses the 'Confirm number change' button. \\
-10. \emph{John} is sent to the confirmation screen, after which he is redirected
-to the main personal information screen. \\
-
-\item [\textbf{Extensions}]:\\
-7.a \emph{John} doesn't receive the code. \\
-\hspace*{0.5cm} 7.a.1 \emph{John} entered the wrong number in the first input
-field. \\
-\hspace*{0.5cm} 7.a.2 If \emph{John} doesn't enter the sent code in 60
-seconds, the request will time out and he will be redirected to the main personal
-settings panel. \\
 
 }
 
@@ -534,3 +421,113 @@ newly opened panel. \\
 \end{lyxlist}
 \hrule
 
+\vspace{0.5cm}
+\hrule
+\begin{lyxlist}{PC1}
+\small{
+\item [\textbf{Procedure:}] User login
+\item [\textbf{Scope:}] Library mobile application (\emph{LMA})
+\item [\textbf{Primary Actor}:] User John
+\item [\textbf{Secondary Actor(s)}:] LoginSystem LS
+\item [\textbf{Goal:}] The intention of the User is to login into the system in
+order to use the services of the application.
+\item [\textbf{Level}:] User-goal level
+\item [\textbf{Main~Success~Scenario}]:\\
+1. \emph{John} enters the user name and password in the respective fields\\
+2. \emph{John} presses on the login button which sends a login request message
+to \emph{LS}\\
+3. \emph{LS} logs \emph{John} into the application\\
+
+
+\item [\textbf{Extensions}]:\\
+3.a Username of \emph{John} not found\\
+\hspace*{0.5cm} 3.a.1 \emph{LS} returns a message stating that the user name
+or password is not correct \\
+\hspace*{0.5cm} \textbf{procedure returns to step 1}
+
+3.b Password of \emph{John} not correct \\
+\hspace*{0.5cm} 3.b.1 \emph{LS} returns a message stating that the user name
+or password is not correct \\
+\hspace*{0.5cm} \textbf{procedure returns to step 1}
+
+}
+
+\end{lyxlist}
+\hrule
+
+
+
+%
+
+\vspace{0.5cm}
+\hrule
+\begin{lyxlist}{PC1}
+\small{
+\item [\textbf{Procedure:}] Request book reservation
+\item [\textbf{Scope:}] Library mobile application (\emph{LMA})
+\item [\textbf{Primary Actor}:] User John
+\item [\textbf{Goal:}] The intention of the User is to request a reservation for
+a book he is interested in.
+\item [\textbf{Level}:] User-goal level
+\item [\textbf{Main~Success~Scenario}]:\\
+1. \emph{John} is browsing the library's list of books. \\
+2. \emph{John} clicks on a book he wants to request a loan for, but the book has
+zero(0) physical copies available.\\
+3. A new panel is shown where \emph{John} can choose whether he wants to
+request a reservation or not. \\
+4. \emph{John} presses on the 'Send reservation request' button. \\
+5. A request is sent to the system and it is stored in the database. \\
+6. The system puts \emph{John's} request in a queue for the selected book. \\ 
+7. When \emph{John} is the first in the queue for the reserved book, a
+notification is sent, asking whether \emph{John} wants to confirm and get the
+loan, or cancel it. \\
+
+}
+
+\end{lyxlist}
+\hrule
+
+%%
+%%
+
+\vspace{0.5cm}
+\hrule
+\begin{lyxlist}{PC1}
+\small{
+\item [\textbf{Procedure:}] Edit phone number
+\item [\textbf{Scope:}] Library mobile application (\emph{LMA})
+\item [\textbf{Primary Actor}:] User John
+\item [\textbf{Goal:}] The intention of the User is to change his phone number
+that is connected to the library account.
+\item [\textbf{Level}:] User-goal level
+\item [\textbf{Main~Success~Scenario}]:\\
+1. \emph{John} is at the home panel of the application after logging in.\\
+2. \emph{John} presses either his profile picture icon, or his name on the
+top of the screen.\\
+3. \emph{John's} personal information, as well as the buttons to change it are
+now visible.\\
+4. \emph{John} clicks on the 'Change phone number' button.\\
+5. \emph{John} enters his new phone number in the first input field marked as
+'New phone number'. \\
+6. \emph{John} presses the 'Send SMS' button which makes the system send a code
+to the number that has been input in the first input field.
+\\
+7. \emph{John} receives a 4-pin code on the phone that has the new number. \\
+8. \emph{John} inputs the received pin code in the second input field marked
+as 'Code received'. \\
+9. \emph{John} presses the 'Confirm number change' button. \\
+10. \emph{John} is sent to the confirmation screen, after which he is redirected
+to the main personal information screen. \\
+
+\item [\textbf{Extensions}]:\\
+7.a \emph{John} doesn't receive the code. \\
+\hspace*{0.5cm} 7.a.1 \emph{John} entered the wrong number in the first input
+field. \\
+\hspace*{0.5cm} 7.a.2 If \emph{John} doesn't enter the sent code in 60
+seconds, the request will time out and he will be redirected to the main personal
+settings panel. \\
+
+}
+
+\end{lyxlist}
+\hrule
