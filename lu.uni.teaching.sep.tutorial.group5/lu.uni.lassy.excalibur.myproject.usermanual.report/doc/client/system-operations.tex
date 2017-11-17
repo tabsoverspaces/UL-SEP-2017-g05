@@ -109,3 +109,396 @@ be cancelled.
 \end{enumerate}
 
 \end{description}
+%%%%%%%%%%%%%%%%%
+%% Payment option system operations
+%%%%%%%%%%%%%%%%%
+
+%% Set default payment option
+\subsection{Set default payment option- User prompt}
+
+ When managing payment options, it is of utmost importance, that at any given
+ moment, there is at least ONE payment method registered to the user's account.
+ This operation is used to automatically select a new default payment option.
+
+\begin{description}
+
+\item \textbf{Parameters:} User ID
+
+\item \textbf{Precondition:} The user has exactly one payment option available
+to his account.
+
+\item \textbf{Post-condition:} The payment option is marked as the
+default for the user's account.
+
+\item \textbf{Output messages:} The user receives a message saying that his
+default payment option has been updated.
+
+\item \textbf{Triggering:}
+\begin{enumerate}
+\item After adding a new, or removing an old payment method that was selected as
+default, the operation is initiated.
+
+\item A request is sent to the system, asking to update the user's default
+payment method.
+
+\item The system selects the only remaining payment option and selects it as
+default.
+
+\item If update is successful, a message is sent back to the user.
+
+\end{enumerate}
+
+\end{description}
+
+%% set default payment option
+\subsection{Set default payment option- User prompt}
+
+ When managing payment options, it is of utmost importance, that at any given
+ moment, there is at least ONE payment method registered to the user's account.
+ This operation is used to select a new default payment method after each
+ modification.
+
+\begin{description}
+
+\item \textbf{Parameters:} User ID
+
+\item \textbf{Precondition:} The user has at least two registered payment
+options.
+
+\item \textbf{Post-condition:} The selected payment option is marked as the
+default for the user's account.
+
+\item \textbf{Output messages:} The user receives a message saying that his
+default payment option has been updated.
+
+\item \textbf{Triggering:}
+\begin{enumerate}
+\item After adding a new, or removing an old payment method that was selected as
+default, system prompts the user to select a new default method.
+
+\item System lists all registered payment methods.
+
+\item User selects one and presses the 'Submit choice' button.
+
+\item A request is sent to the system, asking to update the user's default
+payment method.
+
+\item If update is successful, a message is sent back to the user.
+
+\end{enumerate}
+
+\end{description}
+
+%% Visa adding payment option
+\subsection{Add Visa payment}
+
+ When registering and also editing his personal data, the client needs to be
+ able to add a Visa card as a payment option. This operation is used in both
+ instances, to handle the user's data and store it safely.
+
+\begin{description}
+
+\item \textbf{Parameters:} User ID, Card number, Card holder, Security number
+
+\item \textbf{Precondition:} The user has no currently registered Visa card
+connected to his account.
+
+\item \textbf{Post-condition:} The card information is successfully added to the
+database.
+
+\item \textbf{Output messages:} The user receives a message saying that his
+payment option has been registered into the system, and is asked if he wants to
+make it the default payment option.
+
+\item \textbf{Triggering:}
+\begin{enumerate}
+\item After entering data, press 'Add card' button.
+
+\item The information is sent to the system server.
+
+\item The system server sends the information to a Visa server, and confirms
+data.
+
+\item If confirmation successful, the system server stores the data in the
+database.
+
+\item A message is sent to the client, confirming the addition of his payment
+option.
+
+\end{enumerate}
+
+\end{description}
+
+%% Visa removing payment option
+\subsection{Remove Visa payment option}
+
+ When editing his personal data, the client needs to be
+ able to remove a Visa card from his list of payment options. This operation is
+ used to remove a card from the user's account in the system's database.
+
+\begin{description}
+
+\item \textbf{Parameters:} User ID, Card number, Card holder, Security number
+
+\item \textbf{Precondition:} The user has already registered a valid
+Visa card to his account.
+\item \textbf{Precondition1 :} The user has at least one valid payment option
+registered to his account, apart from the Visa option.
+
+\item \textbf{Post-condition:} The card information is successfully removed from
+the database.
+
+\item \textbf{Output messages:} The user receives a message saying that his
+payment option has been removed from the system.
+
+\item \textbf{Triggering:}
+\begin{enumerate}
+\item After selecting Visa payment option, click on 'Remove'
+
+\item A request is sent to the system server, asking to remove the Visa card
+from the client's account.
+
+\item The system removes the Visa card from the client's account and selects a
+new default payment option.
+
+\item A message is sent to the client, confirming the removal of his Visa
+card from his account.
+
+\end{enumerate}
+
+\end{description}
+
+%% Mastercard payment option
+\subsection{Add Mastercard payment}
+
+ When registering and also editing his personal data, the client needs to be
+ able to add a Mastercard card as a payment option. This operation is used in
+ both instances, to handle the user's data and store it safely.
+
+\begin{description}
+
+\item \textbf{Parameters:} User ID, Card number, Card holder, Security number
+
+\item \textbf{Precondition:} The user has no currently registered Mastercard
+card connected to his account.
+
+\item \textbf{Post-condition:} The card information is successfully added to the
+database.
+
+\item \textbf{Output messages:} The user receives a message saying that his
+payment option has been registered into the system, and is asked if he wants to
+make it the default payment option.
+
+\item \textbf{Triggering:}
+\begin{enumerate}
+\item After entering data, press 'Add card' button.
+
+\item The information is sent to the system server.
+
+\item The system server sends the information to a Mastercard server, and
+confirms data.
+
+\item If confirmation successful, the system server stores the data in the
+database.
+
+\item A message is sent to the client, confirming the addition of his payment
+option.
+
+\end{enumerate}
+
+\end{description}
+%% Mastercard removing option
+\subsection{Remove MasterCard payment option}
+
+ When editing his personal data, the client needs to be
+ able to remove a MasterCard card from his list of payment options. This operation is
+ used to remove a card from the user's account in the system's database.
+
+\begin{description}
+
+\item \textbf{Parameters:} User ID, Card number, Card holder, Security number
+
+\item \textbf{Precondition:} The user has already registered a valid
+MasterCard card to his account.
+\item \textbf{Precondition1 :} The user has at least one valid payment option
+registered to his account, apart from the MasterCard option.
+
+\item \textbf{Post-condition:} The card information is successfully removed from
+the database.
+
+\item \textbf{Output messages:} The user receives a message saying that his
+payment option has been removed from the system.
+
+\item \textbf{Triggering:}
+\begin{enumerate}
+\item After selecting MasterCard payment option, click on 'Remove'
+
+\item A request is sent to the system server, asking to remove the MasterCard card
+from the client's account.
+
+\item The system removes the MasterCard card from the client's account and selects a
+new default payment option.
+
+\item A message is sent to the client, confirming the removal of his MasterCard
+card from his account.
+
+\end{enumerate}
+
+\end{description}
+
+%% Paypal payment option
+\subsection{Add Paypal payment}
+
+ When registering and also editing his personal data, the client needs to be
+ able to add a Paypal account as a payment option. This operation is used
+ in both instances, to handle the user's data and store it safely.
+
+\begin{description}
+
+\item \textbf{Parameters:} User ID, Account e-mail address
+
+\item \textbf{Precondition:} The user has no currently registered Paypal account connected to his account.
+
+\item \textbf{Post-condition:} The account information is successfully added to
+the database.
+
+\item \textbf{Output messages:} The user receives a message saying that his
+payment option has been registered into the system, and is asked if he wants to
+make it the default payment option.
+
+\item \textbf{Triggering:}
+\begin{enumerate}
+\item After entering data, press 'Add account' button.
+
+\item The information is sent to the system server.
+
+\item The system server sends the information to a Paypal server, and
+confirms data.
+
+\item If confirmation successful, the system server stores the data in the
+database.
+
+\item A message is sent to the client, confirming the addition of his payment
+option.
+
+\end{enumerate}
+
+\end{description}
+
+%% Paypal removing option
+\subsection{Remove Paypal payment option}
+
+ When editing his personal data, the client needs to be
+ able to remove a Paypal account from his list of payment options. This
+ operation is used to remove an account from the user's account in the system's
+ database.
+
+\begin{description}
+
+\item \textbf{Parameters:} User ID, Account e-mail address
+
+\item \textbf{Precondition:} The user has already registered a valid
+Paypal account to his account.
+\item \textbf{Precondition1 :} The user has at least one valid payment option
+registered to his account, apart from the Paypal option.
+
+\item \textbf{Post-condition:} The account information is successfully removed
+from the database.
+
+\item \textbf{Output messages:} The user receives a message saying that his
+payment option has been removed from the system.
+
+\item \textbf{Triggering:}
+\begin{enumerate}
+\item After selecting Paypal payment option, click on 'Remove'
+
+\item A request is sent to the system server, asking to remove the Paypal account
+from the client's account.
+
+\item The system removes the Paypal account from the client's account and selects a
+new default payment option.
+
+\item A message is sent to the client, confirming the removal of his Paypal account from his account.
+
+\end{enumerate}
+
+\end{description}
+
+%% American express payment option
+\subsection{Add AmericanExpress payment}
+
+ When registering and also editing his personal data, the client needs to be
+ able to add a AmericanExpress card as a payment option. This operation is used
+ in both instances, to handle the user's data and store it safely.
+
+\begin{description}
+
+\item \textbf{Parameters:} User ID, Card number, Card holder, Security number
+
+\item \textbf{Precondition:} The user has no currently registered AmericanExpress
+card connected to his account.
+
+\item \textbf{Post-condition:} The card information is successfully added to the
+database.
+
+\item \textbf{Output messages:} The user receives a message saying that his
+payment option has been registered into the system, and is asked if he wants to
+make it the default payment option.
+
+\item \textbf{Triggering:}
+\begin{enumerate}
+\item After entering data, press 'Add card' button.
+
+\item The information is sent to the system server.
+
+\item The system server sends the information to a AmericanExpress server, and
+confirms data.
+
+\item If confirmation successful, the system server stores the data in the
+database.
+
+\item A message is sent to the client, confirming the addition of his payment
+option.
+
+\end{enumerate}
+
+\end{description}
+
+%% American express removing option
+\subsection{Remove AmericanExpress payment option}
+
+ When editing his personal data, the client needs to be
+ able to remove an AmericanExpress card from his list of payment options. This
+ operation is used to remove a card from the user's account in the system's database.
+
+\begin{description}
+
+\item \textbf{Parameters:} User ID, Card number, Card holder, Security number
+
+\item \textbf{Precondition:} The user has already registered a valid
+AmericanExpress card to his account.
+\item \textbf{Precondition1 :} The user has at least one valid payment option
+registered to his account, apart from the AmericanExpress option.
+
+\item \textbf{Post-condition:} The card information is successfully removed from
+the database.
+
+\item \textbf{Output messages:} The user receives a message saying that his
+payment option has been removed from the system.
+
+\item \textbf{Triggering:}
+\begin{enumerate}
+\item After selecting AmericanExpress payment option, click on 'Remove'
+
+\item A request is sent to the system server, asking to remove the AmericanExpress card
+from the client's account.
+
+\item The system removes the AmericanExpress card from the client's account and selects a
+new default payment option.
+
+\item A message is sent to the client, confirming the removal of his AmericanExpress
+card from his account.
+
+\end{enumerate}
+
+\end{description}
