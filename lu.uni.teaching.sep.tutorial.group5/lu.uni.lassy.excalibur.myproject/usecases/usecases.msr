@@ -10,20 +10,7 @@ import lu.uni.lassy.messir.libraries.math
 import lu.uni.lassy.messir.libraries.primitives
 import lu.uni.lassy.messir.libraries.string
 
-import lu.uni.lassy.excaliks() {
-		step a: actClient executes sfShowBooks
-		}
-		
-	use case system subfunction sfShowBooks() {
-			actor actClient[primary, active]
-			
-			
-			
-			returned messages {
-			aMessage returned to actClient
-			
-			}
-		}
+Use Case Model{
 	}
 
 }
