@@ -224,6 +224,15 @@
   <semanticResources>platform:/resource/lu.uni.lassy.excalibur.standard.specification.libraries/library/documentation/PrimaryType-Primitive-ptInteger.msrd</semanticResources>
   <semanticResources>platform:/resource/lu.uni.lassy.excalibur.standard.specification.libraries/library/documentation/PrimaryType-Primitive-ptReal.msrd</semanticResources>
   <semanticResources>platform:/resource/lu.uni.lassy.excalibur.standard.specification.libraries/library/documentation/PrimaryType-Primitive-ptString.msrd</semanticResources>
+  <semanticResources>usecases/usecaseinstance-oePressBrowseBooksButton-ucioePressBrowseBooksButton.msr</semanticResources>
+  <semanticResources>usecases/usecaseinstance-oePressBrowseLoansButton-ucioePressBrowseLoansButton.msr</semanticResources>
+  <semanticResources>usecases/usecaseinstance-oePressReservationButton-ucioePressReservationButton.msr</semanticResources>
+  <semanticResources>usecases/usecaseinstance-sfLogin-ucisfLogin.msr</semanticResources>
+  <semanticResources>usecases/usecaseinstance-ugBrowseBookReservations-uciugBrowseBookReservations.msr</semanticResources>
+  <semanticResources>usecases/usecaseinstance-ugBrowseBooks-uciugBrowseBooks.msr</semanticResources>
+  <semanticResources>documentation/View-uci-uciugBrowseBooks.msrd</semanticResources>
+  <semanticResources>usecases/usecaseinstance-sfShowBooks-ucisfShowBooks.msr</semanticResources>
+  <semanticResources>documentation/View-uci-ucisfShowBooks.msrd</semanticResources>
   <ownedViews xmi:type="viewpoint:DView" xmi:id="_vUlB0MP4EeeRL_uO5XCuPw">
     <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/lu.uni.lassy.excalibur.ui.viewer/description/excalibur_models.odesign#//@ownedViewpoints[name='msr-viewpoint']"/>
   </ownedViews>

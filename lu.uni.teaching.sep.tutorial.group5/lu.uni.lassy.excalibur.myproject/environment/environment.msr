@@ -14,5 +14,33 @@ import lu.uni.lassy.messir.libraries.string
 
 Environment Model {
 			
-}
+
+	
+	actor actClient role rnactClient cardinality[0 .. *] {
+			input interface inactClient {
+			
+			
+			
+			}
+			output interface outactClient {
+			operation oeRequestBooksList():ptBoolean
+			operation oeRequestLoanList():ptBoolean
+			operation oeRequestReservationList():ptBoolean
+			operation oeRequestNotificationList():ptBoolean
+			operation oeSendMessage():ptBoolean
+			operation oeChangePassword():ptBoolean
+			operation oeChangeEmail():ptBoolean
+			operation oeChangeLivingAddress():ptBoolean
+			operation oeRemovePaymentMethod():ptBoolean
+			operation oeLogin():ptBoolean
+			}
+		}
+	actor actLibrarian role rnactLibrarian cardinality[0 .. *] {
+			input interface inactLibrarian {
+			}
+			output interface outactLibrarian {
+			operation oeGetIssue():ptBoolean
+			}
+		}
+	}
 }
