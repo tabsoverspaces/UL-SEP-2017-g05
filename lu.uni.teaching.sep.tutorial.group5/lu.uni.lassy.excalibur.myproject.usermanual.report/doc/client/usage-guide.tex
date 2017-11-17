@@ -20,7 +20,7 @@ he is interested in.
 3. A new panel is shown where \emph{John} can choose whether he wants to
 request a loan or not. \\
 4. \emph{John} presses on the 'Send loan request' button. \\
-5. A request is sent to \emph{LibSys} and it is stored in the database. \\
+5. A request is sent to the system and it is stored in the database. \\
 6. \emph{Smith}  processes the request and allows the loan to \emph{John}.\\ 
 7. The system sends a notification to \emph{John} saying that his loan is
 approved and he can pick up his book at the library .\\
@@ -42,6 +42,45 @@ request has been denied.\\
 
 \end{lyxlist}
 \hrule
+
+%%%%%
+%%%%%%
+%%%%%
+
+\vspace{0.5cm}
+\hrule
+\begin{lyxlist}{PC1}
+\small{
+\item [\textbf{Procedure:}] Send a message to a librarian
+\item [\textbf{Scope:}] Library mobile application (\emph{LMA})
+\item [\textbf{Primary Actor}:] User John
+\item [\textbf{Secondary Actor(s)}:] Librarian Smith
+\item [\textbf{Goal:}] The intention of the User is to send a message to a
+librarian, whether it is a question of technical nature or library
+functionality.
+\item [\textbf{Level}:] User-goal level
+\item [\textbf{Main~Success~Scenario}]:\\
+1. \emph{John} is in the home panel, browsing the library's list of books. \\
+2. \emph{John} clicks on the notifications ('N') button in the top right corner.
+\\
+3. A new panel is shown where \emph{John} can choose whether he wants to
+inspect his system/librarian notifications, or send a message to a librarian. \\
+4. \emph{John} presses the 'Contact a librarian' button in the bottom-right
+corner of the panel.
+\\
+5. A new panel opens, with three elements. \\
+6. \emph{John} inputs the title of the message in the 'Issue title' input form.
+\\
+7. \emph{John} inputs thte message contents in the 'Message' input form. \\
+8. \emph{John} presses the 'Send issue' button, which sends the message to the
+system. \\
+
+}
+
+\end{lyxlist}
+\hrule
+
+
 %%%%%%%%%%%%
 %%%%%%%%%%%%
 %%%%%%%%%%%%
@@ -454,8 +493,6 @@ or password is not correct \\
 \end{lyxlist}
 \hrule
 
-
-
 %
 
 \vspace{0.5cm}
@@ -482,7 +519,6 @@ notification is sent, asking whether \emph{John} wants to confirm and get the
 loan, or cancel it. \\
 
 }
-
 \end{lyxlist}
 \hrule
 
@@ -530,3 +566,9 @@ settings panel. \\
 
 \end{lyxlist}
 \hrule
+
+
+
+
+
+

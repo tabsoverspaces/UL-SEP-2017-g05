@@ -502,3 +502,169 @@ card from his account.
 \end{enumerate}
 
 \end{description}
+
+%%%%%%
+% EDIT PERSONAL INFORMATION OPERATIONS
+%%%%%
+
+%%%%%%%%%%%
+%% phone number confirmation code operation
+%%%%%%%%%%%
+\subsection{Phone number confirmation code}
+
+ When editing his personal data, the client is able to edit his current phone
+ number. To do this, he inputs his new phone number, to which the system sends a
+ code, in order to confirm that the new number entered is indeed the user's
+ number.
+
+\begin{description}
+
+\item \textbf{Parameters:} User ID, New phone number
+
+\item \textbf{Precondition:} The user correctly enters his new phone number.
+
+\item \textbf{Post-condition:} The user correctly enters the received
+confirmation code.
+
+\item \textbf{Output messages:} The user is shown a message stating if the
+confirmation code is correct.
+
+\item \textbf{Triggering:}
+\begin{enumerate}
+\item User inputs new phone number into the 'New phone number' input field
+
+\item User presses the 'Send SMS' button,
+
+\item The system received the request with the number, and sends a randomly
+generated 5 digit code to that number.
+
+\item Upon receiving the code, the user inputs the code into the 'Code received'
+input field.
+
+\item User presses the 'Confirm number change' button which sends a request to
+the system
+
+\item If the code received by the server is identical to the one that the server
+sent, the process finished successfully and the user's number is updated.
+
+\end{enumerate}
+
+\end{description}
+
+%%%%%%%%%%%
+%% password change operation
+%%%%%%%%%%%
+\subsection{Password change}
+
+ When editing his personal data, the client is able to edit his password. To do
+ this, he inputs his old password that gets check with the password stored in
+ the database, and then the operation continues with updating the password.
+
+\begin{description}
+
+\item \textbf{Parameters:} User ID, Old password, New password
+
+\item \textbf{Precondition:} The user enters his correct old password.
+
+\item \textbf{Post-condition:} The user's password is successfully updated in
+the database.
+
+\item \textbf{Output messages:} The user is shown a message stating that his
+password has been successfully changed.
+
+\item \textbf{Triggering:}
+\begin{enumerate}
+\item User inputs old password into the 'Old password' input field
+
+\item User inputs his new password in the 'New password' input field
+
+\item User inputs his new password again in the 'Confirm new password' field
+
+\item User presses 'Submit', which sends a request to the system's server.
+
+\item The request contains the old password as well as the new password.
+
+\item The system compares the old password that the user has input, with the
+password that the system has stored in the database. If the two are identical,
+the user's password gets updated with the new password that he input.
+
+\end{enumerate}
+
+\end{description}
+
+%%%%%%%%%%%
+%% email address change
+%%%%%%%%%%%
+\subsection{E-mail address change}
+
+ When editing his personal data, the client is able to edit his current e-mail
+ address.
+ To do this, he inputs his new e-mail and sends the request to the system.
+ 
+ \begin{description}
+
+\item \textbf{Parameters:} User ID, New e-mail address
+
+\item \textbf{Precondition:} The new e-mail address of the user is a valid one.
+
+\item \textbf{Post-condition:} The user's e-mail address is successfully updated
+in the database.
+
+\item \textbf{Output messages:} The user is shown a message stating that his
+e-mail address has been successfully changed.
+
+\item \textbf{Triggering:}
+\begin{enumerate}
+\item User inputs new e-mail address into the 'New e-mail address' input field
+
+\item User presses 'Submit', which sends a request to the system's server.
+
+\item The request contains the new e-mail address that the system will use to
+update the user's email address.
+
+\item The system updates the user's email address in the database.
+
+\end{enumerate}
+
+\end{description}
+
+%%%%%%%%%%%
+%% living address change
+%%%%%%%%%%%
+\subsection{Living address change}
+
+ When editing his personal data, the client is able to edit his current living
+ address.
+ To do this, he inputs all the relevant information of the address, such as
+ house number, street, postal code and the look, and sends a request to the
+ system.
+ 
+ \begin{description}
+
+\item \textbf{Parameters:} User ID, New address line #1, New address line #2,
+New address line #3
+
+\item \textbf{Precondition:} The new living address of the user is a valid one.
+
+\item \textbf{Post-condition:} The user's e-mail address is successfully updated
+in the database.
+
+\item \textbf{Output messages:} The user is shown a message stating that his
+living address has been successfully changed.
+
+\item \textbf{Triggering:}
+\begin{enumerate}
+\item User inputs new living address lines' into the respective new address
+'Line' input fields.
+
+\item User presses 'Submit', which sends a request to the system's server.
+
+\item The request contains the new living address information that the system
+will use to update the user's living address.
+
+\item The system updates the user's living address in the database.
+
+\end{enumerate}
+
+\end{description}
+
