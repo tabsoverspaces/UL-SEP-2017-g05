@@ -10,7 +10,81 @@ import lu.uni.lassy.messir.libraries.math
 import lu.uni.lassy.messir.libraries.primitives
 import lu.uni.lassy.messir.libraries.string
 
-Use Case Model{
-	}
+import lu.uni.lassy.excalibur.myproject.environment
 
+Use Case Model{
+	use case system subfunction sfLogin(AID:ptString, APwd:ptString) {
+			actor actClient[primary, active]
+			returned messages {
+			ieLoginStatus(AStatus) returned to actClient
+			ieMessage(AMessage) returned to actClient
+			}
+		}
+	use case system subfunction sfShowPersonalSettings() {
+			actor actClient[primary, active]
+			
+			returned messages {
+			ieShowPersonalSettingsPanel returned to actClient
+			}
+		}
+	use case system subfunction sfShowPasswordEditPanel() {
+			actor actClient[primary, active]
+			returned messages {
+			ieShowPasswordEditPanel returned to actClient
+			}
+		}
+	use case system subfunction sfShowNumberEditPanel() {
+			actor actClient[primary, active]
+			returned messages {
+			ieShowNumberEditPanel returned to actClient
+			}
+		}
+	use case system subfunction sfShowEmailEditPanel() {
+			actor actClient[primary, active]
+			returned messages {
+			ieShowEmailEditPanel returned to actClient
+			}
+		}
+	use case system subfunction sfShowAddressEditPanel() {
+			actor actClient[primary, active]
+			returned messages {
+			ieShowAddressEditPanel returned to actClient
+			}
+		}
+	use case system subfunction sfShowPaymentEditPanel() {
+			actor actClient[primary, active]
+			returned messages {
+			ieShowPaymentEditPanel returned to actClient
+			}
+		}
+	use case system usergoal ugChangePassword() {
+			actor actClient[primary, active]
+			
+			reuse sfLogin
+			reuse sfShowPersonalSettings
+			reuse sfShowPasswordEditPanel
+			reuse sfInputChangePasswordData
+			
+			step a: actClient executes sfLogin
+			step b: actClient executes sfShowPersonalSettings
+			step c: actClient executes sfShowPasswordEditPanel
+			step d: actClient executes sfInputChangePasswordData
+			step e: actClient executes sfSubmitInformationChange
+		}
+
+	use case system subfunction sfInputChangePasswordData(AOldPassword : ptString, ANewPassword : ptString, ANewPasswordConfirm : ptString) {
+			actor actClient[primary, active]
+			
+			returned messages {
+			
+			}
+		}
+	use case system subfunction sfSubmitInformationChange() {
+			actor actClient[primary, active]
+			
+			returned messages {
+			ieMessage returned to actClient
+			}
+		}
+	}
 }

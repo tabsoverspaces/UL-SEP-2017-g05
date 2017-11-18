@@ -25,6 +25,16 @@ Concept Model {
 			operation init(AvpStarted:ptBoolean): ptBoolean
 		}	
 
-	}
+	
+
+		
+
+		
+
+		
+
+		
+
+		}
 }
 }

@@ -9,8 +9,7 @@ import lu.uni.lassy.messir.libraries.calendar
 import lu.uni.lassy.messir.libraries.math
 import lu.uni.lassy.messir.libraries.primitives
 import lu.uni.lassy.messir.libraries.string
-
-
+import lu.uni.lassy.excalibur.myproject.concepts.primarytypes.datatypes
 
 Environment Model {
 			
@@ -21,18 +20,28 @@ Environment Model {
 			
 			
 			
+			operation ieLoginStatus(AStatus : ptInteger):ptBoolean
+			operation ieShowPersonalSettingsPanel():ptBoolean
+			operation ieShowAddressEditPanel():ptBoolean
+			operation ieShowEmailEditPanel():ptBoolean
+			operation ieShowNumberEditPanel():ptBoolean
+			operation ieShowPasswordEditPanel():ptBoolean
+			operation ieShowPaymentEditPanel():ptBoolean
+			operation ieMessage(AMessage : dtString):ptBoolean
 			}
 			output interface outactClient {
 			operation oeRequestBooksList():ptBoolean
 			operation oeRequestLoanList():ptBoolean
 			operation oeRequestReservationList():ptBoolean
 			operation oeRequestNotificationList():ptBoolean
-			operation oeSendMessage():ptBoolean
-			operation oeChangePassword():ptBoolean
-			operation oeChangeEmail():ptBoolean
-			operation oeChangeLivingAddress():ptBoolean
-			operation oeRemovePaymentMethod():ptBoolean
-			operation oeLogin():ptBoolean
+			
+			operation oeSendMessage(AMessage : dtString):ptBoolean
+			operation oeChangeEmail(ANewEmail : ptString):ptBoolean
+			operation oeChangeLivingAddress(line1 : ptString, line2 : ptString, line3 :ptString):ptBoolean
+			operation oeRemovePaymentMethod(APaymentOption : dtPaymentOption):ptBoolean
+			operation oeLogin(AID:ptString, APwd:ptString):ptBoolean
+			operation oeSetDefaultPaymentOption(APaymentMethod : dtPaymentOption):ptBoolean
+			operation oeInputChangePasswordData(AOldPassword : ptString, ANewPassword : ptString, ANewPasswordConfirmation : ptString):ptBoolean
 			}
 		}
 	actor actLibrarian role rnactLibrarian cardinality[0 .. *] {
