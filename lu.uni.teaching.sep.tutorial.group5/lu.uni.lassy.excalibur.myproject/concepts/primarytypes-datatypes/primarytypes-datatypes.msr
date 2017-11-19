@@ -9,7 +9,7 @@ import lu.uni.lassy.messir.libraries.calendar
 import lu.uni.lassy.messir.libraries.math
 import lu.uni.lassy.messir.libraries.primitives
 import lu.uni.lassy.messir.libraries.string
-
+import lu.uni.lassy.excalibur.myproject.environment
 
 
 Concept Model {
@@ -17,46 +17,26 @@ Concept Model {
 	Primary Types {
    
    // main datatype used for payments
-	datatype dtPaymentOption {
-		attribute name : ptString
-		
-		operation payment(AAmount : ptReal) : ptBoolean
-		operation hasEnoughBalance(AAmount : ptReal) : ptBoolean
-	}
+	
 	
 	// second level datatype that's used to distinct between
 	// cards and accounts	
-	datatype dtCardPayment extends dtPaymentOption{
-		attribute cardNumber : ptString
-		attribute cardHolder : ptString	
-	}
+	
 	
 	// second level datatype used for accounts
-	datatype dtAccountPayment extends dtPaymentOption{
-		attribute account : ptString
-	}
+	
 	
 	// final level datatype
-	datatype dtVisaPaymentOption extends dtCardPayment {
-		
-	}
+	
 	
 	// final level datatype
-	datatype dtMastercardPaymentOption extends dtCardPayment{
-		
-		
-	}
+	
 	
 	// final level datatype
-	datatype dtAmericanExpressPaymentOption extends dtCardPayment{
-		
-	}
+	
 	
 	// final level datatype
-	datatype dtPaypalPaymentOption extends dtAccountPayment{
-		
-	}
 	
 }
 }
-} 
+}

@@ -13,10 +13,28 @@ import lu.uni.lassy.messir.libraries.string
 
 
 Concept Model {
+		Primary Types {
+			datatype dtPerson {
+				
+				attribute firstName : ptString
+				attribute lastName : ptString
+				
+			}
+			
+			datatype dtCardSecurityNumber {
+				attribute num1 : ptInteger
+				attribute num2 : ptInteger
+				attribute num3 : ptInteger
+			}
+		}
+			
+	
 
 	Secondary Types {
 
-	}
+	
 
+
+}
 }
 }
