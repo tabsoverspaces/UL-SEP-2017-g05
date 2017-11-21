@@ -1,12 +1,12 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=latex 2017.7.23)  23 JUL 2017 19:24
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=latex 2017.11.10)  21 NOV 2017 21:42
 entering extended mode
- \write18 enabled.
+ restricted \write18 enabled.
  Source specials enabled.
  %&-line parsing enabled.
 **report.tex
 (./report.tex
 LaTeX2e <2017-04-15>
-Babel <3.12> and hyphenation patterns for 84 language(s) loaded.
+Babel <3.15> and hyphenation patterns for 84 language(s) loaded.
 (/usr/local/texlive/2017/texmf-dist/tex/latex/base/book.cls
 Document Class: book 2014/09/29 v1.4h Standard LaTeX document class
 (/usr/local/texlive/2017/texmf-dist/tex/latex/base/bk11.clo
@@ -33,7 +33,7 @@ Package: etex 2016/08/01 v2.7 eTeX basic definition package (PEB,DPC)
 \c@def=\count89
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/amsmath/amsmath.sty
-Package: amsmath 2016/11/05 v2.16a AMS math features
+Package: amsmath 2017/09/02 v2.17a AMS math features
 \@mathmargin=\skip43
 
 For additional information on amsmath, use the `?' option.
@@ -140,19 +140,19 @@ Package footmisc Info: Declaring symbol style lamport*-robust on input line 924
 .
 )
 (/usr/local/texlive/2017/texmf-dist/tex/generic/babel/babel.sty
-Package: babel 2017/06/29 3.12 The Babel package
+Package: babel 2017/11/03 3.15 The Babel package
 
 (/usr/local/texlive/2017/texmf-dist/tex/generic/babel/switch.def
-File: switch.def 2017/06/29 3.12 Babel switching mechanism
+File: switch.def 2017/11/03 3.15 Babel switching mechanism
 )
 (/usr/local/texlive/2017/texmf-dist/tex/generic/babel-english/english.ldf
 Language: english 2017/06/06 v3.3r English support from the babel system
 
 (/usr/local/texlive/2017/texmf-dist/tex/generic/babel/babel.def
-File: babel.def 2017/06/29 3.12 Babel common definitions
+File: babel.def 2017/11/03 3.15 Babel common definitions
 
 (/usr/local/texlive/2017/texmf-dist/tex/generic/babel/switch.def
-File: switch.def 2017/06/29 3.12 Babel switching mechanism
+File: switch.def 2017/11/03 3.15 Babel switching mechanism
 )
 \babel@savecnt=\count103
 \U@D=\dimen121
@@ -162,7 +162,7 @@ File: switch.def 2017/06/29 3.12 Babel switching mechanism
 \l@newzealand = a dialect from \language\l@british 
 ))
 (/usr/local/texlive/2017/texmf-dist/tex/latex/pdfpages/pdfpages.sty
-Package: pdfpages 2017/07/14 v0.5j Insert pages of external PDF documents (AM)
+Package: pdfpages 2017/10/31 v0.5l Insert pages of external PDF documents (AM)
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/base/ifthen.sty
 Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
@@ -255,10 +255,10 @@ Package graphics Info: Driver file: dvips.def on input line 99.
 \AM@pageheight=\dimen129
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/pdfpages/pppdftex.def
-File: pppdftex.def 2017/07/14 v0.5j Pdfpages driver for pdfTeX (AM)
+File: pppdftex.def 2017/10/31 v0.5l Pdfpages driver for pdfTeX (AM)
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/pdfpages/ppnull.def
-File: ppnull.def 2017/07/14 v0.5j Pdfpages dummy driver (AM)
+File: ppnull.def 2017/10/31 v0.5l Pdfpages dummy driver (AM)
 
 
 Package pdfpages Warning: I will use a dummy \includepdf command which
@@ -591,10 +591,10 @@ Package etexcmds Info: Could not find \expanded.
 )))
 (/usr/local/texlive/2017/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
 (/usr/local/texlive/2017/texmf-dist/tex/latex/l3kernel/expl3.sty
-Package: expl3 2017/07/19 L3 programming layer (loader) 
+Package: expl3 2017/09/18 L3 programming layer (loader) 
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/l3kernel/expl3-code.tex
-Package: expl3 2017/07/19 L3 programming layer (code)
+Package: expl3 2017/09/18 L3 programming layer (code)
 \c_max_int=\count130
 \l_tmpa_int=\count131
 \l_tmpb_int=\count132
@@ -742,7 +742,7 @@ Normal \dimen register pool exhausted, switching to extended pool.
 (/usr/local/texlive/2017/texmf-dist/tex/latex/l3kernel/l3dvips.def
 File: l3dvips.def 2017/03/18 v L3 Experimental driver: dvips
 ))
-Package: xparse 2017/07/19 L3 Experimental document command parser
+Package: xparse 2017/09/18 L3 Experimental document command parser
 \l__xparse_current_arg_int=\count290
 \g__xparse_grabber_int=\count291
 \l__xparse_m_args_int=\count292
@@ -1285,27 +1285,27 @@ Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
 \@vwid@roff=\dimen279
 ))
 (/usr/local/texlive/2017/texmf-dist/tex/latex/animate/animate.sty
-Package: animate 2017/05/18 PDF animations from files and inline graphics
+Package: animate 2017/09/29 PDF animations from files and inline graphics
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/oberdiek/ifdraft.sty
 Package: ifdraft 2016/05/16 v1.4 Detect class options draft and final (HO)
 )
 (/usr/local/texlive/2017/texmf-dist/tex/latex/media9/pdfbase.sty
 (/usr/local/texlive/2017/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty
-Package: l3keys2e 2017/07/19 LaTeX2e option processing using LaTeX3 keys
+Package: l3keys2e 2017/09/18 LaTeX2e option processing using LaTeX3 keys
 )
-Package: pdfbase 2017/03/23 v0.14 driver independent access to low-level PDF fe
+Package: pdfbase 2017/09/29 v0.18 driver independent access to low-level PDF fe
 atures
 \g_pbs_page_int=\count307
 \g_pbs_obj_int=\count308
 ) (/usr/local/texlive/2017/texmf-dist/tex/latex/ocgx2/ocgbase.sty
-Package: ocgbase 2017/03/30 v0.10 support package for ocgx2.sty
+Package: ocgbase 2017/09/29 v0.12 support package for ocgx2.sty
+\g_ocgbase_nd_int=\count309
 )
 \@anim@box=\box67
 \@anim@measbox=\box68
 \@anim@tmpdima=\dimen280
 \@anim@tmpdimb=\dimen281
-\@anim@objnum=\count309
 \@anim@num=\count310
 \@anim@curframe=\count311
 \@anim@curframe@zb=\count312
@@ -1387,7 +1387,7 @@ File: csquotes.cfg
 Package: datetime 2015/03/20 v2.60 Date Time Package
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/fmtcount/fmtcount.sty
-Package: fmtcount 2017/07/21 v3.03
+Package: fmtcount 2017/09/16 v3.04
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/fmtcount/fcprefix.sty
 Package: fcprefix 2012/09/28
@@ -1554,7 +1554,7 @@ Package: longtable 2014/10/28 v4.11 Multi-page Table package (DPC)
 \LT@p@ftn=\toks53
 )
 (/usr/local/texlive/2017/texmf-dist/tex/latex/media9/media9.sty
-Package: media9 2017/06/12 v0.80 acrobat-9/X compatible media
+Package: media9 2017/09/29 v0.86 acrobat-9/X compatible media
 \g_mix_pkgresizeflag_int=\count374
 \l_mix_poster_box=\box80
 \g_mix_wd_dim=\dimen311
@@ -1568,20 +1568,20 @@ Package: media9 2017/06/12 v0.80 acrobat-9/X compatible media
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \addmediapath with sig. 'm' on line 807.
+. Defining command \addmediapath with sig. 'm' on line 804.
 .................................................
 \l_mix_pbtn_box=\box81
 \mix@btn@dim=\dimen314
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \includemedia with sig. 'O{}mm' on line 1215.
+. Defining command \includemedia with sig. 'O{}mm' on line 1212.
 .................................................
 \g_mix_mbtncnt_int=\count380
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \mediabutton with sig. 'O{}m' on line 2417.
+. Defining command \mediabutton with sig. 'O{}m' on line 2418.
 .................................................
 )
 (/usr/local/texlive/2017/texmf-dist/tex/latex/microtype/microtype.sty
@@ -2446,8 +2446,8 @@ LaTeX Font Info:    Overwriting symbol font `wasy' in version `bold'
 (Font)                  U/wasy/m/n --> U/wasy/b/n on input line 90.
 )
 (/usr/local/texlive/2017/texmf-dist/tex/latex/tocloft/tocloft.sty
-Package: tocloft 2013/05/02 v2.3f parameterised ToC, etc., typesetting
-Package tocloft Info: The document has chapter divisions on input line 44.
+Package: tocloft 2017/08/31 v2.3i parameterised ToC, etc., typesetting
+Package tocloft Info: The document has chapter divisions on input line 51.
 \cftparskip=\skip177
 \cftbeforetoctitleskip=\skip178
 \cftaftertoctitleskip=\skip179
@@ -2491,7 +2491,7 @@ Normal \skip register pool exhausted, switching to extended pool.
 \cftsubtabnumwidth=\skip272
 )
 (/usr/local/texlive/2017/texmf-dist/tex/latex/glossaries/base/glossaries.sty
-Package: glossaries 2017/06/11 v4.30 (NLCT)
+Package: glossaries 2017/11/03 v4.34 (NLCT)
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/mfirstuc/mfirstuc.sty
 Package: mfirstuc 2016/07/31 v2.04 (NLCT)
@@ -2574,7 +2574,7 @@ Package: fp-eval 1995/04/03
 )
 (/usr/local/texlive/2017/texmf-dist/tex/latex/glossaries/base/glossaries-compat
 ible-307.sty
-Package: glossaries-compatible-307 2017/06/11 v4.30 (NLCT)
+Package: glossaries-compatible-307 2017/11/03 v4.34 (NLCT)
 )
 (/usr/local/texlive/2017/texmf-dist/tex/latex/tracklang/tracklang.sty
 Package: tracklang 2017/03/25 v1.3.4 (NLCT) Track Languages
@@ -2599,22 +2599,22 @@ File: glossaries-english.ldf 2014/11/23 v1.0
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/glossaries/styles/glossary-hypern
 av.sty
-Package: glossary-hypernav 2017/06/11 v4.30 (NLCT)
+Package: glossary-hypernav 2017/11/03 v4.34 (NLCT)
 )
 (/usr/local/texlive/2017/texmf-dist/tex/latex/glossaries/styles/glossary-list.s
 ty
-Package: glossary-list 2017/06/11 v4.30 (NLCT)
+Package: glossary-list 2017/11/03 v4.34 (NLCT)
 \glslistdottedwidth=\skip275
 )
 (/usr/local/texlive/2017/texmf-dist/tex/latex/glossaries/styles/glossary-long.s
 ty
-Package: glossary-long 2017/06/11 v4.30 (NLCT)
+Package: glossary-long 2017/11/03 v4.34 (NLCT)
 \glsdescwidth=\skip276
 \glspagelistwidth=\skip277
 )
 (/usr/local/texlive/2017/texmf-dist/tex/latex/glossaries/styles/glossary-super.
 sty
-Package: glossary-super 2017/06/11 v4.30 (NLCT)
+Package: glossary-super 2017/11/03 v4.34 (NLCT)
  (/usr/local/texlive/2017/texmf-dist/tex/latex/supertabular/supertabular.sty
 Package: supertabular 2004/02/20 v4.1e the supertabular environment
 \c@tracingst=\count480
@@ -2636,7 +2636,7 @@ Package: supertabular 2004/02/20 v4.1e the supertabular environment
 ))
 (/usr/local/texlive/2017/texmf-dist/tex/latex/glossaries/styles/glossary-tree.s
 ty
-Package: glossary-tree 2017/06/11 v4.30 (NLCT)
+Package: glossary-tree 2017/11/03 v4.34 (NLCT)
 \glstreeindent=\skip281
 ))
 \glswrite=\write7
@@ -3124,12 +3124,12 @@ Package rerunfilecheck Info: File `report.out' has not changed.
 (rerunfilecheck)             Checksum: 013313B4CCC233C358121A07597DF43E;1146.
  ) 
 Here is how much of TeX's memory you used:
- 59386 strings out of 492991
- 1279032 string characters out of 6132647
- 1877801 words of memory out of 5000000
- 61509 multiletter control sequences out of 15000+600000
+ 59455 strings out of 492986
+ 1280331 string characters out of 6132596
+ 1878921 words of memory out of 5000000
+ 61583 multiletter control sequences out of 15000+600000
  562707 words of font info for 116 fonts, out of 8000000 for 9000
  1142 hyphenation exceptions out of 8191
- 69i,16n,98p,10568b,2020s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 69i,16n,98p,10568b,2022s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on report.dvi (31 pages, 296356 bytes).
+Output written on report.dvi (31 pages, 296424 bytes).
