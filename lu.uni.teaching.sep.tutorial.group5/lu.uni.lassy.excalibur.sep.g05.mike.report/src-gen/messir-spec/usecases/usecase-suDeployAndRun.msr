@@ -1,0 +1,40 @@
+package icrash.usecases.suDeployAndRun {
+	import icrash.concepts.primarytypes.datatypes
+	import icrash.environment
+	import icrash.usecases.suGlobalCrisisHandling
+	import icrash.usecases.ugAdministrateTheSystem
+	import icrash.usecases.subfunctions
+
+	Use Case Model {
+		use case system summary suDeployAndRun() {
+			primary actor actAdministrator[active]
+		 	secondary actor actMsrCreator[active]
+			secondary actor actCoordinator[active,multiple]
+			secondary actor actActivator[proactive]
+			secondary actor actComCompany[active]
+
+			reuse oeCreateSystemAndEnvironment
+			reuse ugAdministrateTheSystem[1..*]
+			reuse suGlobalCrisisHandling[1..*]
+			reuse oeSetClock[1..*]
+			reuse oeSollicitateCrisisHandling[0..*]
+			reuse oeAlert[1..*]
+ 
+			step a: actMsrCreator executes oeCreateSystemAndEnvironment
+			step b: actAdministrator executes ugAdministrateTheSystem
+			step c: actComCompany executes oeAlert
+			step d: actActivator executes oeSetClock
+			step ^e: actActivator executes oeSollicitateCrisisHandling
+			step f: actCoordinator executes suGlobalCrisisHandling
+			
+      ordering constraint "step (a) must be always the first step."
+      ordering constraint "step (f) can be executed by different actCoordinator actors."
+      ordering constraint "if (e) than previously (d)."
+		}
+		
+		use case instance uciSimpleAndComplete : suDeployAndRun {
+			related test case instance lu.uni.lassy.excalibur.examples.icrash.tests.testcase01.instance01.instance01
+		}
+		
+	}
+}

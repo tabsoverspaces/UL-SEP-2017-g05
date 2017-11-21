@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>lu.uni.lassy.excalibur.myproject.usermanual.report</name>
+	<name>lu.uni.lassy.excalibur.sep.g05.mike.report</name>
 	<comment></comment>
 	<projects>
 	</projects>
@@ -11,24 +11,21 @@
 			</arguments>
 		</buildCommand>
 		<buildCommand>
-			<name>org.eclipse.ui.externaltools.ExternalToolBuilder</name>
-			<triggers>auto,full,incremental,</triggers>
+			<name>makeGlossaries</name>
 			<arguments>
 				<dictionary>
 					<key>LaunchConfigHandle</key>
-					<value>&lt;project&gt;/.externalToolBuilders/MakeGlossaries.launch</value>
+					<value>&lt;project&gt;/.externalToolBuilders/makeGlossariesBuilderConfiguration.launch</value>
+				</dictionary>
+				<dictionary>
+					<key>incclean</key>
+					<value>true</value>
 				</dictionary>
 			</arguments>
 		</buildCommand>
 	</buildSpec>
 	<natures>
+		<nature>lu.uni.lassy.excalibur.documentation.ui.projectnature</nature>
 		<nature>net.sourceforge.texlipse.builder.TexlipseNature</nature>
 	</natures>
-	<linkedResources>
-		<link>
-			<name>.tex</name>
-			<type>1</type>
-			<location>/Applications/Eclipse.app/Contents/MacOS/d::/texlive/2017/texmf-dist/tex/latex/tools/.tex</location>
-		</link>
-	</linkedResources>
 </projectDescription>

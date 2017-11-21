@@ -1,0 +1,74 @@
+package icrash.usecases.subfunctions {
+
+import lu.uni.lassy.messir.libraries.primitives
+
+import icrash.concepts.primarytypes.datatypes
+import icrash.concepts.primarytypes.classes
+import icrash.concepts.secondarytypes.datatypes
+import lu.uni.lassy.messir.libraries.primitives
+import lu.uni.lassy.messir.libraries.math
+import lu.uni.lassy.messir.libraries.calendar
+
+import icrash.environment
+
+  Use Case Model {
+    
+      use case system subfunction oeAddCoordinator(AdtCoordinatorID:dtCoordinatorID, AdtLogin:dtLogin, AdtPassword:dtPassword){
+        primary actor icrash.environment.actAdministrator[active]
+        returned messages {
+          ieCoordinatorAdded() returned to actAdministrator
+        }
+      }
+    use case system subfunction oeAlert() {
+      primary actor icrash.environment.actComCompany[active]
+    }
+    use case system subfunction oeInvalidateAlert() {
+      primary actor icrash.environment.actCoordinator[active]
+      secondary actor icrash.environment.actComCompany[passive]
+      
+    }
+    use case system subfunction oeCloseCrisis(AdtCrisisID:dtCrisisID) {
+      primary actor icrash.environment.actCoordinator[active]
+    }
+    use case system subfunction oeCreateSystemAndEnvironment() {
+      primary actor icrash.environment.actMsrCreator[active]
+    }
+    use case system subfunction oeDeleteCoordinator(AdtCoordinatorID:dtCoordinatorID) {
+      primary actor icrash.environment.actAdministrator[active]
+    }   
+    use case system subfunction oeGetAlertsSet(AetAlertStatus:etAlertStatus) {
+      primary actor icrash.environment.actCoordinator[active]
+    }
+    use case system subfunction oeGetCrisisSet(AetCrisisStatus:etCrisisStatus){
+      primary actor icrash.environment.actCoordinator[active]
+    }
+    use case system subfunction oeSetCrisisHandler(AdtCrisisID:dtCrisisID) {
+      primary actor icrash.environment.actCoordinator[active]
+      secondary actor icrash.environment.actComCompany[passive,multiple]
+    }    
+    use case system subfunction oeLogin(AdtLogin:dtLogin , AdtPassword:dtPassword) {
+      primary actor icrash.environment.actAuthenticated[active]
+    }   
+    use case system subfunction oeLogout() {
+      primary actor icrash.environment.actAuthenticated[active]
+    }
+    use case system subfunction oeReportOnCrisis(AdtCrisisID:dtCrisisID,AdtComment:dtComment) {
+      primary actor icrash.environment.actCoordinator[active]
+    }
+    use case system subfunction oeSetClock(AcurrentClock:dtDateAndTime) {
+      primary actor icrash.environment.actActivator[proactive]
+    }    
+    use case system subfunction oeSetCrisisStatus(AdtCrisisID:dtCrisisID ,AetCrisisStatus:etCrisisStatus) {
+      primary actor icrash.environment.actCoordinator[active]
+    }
+    use case system subfunction oeSollicitateCrisisHandling() {
+      primary actor icrash.environment.actActivator[proactive]
+      secondary actor icrash.environment.actCoordinator[passive,multiple]
+      secondary actor icrash.environment.actAdministrator[passive]
+    }            
+    use case system subfunction oeValidateAlert(AdtAlertID:dtAlertID) {
+      primary actor icrash.environment.actCoordinator[active]
+    }
+  }
+
+}

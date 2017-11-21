@@ -1,0 +1,10 @@
+package icrash.operations.icrash.environment.actMsrCreator.init {
+
+import lu.uni.lassy.messir.libraries.primitives
+
+Operation Model {
+
+operation: icrash.environment.actMsrCreator.init():ptBoolean
+// generic operation provided by the simulator
+}
+}

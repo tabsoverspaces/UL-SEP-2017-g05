@@ -1,18 +1,18 @@
+;; This logfile was generated automatically by `xindy'
+;; at 21.11.2017  21:48:56
+;; Indexstyle: "/var/folders/2k/v63g7n_s585bxml7zsh9t4d40000gn/T/ufQiFY6b9z", Rawindex: "/var/folders/2k/v63g7n_s585bxml7zsh9t4d40000gn/T/Hmv5Tk7TZo", Output: "user-manual.gls"
 
 
-*** Unable to execute: '"xindy"  -L english -C utf8 -I xindy -M "user-manual" -t "user-manual.glg" -o "user-manual.gls" "user-manual.glo"' ***
+Building indexentry-tree:
+Hierdepth of index is :TREE
 
-Failed with error code 127.
+sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
+sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
 
-Status report:
-
-sh: xindy: command not found
-
-xindy didn't create a transcript.
-Check that xindy has been installed and
-is on your system's PATH.
-Your PATH environment variable is set to: 
-/usr/bin:/bin:/usr/sbin:/sbin
-Try manually running:
-"xindy"  -L english -C utf8 -I xindy -M "user-manual" -t "user-manual.glg" -o "user-manual.gls" "user-manual.glo"
-
+Forming letter-groups:
+Letter-group: "´ÃÐÐ€Ëí" -> "G"
+Letter-group: "€†ÚÃË" -> "A"
+sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
+Letter-group: "€†ÚÃË" -> "A"
+sort-indexentries: (FORWARD BACKWARD FORWARD FORWARD)
+Letter-group: "´ÃÐÐ€Ëí" -> "G"
