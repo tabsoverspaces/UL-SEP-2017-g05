@@ -224,6 +224,9 @@
   <semanticResources>platform:/resource/lu.uni.lassy.excalibur.standard.specification.libraries/library/documentation/PrimaryType-Primitive-ptInteger.msrd</semanticResources>
   <semanticResources>platform:/resource/lu.uni.lassy.excalibur.standard.specification.libraries/library/documentation/PrimaryType-Primitive-ptReal.msrd</semanticResources>
   <semanticResources>platform:/resource/lu.uni.lassy.excalibur.standard.specification.libraries/library/documentation/PrimaryType-Primitive-ptString.msrd</semanticResources>
+  <semanticResources>documentation/View-uc-ugManagingLoans.msrd</semanticResources>
+  <semanticResources>usecases/usecaseinstance-ugManagingLoans-uciugManagingLoans.msr</semanticResources>
+  <semanticResources>documentation/View-uci-uciugManagingLoans.msrd</semanticResources>
   <ownedViews xmi:type="viewpoint:DView" xmi:id="_pEWJoM8LEeeedaHbMN5oTQ">
     <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/lu.uni.lassy.excalibur.ui.viewer/description/excalibur_models.odesign#//@ownedViewpoints[name='msr-viewpoint']"/>
   </ownedViews>

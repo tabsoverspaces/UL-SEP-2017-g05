@@ -1,0 +1,21 @@
+package usecases.uciugManagingLoans {
+	import lu.uni.lassy.excalibur.sep.g05.mike.usecases
+
+	Use Case Model {
+
+		use case instance uciugManagingLoans : ugManagingLoans{
+			actors {
+				mikeSchmitz : lu.uni.lassy.excalibur.sep.g05.mike.environment.actLibrarian
+			}
+			use case steps {
+				mikeSchmitz executed instanceof subfunction sfAddLoan("36958", "What if?", "003") {
+					ieLoan("Loan successfully granted.") returned to mikeSchmitz
+				}
+				
+				mikeSchmitz executed instanceof subfunction sfReturnBook("36958", "What if?", "003") {
+					ieReturnedBook("Book successfully returned.") returned to mikeSchmitz
+				}
+			}
+		}
+	}
+}

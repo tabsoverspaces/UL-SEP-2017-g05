@@ -9,13 +9,34 @@ import lu.uni.lassy.messir.libraries.calendar
 import lu.uni.lassy.messir.libraries.math
 import lu.uni.lassy.messir.libraries.primitives
 import lu.uni.lassy.messir.libraries.string
-
+import lu.uni.lassy.excalibur.myproject.environment
 
 
 Concept Model {
 
 	Primary Types {
    
-	}
+   // main datatype used for payments
+	
+	
+	// second level datatype that's used to distinct between
+	// cards and accounts	
+	
+	
+	// second level datatype used for accounts
+	
+	
+	// final level datatype
+	
+	
+	// final level datatype
+	
+	
+	// final level datatype
+	
+	
+	// final level datatype
+	
+}
 }
 }

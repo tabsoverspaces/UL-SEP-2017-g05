@@ -1,0 +1,10 @@
+/*
+@author nicentra
+@date Sun Nov 26 17:43:41 CET 2017
+*/
+
+
+@@view uc-ugManagingLoans
+@model Use-Case lu.uni.lassy.excalibur.sep.g05.mike.usecases.ugManagingLoans 
+@description ""
+@caption ""

@@ -10,7 +10,7 @@ import lu.uni.lassy.messir.libraries.math
 import lu.uni.lassy.messir.libraries.primitives
 import lu.uni.lassy.messir.libraries.string
 
-
+import lu.uni.lassy.excalibur.myproject.concepts.secondarytypes.datatypes
 
 
 import lu.uni.lassy.messir.libraries.primitives
@@ -25,6 +25,118 @@ Concept Model {
 			operation init(AvpStarted:ptBoolean): ptBoolean
 		}	
 
-	}
-}
+	
+		// main book class
+		class clBook role rnclBook cardinality[0 .. *] {
+			attribute ISBN : ptString
+			attribute name : ptString
+			attribute author : ptString
+			
+			operation init(val1:ptString, val2:ptString, val3:ptString):ptBoolean
+			
+			}
+			
+		// classes to store date for the actors of the system
+		// i.e. the librarians and the clients
+		class clLibrarian role rnclLibrarian cardinality[0..*]{
+			attribute AID : ptInteger
+			attribute name : ptString
+			
+			operation init(val1:ptInteger, val2:ptString):ptBoolean
+			
+			
+			}
+		class clClient role rnclClient cardinality[0..*]
+		{
+			attribute AID:ptInteger
+			attribute name:ptString
+			
+			operation init(val1:ptInteger, val2:ptString):ptBoolean
+		}
+
+		
+		
+		// main notification class
+		abstract class clNotification role rnclNotification cardinality[0..*]{
+			attribute title : ptString
+			attribute content : ptString
+			attribute type : etANotificationTypeEnum
+			
+			attribute recepientID : ptInteger
+			
+			operation init(val1:ptString, val2:ptString, val3 : etANotificationTypeEnum, ARecepientID : ptInteger):ptBoolean
+			
+		}
+		
+		
+		// subclass of the notification class
+		class clSystemNotification role rnclSystemNotification cardinality[0 .. *] extends clNotification {
+			
+			operation init(val1:ptString, val2:ptString, val3 : etANotificationTypeEnum, ARecepientID : ptInteger):ptBoolean
+			}
+
+		// subclass of the notification class
+		class clLibrarianNotification role rnclLibrarianNotification cardinality[0 .. *] extends clNotification {
+			attribute senderID : ptInteger
+			
+			operation init(val1:ptString, val2:ptString, val3 : etANotificationTypeEnum, ARecepientID : ptInteger, ASenderID:ptInteger):ptBoolean
+			}
+
+		
+		enum etANotificationTypeEnum{
+			constants["System", "Librarian"]
+			
+		
+		}
+		
+		// abstract classes for the payment options
+		abstract class clPaymentOption role rnclPaymentOption cardinality[1 .. 4] {
+			attribute name : ptString
+			
+			operation init(val1:ptString) : ptBoolean
+			
+			operation hasEnoughBalance(required : ptReal) :ptBoolean
+	
+		}
+		
+		// ^-
+		abstract class clCardPaymentOption role rnclCardPaymentOption  cardinality [1..4] extends clPaymentOption
+		{
+			attribute cardNumber : ptString
+			attribute cardHolder : dtPerson
+			attribute securityNumber : dtCardSecurityNumber
+			
+			operation init(val1:ptString, val2:dtPerson, val3:dtCardSecurityNumber) : ptBoolean
+		}
+		
+		// ^-
+		abstract class clAccountPaymentOption role rnclAccountPaymentOption  cardinality [1..4] extends clPaymentOption
+		{
+			attribute accountName : ptString
+			attribute accountHolder : dtPerson
+			
+			operation init(val1:ptString, val2:dtPerson) : ptBoolean
+		}
+		
+		// actual classes for the payment options
+		class clVisaPaymentOption role rnclVisaPaymentOption cardinality[0 .. 1] extends clCardPaymentOption {
+			
+		}
+
+		class clMastercardPaymentOption role rnclMastercardPaymentOption cardinality[0 .. 1] extends clCardPaymentOption {
+			
+
+		}
+		
+		class clAmericanExpressPaymentOption role rnclAmericanExpressPaymentOption cardinality[0 .. 1] extends clCardPaymentOption {
+			
+
+		}
+		
+		class clPaypalPaymentOption role rnclPaypalPaymentOption cardinality[0..1] extends clAccountPaymentOption{
+			
+			
+		}
+		
+}}
 }

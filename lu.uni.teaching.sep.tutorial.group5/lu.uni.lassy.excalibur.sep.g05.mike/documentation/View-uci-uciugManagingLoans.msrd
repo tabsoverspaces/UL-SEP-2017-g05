@@ -1,0 +1,15 @@
+/*
+@author nicentra
+@date Sun Nov 26 17:56:55 CET 2017
+*/
+
+
+@@view uci-uciugManagingLoans
+@instance Use-Case usecases.uciugManagingLoans.uciugManagingLoans 
+@description ""
+@caption ""
+
+@@view uci-uciugManagingLoans
+@instance Use-Case usecases.uciugManagingLoans.uciugManagingLoans 
+@description ""
+@caption ""

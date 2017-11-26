@@ -14,6 +14,35 @@ import lu.uni.lassy.messir.libraries.string
 
 	Use Case Model {
 		
+	use case system subfunction sfAccessCustomerDatabase() {
+			actor lu.uni.lassy.excalibur.sep.g05.mike.environment.actLibrarian[primary, active]
+			returned messages{
+				ieCustomerDatabase returned to lu.uni.lassy.excalibur.sep.g05.mike.environment.actLibrarian
+			}
+		}
+	use case system subfunction sfAddLoan() {
+			actor lu.uni.lassy.excalibur.sep.g05.mike.environment.actLibrarian[primary, active]
+			returned messages{
+				ieLoan returned to lu.uni.lassy.excalibur.sep.g05.mike.environment.actLibrarian
+			}
+		}
+	use case system subfunction sfReturnBook() {
+			actor lu.uni.lassy.excalibur.sep.g05.mike.environment.actLibrarian[primary, active]
+			returned messages{
+				ieReturnedBook returned to lu.uni.lassy.excalibur.sep.g05.mike.environment.actLibrarian
+			}
+		}
+	use case system usergoal ugManagingLoans() {
+			actor lu.uni.lassy.excalibur.sep.g05.mike.environment.actLibrarian[primary, active]
+			reuse lu.uni.lassy.excalibur.sep.g05.mike.usecases.sfAddLoan[0..*]
+			reuse lu.uni.lassy.excalibur.sep.g05.mike.usecases.sfReturnBook[0..*]
+			
+			step a: lu.uni.lassy.excalibur.sep.g05.mike.environment.actLibrarian executes sfAddLoan()
+			step b: lu.uni.lassy.excalibur.sep.g05.mike.environment.actLibrarian executes sfReturnBook()
+			
+			ordering constraint "step a must be executed first"
+		}
+	use case system summary suDeployAndRun() {
+		}
 	}
-
 }
