@@ -10,19 +10,16 @@
 			<arguments>
 			</arguments>
 		</buildCommand>
-<<<<<<< HEAD
 		<buildCommand>
 			<name>org.eclipse.ui.externaltools.ExternalToolBuilder</name>
 			<triggers>auto,full,incremental,</triggers>
 			<arguments>
 				<dictionary>
 					<key>LaunchConfigHandle</key>
-					<value>&lt;project&gt;/.externalToolBuilders/MakeGlossaries.launch</value>
+					<value>&lt;project&gt;/.externalToolBuilders/makeGlossary.launch</value>
 				</dictionary>
 			</arguments>
 		</buildCommand>
-=======
->>>>>>> branch 'master' of https://github.com/tabsoverspaces/UL-SEP-2017-g05.git
 	</buildSpec>
 	<natures>
 		<nature>net.sourceforge.texlipse.builder.TexlipseNature</nature>

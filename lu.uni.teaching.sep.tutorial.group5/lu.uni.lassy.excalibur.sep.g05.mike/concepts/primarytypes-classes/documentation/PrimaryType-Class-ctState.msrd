@@ -1,0 +1,16 @@
+/*
+@author nicentra
+@date Tue Nov 28 15:39:41 CET 2017
+*/
+
+
+@@Primary Type Class lu.uni.lassy.excalibur.sep.g05.mike.concepts.primarytypes.classes.ctState
+@description ""
+@attribute
+lu.uni.lassy.excalibur.sep.g05.mike.concepts.primarytypes.classes.ctState.vpStarted
+""
+@endAttributes
+@operation
+lu.uni.lassy.excalibur.sep.g05.mike.concepts.primarytypes.classes.ctState.init
+""
+@endOperations

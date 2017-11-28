@@ -1,0 +1,165 @@
+package usecases.uciugManagingLoans {
+	import lu.uni.lassy.excalibur.sep.g05.mike.usecases
+
+	Use Case Model {
+
+		use case instance uciugManagingLoans : ugManagingLoans{
+			actors {
+				mikeSchmitz : lu.uni.lassy.excalibur.sep.g05.mike.environment.actLibrarian
+			}
+			use case steps {
+				mikeSchmitz executed instanceof subfunction sfAddLoan("36958", "What if?", "003") {
+					ieLoan("Loan successfully granted.") returned to mikeSchmitz
+				}
+				
+				mikeSchmitz executed instanceof subfunction sfReturnBook("36958", "What if?", "003") {
+					ieReturnedBook("Book successfully returned.") returned to mikeSchmitz
+				}
+			}
+		}
+		
+		use case instance uciugAddBook : ugAddBook{
+			actors {
+				mikeSchmitz : lu.uni.lassy.excalibur.sep.g05.mike.environment.actLibrarian
+			}
+			use case steps {
+				mikeSchmitz executed instanceof subfunction sfAccessBookDatabase() {
+					ieBookDatabase("Book database opened.") returned to mikeSchmitz
+				}
+				
+				mikeSchmitz executed instanceof subfunction sfAddBook("0-544-27299-4", "Randall Munroe", "What If?") {
+					ieBookAdded("Book successfully returned.") returned to mikeSchmitz
+				}
+			}
+		}
+		
+		use case instance uciugReinstateCustomer : ugReinstateCustomer{
+			actors {
+				mikeSchmitz : lu.uni.lassy.excalibur.sep.g05.mike.environment.actLibrarian
+			}
+			use case steps {
+				mikeSchmitz executed instanceof subfunction sfAccessCustomerDatabase() {
+					ieCustomerDatabase("Customer database opened.") returned to mikeSchmitz
+				}
+				
+				mikeSchmitz executed instanceof subfunction sfSearchCustomer("John Smith") {
+					ieCustomerQuery("Customer retrieved") returned to mikeSchmitz
+				}
+				
+				mikeSchmitz executed instanceof subfunction sfInspectCustomer() {
+					ieCustomerProfile("Customer profile opened") returned to mikeSchmitz
+				}
+				
+				mikeSchmitz executed instanceof subfunction sfReinstateCustomer() {
+					ieCustomerReinstated("Customer reinstated") returned to mikeSchmitz
+				}
+			}
+		}
+		
+		use case instance uciugRemoveBook : ugRemoveBook {
+			actors {
+				mikeSchmitz: lu.uni.lassy.excalibur.sep.g05.mike.environment.actLibrarian
+			}
+			use case steps {
+				mikeSchmitz executed instanceof subfunction sfAccessBookDatabase() {
+					ieBookDatabase("Book database opened") returned to mikeSchmitz
+				}
+				mikeSchmitz executed instanceof subfunction sfRemoveBook("#000003") {
+					ieBookRemoved("Book successfully removed") returned to mikeSchmitz
+				}
+			}	
+		}
+		
+		use case instance uciugRequestCustomerBan : ugRequestCustomerBan{
+			actors {
+				mikeSchmitz : lu.uni.lassy.excalibur.sep.g05.mike.environment.actLibrarian
+			}
+			use case steps {
+				mikeSchmitz executed instanceof subfunction sfAccessCustomerDatabase() {
+					ieCustomerDatabase("Customer database opened.") returned to mikeSchmitz
+				}
+				
+				mikeSchmitz executed instanceof subfunction sfSearchCustomer("John Smith") {
+					ieCustomerQuery("Customer retrieved") returned to mikeSchmitz
+				}
+				
+				mikeSchmitz executed instanceof subfunction sfInspectCustomer() {
+					ieCustomerProfile("Customer profile opened") returned to mikeSchmitz
+				}
+				
+				mikeSchmitz executed instanceof subfunction sfRequestCustomerBan("Second time now the customer has returned a book in an almost destroyed state") {
+					ieSentBanRequest("Ban request send off") returned to mikeSchmitz
+				}
+			}
+		}
+		
+		use case instance uciugRequestCustomerUnban : ugRequestCustomerUnban{
+			actors {
+				mikeSchmitz : lu.uni.lassy.excalibur.sep.g05.mike.environment.actLibrarian
+			}
+			use case steps {
+				mikeSchmitz executed instanceof subfunction sfAccessCustomerDatabase() {
+					ieCustomerDatabase("Customer database opened.") returned to mikeSchmitz
+				}
+				
+				mikeSchmitz executed instanceof subfunction sfSearchCustomer("John Smith") {
+					ieCustomerQuery("Customer retrieved") returned to mikeSchmitz
+				}
+				
+				mikeSchmitz executed instanceof subfunction sfInspectCustomer() {
+					ieCustomerProfile("Customer profile opened") returned to mikeSchmitz
+				}
+				
+				mikeSchmitz executed instanceof subfunction sfRequestCustomerUnban("Customer has paid all outstanding fines plus  an extra donation and has handed in a long apology letter") {
+					ieSentUnbanRequest("Unban request send off") returned to mikeSchmitz
+				}
+			}
+		}
+		
+		use case instance uciugSetNote : ugSetNote{
+			actors {
+				mikeSchmitz : lu.uni.lassy.excalibur.sep.g05.mike.environment.actLibrarian
+			}
+			use case steps {
+				mikeSchmitz executed instanceof subfunction sfAccessCustomerDatabase() {
+					ieCustomerDatabase("Customer database opened.") returned to mikeSchmitz
+				}
+				
+				mikeSchmitz executed instanceof subfunction sfSearchCustomer("John Smith") {
+					ieCustomerQuery("Customer retrieved") returned to mikeSchmitz
+				}
+				
+				mikeSchmitz executed instanceof subfunction sfInspectCustomer() {
+					ieCustomerProfile("Customer profile opened") returned to mikeSchmitz
+				}
+				
+				mikeSchmitz executed instanceof subfunction sfSetNote("Customer is overdue on 2 books, suspended until fine of 20 Euro is paid") {
+					ieSetNote("Note set") returned to mikeSchmitz
+				}
+			}
+		}
+		
+		use case instance uciugSuspendCustomer : ugSuspendCustomer{
+			actors {
+				mikeSchmitz : lu.uni.lassy.excalibur.sep.g05.mike.environment.actLibrarian
+			}
+			use case steps {
+				mikeSchmitz executed instanceof subfunction sfAccessCustomerDatabase() {
+					ieCustomerDatabase("Customer database opened.") returned to mikeSchmitz
+				}
+				
+				mikeSchmitz executed instanceof subfunction sfSearchCustomer("John Smith") {
+					ieCustomerQuery("Customer retrieved") returned to mikeSchmitz
+				}
+				
+				mikeSchmitz executed instanceof subfunction sfInspectCustomer() {
+					ieCustomerProfile("Customer profile opened") returned to mikeSchmitz
+				}
+				
+				mikeSchmitz executed instanceof subfunction sfSuspendCustomer() {
+					ieCustomerSuspended("Customer suspended") returned to mikeSchmitz
+				}
+			}
+		}
+	}
+}

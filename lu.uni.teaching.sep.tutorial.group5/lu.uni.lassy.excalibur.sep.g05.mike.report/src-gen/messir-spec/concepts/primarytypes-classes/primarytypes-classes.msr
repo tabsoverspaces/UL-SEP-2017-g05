@@ -1,0 +1,30 @@
+/*
+* @author nicentra
+* @date Tue Nov 21 23:30:54 CET 2017
+*/
+
+package lu.uni.lassy.excalibur.sep.g05.mike.concepts.primarytypes.classes {
+
+import lu.uni.lassy.messir.libraries.calendar
+import lu.uni.lassy.messir.libraries.math
+import lu.uni.lassy.messir.libraries.primitives
+import lu.uni.lassy.messir.libraries.string
+
+
+
+
+import lu.uni.lassy.messir.libraries.primitives
+
+Concept Model {
+
+	Primary Types {
+	
+		state class ctState {
+			attribute vpStarted: ptBoolean
+
+			operation init(AvpStarted:ptBoolean): ptBoolean
+		}	
+
+	}
+}
+}

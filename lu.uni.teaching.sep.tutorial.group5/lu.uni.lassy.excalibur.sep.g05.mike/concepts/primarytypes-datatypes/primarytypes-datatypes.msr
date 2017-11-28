@@ -16,6 +16,28 @@ Concept Model {
 
 	Primary Types {
    
+	datatype dtBook {
+		attribute attISBN: ptString
+	 	attribute attAuthor: ptString
+	 	attribute attBookname: ptString
+	 	attribute attBookID: ptString
+	 	attribute attLoanStatus: ptString
 	}
+	
+	datatype dtCustomer {
+		attribute attFirstName: ptString
+		attribute attLastName: ptString
+		attribute attDoB: lu.uni.lassy.messir.libraries.calendar.dtDate
+	}
+	
+	datatype dtLoan {
+		attribute atCustomer : dtCustomer
+		attribute attBook: dtBook
+		attribute attLoanStart: dtDate
+		attribute attLoanEnd: dtDate
+		attribute attOverdue: ptBoolean
+	}
+		}
+		
 }
 }

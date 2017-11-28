@@ -233,18 +233,5 @@ import lu.uni.lassy.messir.libraries.string
 			
 			ordering constraint "step a must be executed first"		
 	}
-	
-//	use case system summary suDeployAndRun() {
-//		actor lu.uni.lassy.excalibur.sep.g05.mike.environment.actLibrarian[primary, active]
-//		
-//		reuse ugManagingLoans[0..*]
-//		reuse sfAccessCustomerDatabase[0..*]
-//		
-//		// step shit
-//		
-//		//ordering constraint
-//		
-//		
-//		}
 	}
 }

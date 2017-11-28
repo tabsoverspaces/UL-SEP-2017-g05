@@ -241,6 +241,43 @@
   <semanticResources>documentation/View-uc-ugRequestCustomerUnban.msrd</semanticResources>
   <semanticResources>documentation/View-uc-ugSetNote.msrd</semanticResources>
   <semanticResources>documentation/View-uc-ugSuspendCustomer.msrd</semanticResources>
+  <semanticResources>concepts/primarytypes-classes/documentation/PrimaryType-Class-ctState.msrd</semanticResources>
+  <semanticResources>concepts/primarytypes-classes/documentation/Operation-ctState-init.msrd</semanticResources>
+  <semanticResources>environment/documentation/Actor-actLibrarian.msrd</semanticResources>
+  <semanticResources>environment/documentation/Actor-actCustomer.msrd</semanticResources>
+  <semanticResources>usecases/documentation/UseCaseInstance-uciugManagingLoans.msrd</semanticResources>
+  <semanticResources>usecases/documentation/UseCaseInstance-uciugAddBook.msrd</semanticResources>
+  <semanticResources>usecases/documentation/UseCaseInstance-uciugReinstateCustomer.msrd</semanticResources>
+  <semanticResources>usecases/documentation/UseCaseInstance-uciugRemoveBook.msrd</semanticResources>
+  <semanticResources>usecases/documentation/UseCaseInstance-uciugRequestCustomerBan.msrd</semanticResources>
+  <semanticResources>usecases/documentation/UseCaseInstance-uciugRequestCustomerUnban.msrd</semanticResources>
+  <semanticResources>usecases/documentation/UseCaseInstance-uciugSetNote.msrd</semanticResources>
+  <semanticResources>usecases/documentation/UseCaseInstance-uciugSuspendCustomer.msrd</semanticResources>
+  <semanticResources>usecases/documentation/UseCase-sfAccessCustomerDatabase.msrd</semanticResources>
+  <semanticResources>usecases/documentation/UseCase-sfSearchCustomer.msrd</semanticResources>
+  <semanticResources>usecases/documentation/UseCase-sfInspectCustomer.msrd</semanticResources>
+  <semanticResources>usecases/documentation/UseCase-sfAddLoan.msrd</semanticResources>
+  <semanticResources>usecases/documentation/UseCase-sfReturnBook.msrd</semanticResources>
+  <semanticResources>usecases/documentation/UseCase-sfSuspendCustomer.msrd</semanticResources>
+  <semanticResources>usecases/documentation/UseCase-sfReinstateCustomer.msrd</semanticResources>
+  <semanticResources>usecases/documentation/UseCase-sfRequestCustomerBan.msrd</semanticResources>
+  <semanticResources>usecases/documentation/UseCase-sfRequestCustomerUnban.msrd</semanticResources>
+  <semanticResources>usecases/documentation/UseCase-sfSetNote.msrd</semanticResources>
+  <semanticResources>usecases/documentation/UseCase-sfAccessBookDatabase.msrd</semanticResources>
+  <semanticResources>usecases/documentation/UseCase-sfSearchBook.msrd</semanticResources>
+  <semanticResources>usecases/documentation/UseCase-sfAddBook.msrd</semanticResources>
+  <semanticResources>usecases/documentation/UseCase-sfRemoveBook.msrd</semanticResources>
+  <semanticResources>usecases/documentation/UseCase-ugManagingLoans.msrd</semanticResources>
+  <semanticResources>usecases/documentation/UseCase-ugSuspendCustomer.msrd</semanticResources>
+  <semanticResources>usecases/documentation/UseCase-ugReinstateCustomer.msrd</semanticResources>
+  <semanticResources>usecases/documentation/UseCase-ugRequestCustomerBan.msrd</semanticResources>
+  <semanticResources>usecases/documentation/UseCase-ugRequestCustomerUnban.msrd</semanticResources>
+  <semanticResources>usecases/documentation/UseCase-ugSetNote.msrd</semanticResources>
+  <semanticResources>usecases/documentation/UseCase-ugAddBook.msrd</semanticResources>
+  <semanticResources>usecases/documentation/UseCase-ugRemoveBook.msrd</semanticResources>
+  <semanticResources>documentation/View-cm-view1.msrd</semanticResources>
+  <semanticResources>documentation/View-cm-view2.msrd</semanticResources>
+  <semanticResources>documentation/View-cm-view3.msrd</semanticResources>
   <ownedViews xmi:type="viewpoint:DView" xmi:id="_pEt9EM8LEeeedaHbMN5oTQ">
     <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/lu.uni.lassy.excalibur.ui.viewer/description/excalibur_models.odesign#//@ownedViewpoints[name='msr-viewpoint']"/>
   </ownedViews>

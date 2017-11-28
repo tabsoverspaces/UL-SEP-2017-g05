@@ -1,0 +1,13 @@
+/*
+@author nicentra
+@date Tue Nov 28 16:10:58 CET 2017
+*/
+
+
+@@view cm-view3
+@model Concept
+@level Local
+@sublevel Primary Datatype
+@number 3
+@description ""
+@caption ""

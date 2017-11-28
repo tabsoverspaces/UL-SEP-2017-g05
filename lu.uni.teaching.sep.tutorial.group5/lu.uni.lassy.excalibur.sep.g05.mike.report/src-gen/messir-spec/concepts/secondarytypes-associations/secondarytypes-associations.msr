@@ -1,0 +1,21 @@
+/*
+* @author nicentra
+* @date Tue Nov 21 23:30:54 CET 2017
+*/
+
+package lu.uni.lassy.excalibur.sep.g05.mike.concepts.secondarytypes.associations {
+
+import lu.uni.lassy.messir.libraries.calendar
+import lu.uni.lassy.messir.libraries.math
+import lu.uni.lassy.messir.libraries.primitives
+import lu.uni.lassy.messir.libraries.string
+
+
+
+Concept Model {
+	
+	Secondary Types {
+	
+	}
+}
+}
