@@ -1,0 +1,27 @@
+package usecases.uciugManageLibrarians {
+	import lu.uni.lassy.excalibur.myproject.usecases
+
+	Use Case Model {
+		use case instance uciugManageLibrarians : ugManageLibrarians{
+			actors {
+				filippoLobisch : lu.uni.lassy.excalibur.myproject.environment.actSystemAdministrator
+			}
+			use case steps {
+				
+				filippoLobisch executed instanceof subfunction sfLibrarian() {
+					ieLibrarian() returned to filippoLobisch
+				}
+				
+				filippoLobisch executed instanceof subfunction sfAddLibrarian("100900100", "John Smith", "10/10/1990") {
+					ieLibrarianAdded("Librarian successfully created and added.") returned to filippoLobisch
+				}
+				filippoLobisch executed instanceof subfunction sfEditLibrarian("100900101", "Michael Smith", "01/09/1991") {
+					ieLibrarianEdited("Librarian successfully edited.") returned to filippoLobisch
+				}
+				filippoLobisch executed instanceof subfunction sfDeleteLibrarian("100900101", "Mike Smith", "01/09/1991") {
+					ieLibrarianDeleted("Librarian successfully deleted.") returned to filippoLobisch
+				}
+			}
+		}
+	}
+}

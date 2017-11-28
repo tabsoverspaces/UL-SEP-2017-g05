@@ -1,0 +1,21 @@
+/*
+* @author lobfil
+* @date Tue Nov 07 21:17:53 CET 2017
+*/
+
+package lu.uni.lassy.excalibur.myproject.concepts.primarytypes.associations {
+
+import lu.uni.lassy.messir.libraries.calendar
+import lu.uni.lassy.messir.libraries.math
+import lu.uni.lassy.messir.libraries.primitives
+import lu.uni.lassy.messir.libraries.string
+
+
+
+Concept Model {
+	
+	Primary Types {
+	
+	}
+}
+}

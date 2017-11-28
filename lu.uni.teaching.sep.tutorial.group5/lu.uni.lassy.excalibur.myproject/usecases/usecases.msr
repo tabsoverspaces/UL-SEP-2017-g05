@@ -1,8 +1,3 @@
-/*
-* @author lobfil
-* @date Tue Nov 07 21:17:53 CET 2017
-*/
-
 package lu.uni.lassy.excalibur.myproject.usecases {
 
 import lu.uni.lassy.messir.libraries.calendar
@@ -10,165 +5,127 @@ import lu.uni.lassy.messir.libraries.math
 import lu.uni.lassy.messir.libraries.primitives
 import lu.uni.lassy.messir.libraries.string
 
-import lu.uni.lassy.excalibur.myproject.environment
-import lu.uni.lassy.excalibur.myproject.concepts.primarytypes.datatypes
-import lu.uni.lassy.excalibur.myproject.concepts.primarytypes.classes
-
-Use Case Model{
-	use case system subfunction sfLogin(AID:ptString, APwd:ptString) {
-			actor actClient[primary, active]
-			returned messages {
-			ieLoginStatus(AStatus) returned to actClient
-			ieMessage(AMessage) returned to actClient
-			}
-		}
-	use case system subfunction sfShowPersonalSettings() {
-			actor actClient[primary, active]
-			
-			returned messages {
-			ieShowPersonalSettingsPanel returned to actClient
-			}
-		}
-	use case system subfunction sfShowPasswordEditPanel() {
-			actor actClient[primary, active]
-			returned messages {
-			ieShowPasswordEditPanel returned to actClient
-			}
-		}
-	use case system subfunction sfShowNumberEditPanel() {
-			actor actClient[primary, active]
-			returned messages {
-			ieShowNumberEditPanel returned to actClient
-			}
-		}
-	use case system subfunction sfShowEmailEditPanel() {
-			actor actClient[primary, active]
-			returned messages {
-			ieShowEmailEditPanel returned to actClient
-			}
-		}
-	use case system subfunction sfShowAddressEditPanel() {
-			actor actClient[primary, active]
-			returned messages {
-			ieShowAddressEditPanel returned to actClient
-			}
-		}
-	use case system subfunction sfShowPaymentEditPanel() {
-			actor actClient[primary, active]
-			returned messages {
-			ieShowPaymentEditPanel returned to actClient
-			}
+	Use Case Model {
+		use case system summary suDeployAndRun() {
+		actor lu.uni.lassy.excalibur.myproject.environment.actSystemAdministrator[primary, active]
+		
+		reuse lu.uni.lassy.excalibur.myproject.usecases.sfCreateSystemEnvironment[0..1]
+		reuse lu.uni.lassy.excalibur.myproject.usecases.ugManageLibrarians[1..*]
+		reuse lu.uni.lassy.excalibur.myproject.usecases.sfLogin[0..1]
+		reuse lu.uni.lassy.excalibur.myproject.usecases.sfLogout[0..1]
+		
+		step a: lu.uni.lassy.excalibur.myproject.environment.actSystemAdministrator executes sfCreateSystemEnvironment
+		step b: lu.uni.lassy.excalibur.myproject.environment.actSystemAdministrator executes sfLogin
+		step c: lu.uni.lassy.excalibur.myproject.environment.actSystemAdministrator executes ugManageLibrarians
+		step d: lu.uni.lassy.excalibur.myproject.environment.actSystemAdministrator executes sfLogout
+		
+		ordering constraint
+			"step a must be executed first."
+		ordering constraint
+			"step b must always come before step c."
+		ordering constraint
+			"step d must be the last."
 		}
 		
-	use case system subfunction sfShowNotificationsPanel() {
-			actor actClient[primary, active]
-			returned messages {
-			actClient.inactClient.ieShowNotificationsPanel() returned to actClient
-			}
-		}
-	use case system subfunction sfInspectAnNotification() {
-			actor actClient[primary, active]
-			
-			returned messages {
-			actClient.inactClient.ieGetNotificationData() returned to actClient
-			}
-			
-		}
-	use case system subfunction sfInputReplyData(ATitle : ptString, AContent:ptString) {
-			actor actClient[primary, active]
-			
-			returned messages {
-			
-			}
-		}
-	use case system subfunction sfSubmitReply() {
-			actor actClient[primary, active]
-			actor actLibrarian[secondary]
-			
-			returned messages {
-			actClient.inactClient.ieSubmittionStatus(AStatus) returned to actClient
-			actLibrarian.inactLibrarian.ieGetMessageFromClient(ATitle,AContent) returned to actLibrarian
-			}
+	use case system usergoal ugManageLibrarians() {
+		actor lu.uni.lassy.excalibur.myproject.environment.actSystemAdministrator[primary, active]
+		
+		reuse lu.uni.lassy.excalibur.myproject.usecases.sfLibrarian[0..*]
+		reuse lu.uni.lassy.excalibur.myproject.usecases.sfAddLibrarian[0..*]
+		reuse lu.uni.lassy.excalibur.myproject.usecases.sfEditLibrarian[0..*]
+		reuse lu.uni.lassy.excalibur.myproject.usecases.sfDeleteLibrarian[0..*]
+		
+		step a: lu.uni.lassy.excalibur.myproject.environment.actSystemAdministrator executes sfLibrarian
+		step b: lu.uni.lassy.excalibur.myproject.environment.actSystemAdministrator executes sfAddLibrarian
+		step c: lu.uni.lassy.excalibur.myproject.environment.actSystemAdministrator executes sfEditLibrarian
+		step d: lu.uni.lassy.excalibur.myproject.environment.actSystemAdministrator executes sfDeleteLibrarian
+		
+		ordering constraint
+			"step a must always be the first one."
+		
 		}	
-		
-		
-	use case system usergoal ugChangePassword() {
-			actor actClient[primary, active]
-			
-			reuse sfLogin
-			reuse sfShowPersonalSettings
-			reuse sfShowPasswordEditPanel
-			reuse sfInputChangePasswordData
-			
-			step a: actClient executes sfLogin
-			step b: actClient executes sfShowPersonalSettings
-			step c: actClient executes sfShowPasswordEditPanel
-			step d: actClient executes sfInputChangePasswordData
-			step e: actClient executes sfSubmitInformationChange
-		}
-
-	use case system subfunction sfInputChangePasswordData(AOldPassword : ptString, ANewPassword : ptString, ANewPasswordConfirm : ptString) {
-			actor actClient[primary, active]
-			
-			returned messages {
-			
-			}
-		}
-	use case system subfunction sfSubmitInformationChange() {
-			actor actClient[primary, active]
-			
-			returned messages {
-			ieInformationChangeResponse returned to actClient
-			ieMessage returned to actClient
-			}
-		}
-	use case system usergoal ugReplyToLibrarian() {
-		actor actClient[primary, active]
-		
-		reuse sfShowNotificationsPanel
-		reuse sfInspectAnNotification
-		reuse sfInputReplyData
-		reuse sfSubmitReply
-		
-		 step a: actClient executes sfShowNotificationsPanel
-		 step b: actClient executes sfInspectAnNotification
-		 step c: actClient executes sfInputReplyData
-		 step d: actClient executes sfSubmitReply
-		}
 	
-	use case system usergoal ugSendBookLoanRequest() {
-		actor actClient[primary,active]
-		
-		reuse sfShowBookList
-		reuse sfInspectABook
-		reuse sfSubmitLoanRequest
-		
-		step a: actClient executes sfShowBookList
-		step b: actClient executes sfInspectABook
-		step c: actClient executes sfSubmitLoanRequest
-		
-		}
-	use case system subfunction sfShowBookList() {
-			actor actClient[primary, active]
-			
-			returned messages {
-			actClient.inactClient.ieGetBookList() returned to actClient
+
+	use case system subfunction sfAddLibrarian() {
+			actor lu.uni.lassy.excalibur.myproject.environment.actSystemAdministrator[primary, passive]
+			returned messages{
+				ieLibrarianAdded returned to lu.uni.lassy.excalibur.myproject.environment.actSystemAdministrator
 			}
 		}
-	use case system subfunction sfInspectABook(ABook : clBook) {
-			actor actClient[primary, active]
+	use case system subfunction sfDeleteLibrarian() {
+			actor lu.uni.lassy.excalibur.myproject.environment.actSystemAdministrator[primary, active]
 			
 			returned messages{
-				actClient.inactClient.ieGetBookInformation() returned to actClient
+				ieLibrarianDeleted returned to lu.uni.lassy.excalibur.myproject.environment.actSystemAdministrator
+			}
+		
+		}
+	use case system subfunction sfEditLibrarian() {
+			actor lu.uni.lassy.excalibur.myproject.environment.actSystemAdministrator[primary, active]
+			
+			returned messages{
+				ieLibrarianEdited returned to lu.uni.lassy.excalibur.myproject.environment.actSystemAdministrator
 			}
 		}
-	use case system subfunction sfSubmitLoanRequest(ABook : clBook) {
-			actor actClient[primary, active]
+	
+	use case system subfunction sfLibrarian() {
+			actor lu.uni.lassy.excalibur.myproject.environment.actSystemAdministrator[primary, active]
 			
-			returned messages {
-			ieRequestResponse returned to actClient
-			ieMessage returned to actClient
+			returned messages{
+				ieLibrarians() returned to lu.uni.lassy.excalibur.myproject.environment.actSystemAdministrator
 			}
+		}
+		
+	use case system subfunction sfViewAndSearchLibrarian() {
+			actor lu.uni.lassy.excalibur.myproject.environment.actSystemAdministrator[primary, active]
+			
+			returned messages{
+				ieLibrarian() returned to lu.uni.lassy.excalibur.myproject.environment.actSystemAdministrator
+			}
+		}
+	
+		
+	use case system subfunction sfLogin() {
+			actor lu.uni.lassy.excalibur.myproject.environment.actSystemAdministrator[primary, active]
+			returned messages{
+				ieLogin returned to lu.uni.lassy.excalibur.myproject.environment.actSystemAdministrator
+			}
+		}
+	use case system subfunction sfLogout() {
+			actor lu.uni.lassy.excalibur.myproject.environment.actSystemAdministrator[primary, active]
+			returned messages{
+				ieLogout returned to lu.uni.lassy.excalibur.myproject.environment.actSystemAdministrator
+			}	
+		
+		}
+	
+	use case system subfunction sfSendMessage() {
+			actor lu.uni.lassy.excalibur.myproject.environment.actSystemAdministrator[primary, active]
+			returned messages{
+				ieMessageSent returned to lu.uni.lassy.excalibur.myproject.environment.actSystemAdministrator
+			}
+		}
+	
+	
+	use case system subfunction sfReceiveMessage() {
+			actor lu.uni.lassy.excalibur.myproject.environment.actSystemAdministrator[primary, active]
+			returned messages{
+				ieMessageReceived returned to lu.uni.lassy.excalibur.myproject.environment.actSystemAdministrator
+			}
+		}
+	use case system subfunction sfCreateSystemEnvironment() {
+			actor lu.uni.lassy.excalibur.myproject.environment.actSystemAdministrator[primary, active]
+		}
+		
+	use case system usergoal ugManageMessages() {
+		actor lu.uni.lassy.excalibur.myproject.environment.actSystemAdministrator[primary, active]
+		
+		reuse lu.uni.lassy.excalibur.myproject.usecases.sfSendMessage[0..*]
+		reuse lu.uni.lassy.excalibur.myproject.usecases.sfReceiveMessage[0..*]	
+		
+		step a: lu.uni.lassy.excalibur.myproject.environment.actSystemAdministrator executes sfSendMessage
+		step b: lu.uni.lassy.excalibur.myproject.environment.actSystemAdministrator executes sfReceiveMessage	
+		
 		}
 	}
 }

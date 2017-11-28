@@ -1,0 +1,22 @@
+package usecases.ucisuDeployAndRun {
+	import lu.uni.lassy.excalibur.myproject.usecases
+
+	Use Case Model {
+		use case instance ucisuDeployAndRun : suDeployAndRun{
+			actors {
+				filippoLobisch : lu.uni.lassy.excalibur.myproject.environment.actSystemAdministrator
+			}
+			
+			use case steps {
+				filippoLobisch executed instanceof subfunction sfCreateSystemEnvironment() {}
+				filippoLobisch executed instanceof subfunction sfLogin("filippoLobisch", "password") {
+					ieLogin("Login successful") returned to filippoLobisch
+				}
+				filippoLobisch executed instanceof subfunction sfLogout() {
+					ieLogout("Logout successful.") returned to filippoLobisch
+				}
+			}
+			
+		}				
+	}
+}

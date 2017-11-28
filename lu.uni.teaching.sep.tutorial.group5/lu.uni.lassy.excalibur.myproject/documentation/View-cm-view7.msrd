@@ -1,0 +1,13 @@
+/*
+@author lobfil
+@date Mon Nov 27 19:14:14 CET 2017
+*/
+
+
+@@view cm-view7-dtName
+@model Concept
+@level Local
+@sublevel Primary Datatype
+@number 7
+@description "shows the dtName primary data type"
+@caption ""

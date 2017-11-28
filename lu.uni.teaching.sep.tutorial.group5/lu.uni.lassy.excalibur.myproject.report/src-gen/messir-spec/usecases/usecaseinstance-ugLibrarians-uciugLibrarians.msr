@@ -1,0 +1,8 @@
+package usecases.uciugLibrarians {
+	import lu.uni.lassy.excalibur.myproject.usecases
+
+	Use Case Model {
+
+		
+	}
+}

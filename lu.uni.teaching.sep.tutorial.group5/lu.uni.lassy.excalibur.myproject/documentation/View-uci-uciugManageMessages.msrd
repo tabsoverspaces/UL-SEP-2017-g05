@@ -1,0 +1,10 @@
+/*
+@author lobfil
+@date Wed Nov 22 12:07:43 CET 2017
+*/
+
+
+@@view uci-uciugManageMessages
+@instance Use-Case usecases.uciugManageMessages.uciugManageMessages 
+@description ""
+@caption ""

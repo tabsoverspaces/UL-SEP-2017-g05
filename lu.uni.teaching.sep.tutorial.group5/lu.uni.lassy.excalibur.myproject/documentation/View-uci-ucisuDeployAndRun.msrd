@@ -1,0 +1,12 @@
+/*
+@author lobfil
+@date Wed Nov 22 12:07:00 CET 2017
+*/
+
+
+@@view uci-ucisuDeployAndRun
+@instance Use-Case usecases.ucisuDeployAndRun.ucisuDeployAndRun 
+@description ""
+@caption ""
+
+

@@ -1,0 +1,13 @@
+/*
+@author lobfil
+@date Mon Nov 27 18:48:11 CET 2017
+*/
+
+
+@@view cm-view4-clLibrarian
+@model Concept
+@level Local
+@sublevel Primary Class
+@number 4
+@description "shows the clLibrarian primary class type"
+@caption ""

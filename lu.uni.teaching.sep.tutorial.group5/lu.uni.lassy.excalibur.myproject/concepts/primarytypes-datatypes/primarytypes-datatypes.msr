@@ -9,34 +9,32 @@ import lu.uni.lassy.messir.libraries.calendar
 import lu.uni.lassy.messir.libraries.math
 import lu.uni.lassy.messir.libraries.primitives
 import lu.uni.lassy.messir.libraries.string
-import lu.uni.lassy.excalibur.myproject.environment
+
 
 
 Concept Model {
 
 	Primary Types {
    
-   // main datatype used for payments
-	
-	
-	// second level datatype that's used to distinct between
-	// cards and accounts	
-	
-	
-	// second level datatype used for accounts
-	
-	
-	// final level datatype
-	
-	
-	// final level datatype
-	
-	
-	// final level datatype
-	
-	
-	// final level datatype
-	
-}
+		datatype dtMessage {
+			attribute value: ptString
+			}
+		
+		datatype dtDate {
+			attribute day: ptInteger
+			attribute month: ptInteger
+			attribute year: ptInteger
+			}
+		
+		datatype dtTime {
+			attribute hour: ptInteger
+			attribute minutes: ptInteger
+			}
+					
+		datatype dtName {
+			attribute first: ptString
+			attribute last: ptString
+			}
+		}
 }
 }

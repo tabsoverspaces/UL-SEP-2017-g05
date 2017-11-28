@@ -1,0 +1,23 @@
+package usecases.ucisuDeployAndRun {
+	import lu.uni.lassy.excalibur.myproject.usecases
+
+	Use Case Model {
+
+		use case instance ucisuDeployAndRun : suDeployAndRun{
+			actors {
+				filippoLobisch : lu.uni.lassy.excalibur.myproject.environment.actSysadmin
+			}
+			
+			use case steps{
+				filippoLobisch executed instanceof subfunction sfLogin("filippoLobisch", "password") {}
+				filippoLobisch executed instanceof subfunction sfLogout() {}
+				filippoLobisch executed instanceof subfunction sfAddLibrarian("100900100", "John Smith", "10/10/1990") {}
+				filippoLobisch executed instanceof subfunction sfEditLibrarian("Successfully edited librarian.") {}
+				filippoLobisch executed instanceof subfunction sfDeleteLibrarian("Successfully deleted librarian.") {}
+				
+			}
+			
+		}
+				
+	}
+}

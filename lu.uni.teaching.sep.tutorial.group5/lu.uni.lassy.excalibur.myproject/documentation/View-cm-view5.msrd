@@ -1,0 +1,13 @@
+/*
+@author lobfil
+@date Mon Nov 27 19:01:05 CET 2017
+*/
+
+
+@@view cm-view5-dtDate
+@model Concept
+@level Local
+@sublevel Primary Datatype
+@number 5
+@description "shows the dtDate primary data type"
+@caption ""

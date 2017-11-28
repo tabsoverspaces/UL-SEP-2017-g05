@@ -1,0 +1,16 @@
+/*
+@author lobfil
+@date Wed Nov 08 01:30:48 CET 2017
+*/
+
+
+@@Primary Type Class lu.uni.lassy.excalibur.myproject.concepts.primarytypes.classes.ctState
+@description ""
+@attribute
+lu.uni.lassy.excalibur.myproject.concepts.primarytypes.classes.ctState.vpStarted
+""
+@endAttributes
+@operation
+lu.uni.lassy.excalibur.myproject.concepts.primarytypes.classes.ctState.init
+""
+@endOperations

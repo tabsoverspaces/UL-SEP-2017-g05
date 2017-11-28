@@ -1,0 +1,9 @@
+/*
+@author lobfil
+@date Wed Nov 08 00:16:06 CET 2017
+*/
+
+@@view uc-suDeployAndRun
+@model Use-Case lu.uni.lassy.excalibur.myproject.usecases.suDeployAndRun 
+@description ""
+@caption ""
