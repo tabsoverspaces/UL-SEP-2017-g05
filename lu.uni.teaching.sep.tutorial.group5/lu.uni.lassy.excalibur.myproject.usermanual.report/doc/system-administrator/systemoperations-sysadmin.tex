@@ -1,3 +1,9 @@
+\documentclass{article}
+
+\usepackage{}
+
+\begin{document}
+
 \section{System Administrator}
 \label{operation:System Administrator}
 
@@ -9,7 +15,7 @@ The add librarian functionality is only available for the system administrator. 
 
 \begin{description}
 
-\item \textbf{Parameters:} ID (Randomly generated), First Name, Last Name, Date of Birth
+\item \textbf{Parameters:} ID (Randomly generated), Name, Date of Birth
 
 \item \textbf{Precondition:} The system administrator must be logged into the system and must have received the information about the librarian too add. 
 
@@ -21,8 +27,6 @@ The add librarian functionality is only available for the system administrator. 
 \begin{enumerate}
 
 \item From the users main window, click on the Add Librarian button to open the add librarian page. 
-
-\item From the users main window, click on the Add Librarians button to open the add librarian page. 
 
 \item Once the add librarian page opens, fill out all the required parameters with information related to the new librarian that is being created. 
 
@@ -38,7 +42,7 @@ The edit librarian functionality is used when editing user information. This inc
 
 \begin{description}
 
-\item \textbf{Parameters:} ID, First Name, Last Name
+\item \textbf{Parameters:} ID, Name
 
 \item \textbf{Precondition:} The system administrator must be logged in, at the users page and must have the different information of the librarian that needs to be edited.
 
@@ -67,7 +71,7 @@ The delete librarian is once again only available for the system administrator. 
 
 \begin{description}
 
-\item \textbf{Parameters:} ID (Randomly generated), First Name, Last Name
+\item \textbf{Parameters:} ID (Randomly generated), Name
 
 \item \textbf{Precondition:} The system administrator must be logged into the system and must have received the information about the librarian too remove. 
 
@@ -100,15 +104,17 @@ window to open the users deletion page.
 The messages functionality is a system which allows Librarians to contact System
 Administrators and vice versa. Its main purpose is to allow an easy communication system to help System Administrators and Librarians communicate issues and changes more easily.
 
-\subsubsection{New Message}
+\subsubsection{Send Message}
 
 The new message functionality like the title suggests allows a system administrator to create a new message to send to a librarian. 
 
 \begin{description}
 
-\item \textbf{Parameters:} Librarian ID, First Name, Last Name, Message
+\item \textbf{Parameters:} Librarian, Name, Message
 
-\item \textbf{Precondition:} The system administrator must be logged in and must have received the information (ID, First Name, Last Name) of the librarian to whom the message has to be sent.
+\item \textbf{Precondition:} The system administrator must be logged in and must
+have received the information (ID, Name) of the librarian to whom the message
+has to be sent.
 
 \item \textbf{Post-condition:} The message is sent to the Librarian and the
 system administrator will see the message as a rectangle in the chat.
@@ -129,3 +135,37 @@ system administrator will see the message as a rectangle in the chat.
 \end{enumerate}
 
 \end{description}
+
+
+\subsubsection{Receive Message}
+
+The receive message functionality allows the System
+Administrator to receive a message from a librarian.
+
+\begin{description}
+
+\item \textbf{Parameters:} Librarian
+
+\item \textbf{Precondition:} The system administrator must be logged in and must
+have received the information (ID, Name) of the librarian from whom he needs to
+receive a message.
+
+\item \textbf{Post-condition:} The message is loaded as a rectangle in the chat
+where the System Administrator can see it.
+
+\item \textbf{Output messages:} None.
+
+\item \textbf{Triggering:}
+\begin{enumerate}
+
+\item Select the Librarian from which the message needs to be received. 
+
+\item Click on the receive message button at the top right of the chat
+main panel.
+  
+
+\end{enumerate}
+
+\end{description}
+
+\end{document}

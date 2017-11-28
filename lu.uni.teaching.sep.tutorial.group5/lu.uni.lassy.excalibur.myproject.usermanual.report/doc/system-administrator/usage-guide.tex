@@ -3,6 +3,8 @@
 
 \subsection{Multi-procedures}
 
+The System Administrator does not have any multi-procedures. 
+
 \subsection{Mono-procedures}
 
 
@@ -57,34 +59,57 @@ message to a librarian.
 1. \emph{Filippo} is on the messages functionality and has important
 information to pass on to a given librarian.
 \\
-2. \emph{Filippo} clicks on the \emph{new message} button. \\
-3. A new panel is shown where \emph{Filippo} can choose which librarian to
-send a message to and which librarian, if any, to BCc in that message. The
-\emph{Filippo} can also write the message that needs to be sent.
-\\
-4. \emph{Filippo} clicks on the 'Send' button. \\
-5. The system sends the message to the librarians set in
-the 'To' and 'BCc' fields. \\
-6. \emph{Filippo} is returned to the messages panel. \\
-
+2. \emph{Filippo} clicks on the librarian who he wants to send a message to. \\
+3. \emph{Filippo} writes the message in the text box at the bottom. \\
+4. \emph{Filippo} clicks on the \emph{send} button
+5. The system sends the message to the librarian. \\
 
 
 \item [\textbf{Extensions}]: \\
 4.a The content of the message is empty.\\
-\hspace*{0.5cm} 3.a.1 The application shows a notification popup to
+\hspace*{0.5cm} 4.a.1 The application shows a notification popup to
 \emph{Filippo} informing that the content of the message is empty. \\
 \hspace*{0.5cm} \textbf{procedure returns to step 3}
-
-4.b No librarian selected as the recipient for the message.
-\hspace*{0.5cm} 4.b.1 \emph{Filippo} receives a notification informing that
-no librarian has been selected as the recipient for the message.\\
-\hspace*{0.5cm} \textbf{procedure returns to step 3}}
-
+}
 \end{lyxlist}
 \hrule
 
 %%
 %%
+
+\vspace{0.5cm}
+\hrule
+\begin{lyxlist}{PC1}
+\small{
+\item [\textbf{Procedure:}] Receive Message
+\item [\textbf{Scope:}] System Administrator Desktop Application (\emph{SADA})
+\item [\textbf{Primary Actor}:] SystemAdministrator Filippo
+\item [\textbf{Secondary Actor(s)}:] None
+\item [\textbf{Goal:}] The intention of the System Administrator to receive a
+message from a librarian.
+\item [\textbf{Level}:] User-goal level
+\item [\textbf{Main~Success~Scenario}]:\\
+1. \emph{Filippo} is on the messages functionality and wants to receive the
+messages from the librarians. 
+\\
+2. \emph{Filippo} clicks on the librarian who he wants to receive the message
+from.
+\\
+3. \emph{Filippo} clicks on the \emph{Receive Message} button
+4. The system gets all the messages sent from that librarian and loads them
+into the chat.
+\\
+
+
+\item [\textbf{Extensions}]: \\
+3.a No new message.\\
+\hspace*{0.5cm} 3.a.1 The application shows a notification popup to
+\emph{Filippo} informing that there is no new message. \\
+\hspace*{0.5cm} \textbf{procedure returns to step 2}
+}
+\end{lyxlist}
+\hrule
+
 
 \vspace{0.5cm}
 \hrule
