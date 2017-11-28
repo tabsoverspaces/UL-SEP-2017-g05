@@ -1,0 +1,10 @@
+/*
+@author nicentra
+@date Tue Nov 28 09:57:35 CET 2017
+*/
+
+
+@@view uc-ugRequestCustomerUnban
+@model Use-Case lu.uni.lassy.excalibur.sep.g05.mike.usecases.ugRequestCustomerUnban 
+@description ""
+@caption ""

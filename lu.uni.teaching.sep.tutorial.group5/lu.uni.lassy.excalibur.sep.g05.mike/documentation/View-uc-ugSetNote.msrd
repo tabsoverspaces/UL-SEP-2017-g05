@@ -1,0 +1,10 @@
+/*
+@author nicentra
+@date Tue Nov 28 09:57:42 CET 2017
+*/
+
+
+@@view uc-ugSetNote
+@model Use-Case lu.uni.lassy.excalibur.sep.g05.mike.usecases.ugSetNote 
+@description ""
+@caption ""

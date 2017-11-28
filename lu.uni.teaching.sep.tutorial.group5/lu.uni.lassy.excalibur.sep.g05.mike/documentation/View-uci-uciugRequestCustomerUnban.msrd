@@ -1,0 +1,10 @@
+/*
+@author nicentra
+@date Tue Nov 28 09:52:23 CET 2017
+*/
+
+
+@@view uci-uciugRequestCustomerUnban
+@instance Use-Case usecases.uciugManagingLoans.uciugRequestCustomerUnban 
+@description ""
+@caption ""

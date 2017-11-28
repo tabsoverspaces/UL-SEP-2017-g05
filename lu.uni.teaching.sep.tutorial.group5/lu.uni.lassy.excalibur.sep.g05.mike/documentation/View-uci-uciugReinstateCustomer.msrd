@@ -1,0 +1,10 @@
+/*
+@author nicentra
+@date Tue Nov 28 09:51:59 CET 2017
+*/
+
+
+@@view uci-uciugReinstateCustomer
+@instance Use-Case usecases.uciugManagingLoans.uciugReinstateCustomer 
+@description ""
+@caption ""

@@ -227,6 +227,20 @@
   <semanticResources>documentation/View-uc-ugManagingLoans.msrd</semanticResources>
   <semanticResources>usecases/usecaseinstance-ugManagingLoans-uciugManagingLoans.msr</semanticResources>
   <semanticResources>documentation/View-uci-uciugManagingLoans.msrd</semanticResources>
+  <semanticResources>documentation/View-uc-ugAddBook.msrd</semanticResources>
+  <semanticResources>documentation/View-uci-uciugAddBook.msrd</semanticResources>
+  <semanticResources>documentation/View-uci-uciugReinstateCustomer.msrd</semanticResources>
+  <semanticResources>documentation/View-uci-uciugRemoveBook.msrd</semanticResources>
+  <semanticResources>documentation/View-uci-uciugRequestCustomerBan.msrd</semanticResources>
+  <semanticResources>documentation/View-uci-uciugRequestCustomerUnban.msrd</semanticResources>
+  <semanticResources>documentation/View-uci-uciugSetNote.msrd</semanticResources>
+  <semanticResources>documentation/View-uci-uciugSuspendCustomer.msrd</semanticResources>
+  <semanticResources>documentation/View-uc-ugReinstateCustomer.msrd</semanticResources>
+  <semanticResources>documentation/View-uc-ugRemoveBook.msrd</semanticResources>
+  <semanticResources>documentation/View-uc-ugRequestCustomerBan.msrd</semanticResources>
+  <semanticResources>documentation/View-uc-ugRequestCustomerUnban.msrd</semanticResources>
+  <semanticResources>documentation/View-uc-ugSetNote.msrd</semanticResources>
+  <semanticResources>documentation/View-uc-ugSuspendCustomer.msrd</semanticResources>
   <ownedViews xmi:type="viewpoint:DView" xmi:id="_pEt9EM8LEeeedaHbMN5oTQ">
     <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/lu.uni.lassy.excalibur.ui.viewer/description/excalibur_models.odesign#//@ownedViewpoints[name='msr-viewpoint']"/>
   </ownedViews>

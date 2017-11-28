@@ -20,18 +20,97 @@ import lu.uni.lassy.messir.libraries.string
 				ieCustomerDatabase returned to lu.uni.lassy.excalibur.sep.g05.mike.environment.actLibrarian
 			}
 		}
+		
+	use case system subfunction sfSearchCustomer() {
+		actor lu.uni.lassy.excalibur.sep.g05.mike.environment.actLibrarian[primary, active]
+		returned messages{
+			ieCustomerQuery returned to lu.uni.lassy.excalibur.sep.g05.mike.environment.actLibrarian
+		}
+	}
+
+	use case system subfunction sfInspectCustomer() {
+		actor lu.uni.lassy.excalibur.sep.g05.mike.environment.actLibrarian[primary, active]
+		returned messages{
+			ieCustomerProfile returned to lu.uni.lassy.excalibur.sep.g05.mike.environment.actLibrarian
+		}
+	}
+		
 	use case system subfunction sfAddLoan() {
-			actor lu.uni.lassy.excalibur.sep.g05.mike.environment.actLibrarian[primary, active]
-			returned messages{
-				ieLoan returned to lu.uni.lassy.excalibur.sep.g05.mike.environment.actLibrarian
-			}
+		actor lu.uni.lassy.excalibur.sep.g05.mike.environment.actLibrarian[primary, active]
+		returned messages{
+			ieLoan returned to lu.uni.lassy.excalibur.sep.g05.mike.environment.actLibrarian
 		}
+	}
 	use case system subfunction sfReturnBook() {
-			actor lu.uni.lassy.excalibur.sep.g05.mike.environment.actLibrarian[primary, active]
-			returned messages{
-				ieReturnedBook returned to lu.uni.lassy.excalibur.sep.g05.mike.environment.actLibrarian
-			}
+		actor lu.uni.lassy.excalibur.sep.g05.mike.environment.actLibrarian[primary, active]
+		returned messages{
+			ieReturnedBook returned to lu.uni.lassy.excalibur.sep.g05.mike.environment.actLibrarian
 		}
+	}
+	
+	use case system subfunction sfSuspendCustomer() {
+		actor lu.uni.lassy.excalibur.sep.g05.mike.environment.actLibrarian[primary, active]
+		returned messages{
+			ieCustomerSuspended returned to lu.uni.lassy.excalibur.sep.g05.mike.environment.actLibrarian
+		}
+	}
+	
+	use case system subfunction sfReinstateCustomer() {
+		actor lu.uni.lassy.excalibur.sep.g05.mike.environment.actLibrarian[primary, active]
+		returned messages{
+			ieCustomerReinstated returned to lu.uni.lassy.excalibur.sep.g05.mike.environment.actLibrarian
+		}
+	}
+	
+	use case system subfunction sfRequestCustomerBan() {
+		actor lu.uni.lassy.excalibur.sep.g05.mike.environment.actLibrarian[primary, active]
+		returned messages{
+			ieSentBanRequest returned to lu.uni.lassy.excalibur.sep.g05.mike.environment.actLibrarian
+		}
+	}
+	
+	use case system subfunction sfRequestCustomerUnban() {
+		actor lu.uni.lassy.excalibur.sep.g05.mike.environment.actLibrarian[primary, active]
+		returned messages{
+			ieSentUnbanRequest returned to lu.uni.lassy.excalibur.sep.g05.mike.environment.actLibrarian
+		}
+	}
+	
+	use case system subfunction sfSetNote() {
+		actor lu.uni.lassy.excalibur.sep.g05.mike.environment.actLibrarian[primary, active]
+		returned messages{
+			ieSetNote returned to lu.uni.lassy.excalibur.sep.g05.mike.environment.actLibrarian
+		}
+	}
+	
+	use case system subfunction sfAccessBookDatabase() {
+		actor lu.uni.lassy.excalibur.sep.g05.mike.environment.actLibrarian[primary, active]
+		returned messages{
+			ieBookDatabase returned to lu.uni.lassy.excalibur.sep.g05.mike.environment.actLibrarian
+		}
+	}
+	
+	use case system subfunction sfSearchBook() {
+		actor lu.uni.lassy.excalibur.sep.g05.mike.environment.actLibrarian[primary, active]
+		returned messages{
+			ieBookQuery returned to lu.uni.lassy.excalibur.sep.g05.mike.environment.actLibrarian
+		}
+	}
+	
+	use case system subfunction sfAddBook() {
+		actor lu.uni.lassy.excalibur.sep.g05.mike.environment.actLibrarian[primary, active]
+		returned messages{
+			ieBookAdded returned to lu.uni.lassy.excalibur.sep.g05.mike.environment.actLibrarian
+		}
+	}
+	
+	use case system subfunction sfRemoveBook() {
+		actor lu.uni.lassy.excalibur.sep.g05.mike.environment.actLibrarian[primary, active]
+		returned messages{
+			ieBookRemoved returned to lu.uni.lassy.excalibur.sep.g05.mike.environment.actLibrarian
+		}
+	}
+	
 	use case system usergoal ugManagingLoans() {
 			actor lu.uni.lassy.excalibur.sep.g05.mike.environment.actLibrarian[primary, active]
 			reuse lu.uni.lassy.excalibur.sep.g05.mike.usecases.sfAddLoan[0..*]
@@ -41,8 +120,131 @@ import lu.uni.lassy.messir.libraries.string
 			step b: lu.uni.lassy.excalibur.sep.g05.mike.environment.actLibrarian executes sfReturnBook()
 			
 			ordering constraint "step a must be executed first"
-		}
-	use case system summary suDeployAndRun() {
-		}
+	}
+	
+	use case system usergoal ugSuspendCustomer() {
+			actor lu.uni.lassy.excalibur.sep.g05.mike.environment.actLibrarian[primary, active]
+			reuse lu.uni.lassy.excalibur.sep.g05.mike.usecases.sfAccessCustomerDatabase[1..1]
+			reuse lu.uni.lassy.excalibur.sep.g05.mike.usecases.sfSearchCustomer[1..1]
+			reuse lu.uni.lassy.excalibur.sep.g05.mike.usecases.sfInspectCustomer[1..1]
+			reuse lu.uni.lassy.excalibur.sep.g05.mike.usecases.sfSuspendCustomer[1..1]
+			
+			step a: lu.uni.lassy.excalibur.sep.g05.mike.environment.actLibrarian executes sfAccessCustomerDatabase()
+			step b: lu.uni.lassy.excalibur.sep.g05.mike.environment.actLibrarian executes sfSearchCustomer()
+			step c: lu.uni.lassy.excalibur.sep.g05.mike.environment.actLibrarian executes sfInspectCustomer()
+			step d: lu.uni.lassy.excalibur.sep.g05.mike.environment.actLibrarian executes sfSuspendCustomer()
+			
+			ordering constraint "step a must be executed first"
+			ordering constraint "step b must be executed second"
+			ordering constraint "step c must be executed third"
+			ordering constraint "step d must be executed fourth"			
+	}
+	
+	use case system usergoal ugReinstateCustomer() {
+			actor lu.uni.lassy.excalibur.sep.g05.mike.environment.actLibrarian[primary, active]
+			reuse lu.uni.lassy.excalibur.sep.g05.mike.usecases.sfAccessCustomerDatabase[1..1]
+			reuse lu.uni.lassy.excalibur.sep.g05.mike.usecases.sfSearchCustomer[1..1]
+			reuse lu.uni.lassy.excalibur.sep.g05.mike.usecases.sfInspectCustomer[1..1]
+			reuse lu.uni.lassy.excalibur.sep.g05.mike.usecases.sfReinstateCustomer[1..1]
+			
+			step a: lu.uni.lassy.excalibur.sep.g05.mike.environment.actLibrarian executes sfAccessCustomerDatabase()
+			step b: lu.uni.lassy.excalibur.sep.g05.mike.environment.actLibrarian executes sfSearchCustomer()
+			step c: lu.uni.lassy.excalibur.sep.g05.mike.environment.actLibrarian executes sfInspectCustomer()
+			step d: lu.uni.lassy.excalibur.sep.g05.mike.environment.actLibrarian executes sfReinstateCustomer()
+			
+			ordering constraint "step a must be executed first"
+			ordering constraint "step b must be executed second"
+			ordering constraint "step c must be executed third"
+			ordering constraint "step d must be executed fourth"			
+	}
+	
+	use case system usergoal ugRequestCustomerBan() {
+			actor lu.uni.lassy.excalibur.sep.g05.mike.environment.actLibrarian[primary, active]
+			reuse lu.uni.lassy.excalibur.sep.g05.mike.usecases.sfAccessCustomerDatabase[1..1]
+			reuse lu.uni.lassy.excalibur.sep.g05.mike.usecases.sfSearchCustomer[1..1]
+			reuse lu.uni.lassy.excalibur.sep.g05.mike.usecases.sfInspectCustomer[1..1]
+			reuse lu.uni.lassy.excalibur.sep.g05.mike.usecases.sfRequestCustomerBan[1..1]
+			
+			step a: lu.uni.lassy.excalibur.sep.g05.mike.environment.actLibrarian executes sfAccessCustomerDatabase()
+			step b: lu.uni.lassy.excalibur.sep.g05.mike.environment.actLibrarian executes sfSearchCustomer()
+			step c: lu.uni.lassy.excalibur.sep.g05.mike.environment.actLibrarian executes sfInspectCustomer()
+			step d: lu.uni.lassy.excalibur.sep.g05.mike.environment.actLibrarian executes sfRequestCustomerBan()
+			
+			ordering constraint "step a must be executed first"
+			ordering constraint "step b must be executed second"
+			ordering constraint "step c must be executed third"
+			ordering constraint "step d must be executed fourth"			
+	}
+	
+	use case system usergoal ugRequestCustomerUnban() {
+			actor lu.uni.lassy.excalibur.sep.g05.mike.environment.actLibrarian[primary, active]
+			reuse lu.uni.lassy.excalibur.sep.g05.mike.usecases.sfAccessCustomerDatabase[1..1]
+			reuse lu.uni.lassy.excalibur.sep.g05.mike.usecases.sfSearchCustomer[1..1]
+			reuse lu.uni.lassy.excalibur.sep.g05.mike.usecases.sfInspectCustomer[1..1]
+			reuse lu.uni.lassy.excalibur.sep.g05.mike.usecases.sfRequestCustomerUnban[1..1]
+			
+			step a: lu.uni.lassy.excalibur.sep.g05.mike.environment.actLibrarian executes sfAccessCustomerDatabase()
+			step b: lu.uni.lassy.excalibur.sep.g05.mike.environment.actLibrarian executes sfSearchCustomer()
+			step c: lu.uni.lassy.excalibur.sep.g05.mike.environment.actLibrarian executes sfInspectCustomer()
+			step d: lu.uni.lassy.excalibur.sep.g05.mike.environment.actLibrarian executes sfRequestCustomerUnban()
+			
+			ordering constraint "step a must be executed first"
+			ordering constraint "step b must be executed second"
+			ordering constraint "step c must be executed third"
+			ordering constraint "step d must be executed fourth"			
+	}
+	
+	use case system usergoal ugSetNote() {
+			actor lu.uni.lassy.excalibur.sep.g05.mike.environment.actLibrarian[primary, active]
+			reuse lu.uni.lassy.excalibur.sep.g05.mike.usecases.sfAccessCustomerDatabase[1..1]
+			reuse lu.uni.lassy.excalibur.sep.g05.mike.usecases.sfSearchCustomer[1..1]
+			reuse lu.uni.lassy.excalibur.sep.g05.mike.usecases.sfInspectCustomer[1..1]
+			reuse lu.uni.lassy.excalibur.sep.g05.mike.usecases.sfSetNote[1..1]
+			
+			step a: lu.uni.lassy.excalibur.sep.g05.mike.environment.actLibrarian executes sfAccessCustomerDatabase()
+			step b: lu.uni.lassy.excalibur.sep.g05.mike.environment.actLibrarian executes sfSearchCustomer()
+			step c: lu.uni.lassy.excalibur.sep.g05.mike.environment.actLibrarian executes sfInspectCustomer()
+			step d: lu.uni.lassy.excalibur.sep.g05.mike.environment.actLibrarian executes sfSetNote()
+			
+			ordering constraint "step a must be executed first"
+			ordering constraint "step b must be executed second"
+			ordering constraint "step c must be executed third"
+			ordering constraint "step d must be executed fourth"			
+	}
+	
+	use case system usergoal ugAddBook() {
+			actor lu.uni.lassy.excalibur.sep.g05.mike.environment.actLibrarian[primary, active]
+			reuse lu.uni.lassy.excalibur.sep.g05.mike.usecases.sfAccessBookDatabase[1..1]
+			reuse lu.uni.lassy.excalibur.sep.g05.mike.usecases.sfAddBook[1..*]
+			
+			step a: lu.uni.lassy.excalibur.sep.g05.mike.environment.actLibrarian executes sfAccessBookDatabase()
+			step b: lu.uni.lassy.excalibur.sep.g05.mike.environment.actLibrarian executes sfAddBook()
+			
+			ordering constraint "step a must be executed first"		
+	}
+	
+	use case system usergoal ugRemoveBook() {
+			actor lu.uni.lassy.excalibur.sep.g05.mike.environment.actLibrarian[primary, active]
+			reuse lu.uni.lassy.excalibur.sep.g05.mike.usecases.sfAccessBookDatabase[1..1]
+			reuse lu.uni.lassy.excalibur.sep.g05.mike.usecases.sfRemoveBook[1..*]
+			
+			step a: lu.uni.lassy.excalibur.sep.g05.mike.environment.actLibrarian executes sfAccessBookDatabase()
+			step b: lu.uni.lassy.excalibur.sep.g05.mike.environment.actLibrarian executes sfRemoveBook()
+			
+			ordering constraint "step a must be executed first"		
+	}
+	
+//	use case system summary suDeployAndRun() {
+//		actor lu.uni.lassy.excalibur.sep.g05.mike.environment.actLibrarian[primary, active]
+//		
+//		reuse ugManagingLoans[0..*]
+//		reuse sfAccessCustomerDatabase[0..*]
+//		
+//		// step shit
+//		
+//		//ordering constraint
+//		
+//		
+//		}
 	}
 }
