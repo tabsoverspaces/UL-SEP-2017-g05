@@ -8,8 +8,3 @@
 @instance Use-Case usecases.uciugManagingLoans.uciugManagingLoans 
 @description ""
 @caption ""
-
-@@view uci-uciugManagingLoans
-@instance Use-Case usecases.uciugManagingLoans.uciugManagingLoans 
-@description ""
-@caption ""

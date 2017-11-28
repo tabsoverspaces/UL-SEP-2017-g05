@@ -16,8 +16,10 @@ Environment Model {
 			
 actor actLibrarian role rnactLibrarian cardinality[1 .. *] {
 			input interface inactLibrarian {
+				
 			}
 			output interface outactLibrarian {
+				
 			}
 		}
 	actor actCustomer role rnactCustomer cardinality[0 .. *] {
