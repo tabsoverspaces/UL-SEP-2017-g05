@@ -1,0 +1,24 @@
+/*
+@author lobfil
+@date Mon Nov 27 18:42:29 CET 2017
+*/
+
+
+@@Use Case lu.uni.lassy.excalibur.myproject.usecases.ugManageLibrarians
+@description ""
+@protocolCondition
+"
+"
+@endProtocolConditions
+@preCondition
+"
+"
+@endPreConditions
+@postCondition
+"
+"
+@endPostConditions
+@additionalInformation
+"
+none
+"

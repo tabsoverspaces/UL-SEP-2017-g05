@@ -1,0 +1,8 @@
+package usecases.ucisuManageLibrarians {
+	import lu.uni.lassy.excalibur.myproject.usecases
+
+	Use Case Model {
+
+		
+	}
+}

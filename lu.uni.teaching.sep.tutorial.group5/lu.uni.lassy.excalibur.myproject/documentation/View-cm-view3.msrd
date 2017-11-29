@@ -1,0 +1,13 @@
+/*
+@author lobfil
+@date Mon Nov 27 18:47:59 CET 2017
+*/
+
+
+@@view cm-view3-clSysAdmin
+@model Concept
+@level Local
+@sublevel Primary Class
+@number 3
+@description "shows the clSystemAdministrator primary class type"
+@caption ""

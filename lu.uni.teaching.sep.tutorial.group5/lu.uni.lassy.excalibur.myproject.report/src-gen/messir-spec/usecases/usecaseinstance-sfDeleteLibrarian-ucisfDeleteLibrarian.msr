@@ -1,0 +1,6 @@
+package usecases.ucisfDeleteLibrarian {
+	import lu.uni.lassy.excalibur.myproject.usecases
+
+	Use Case Model {
+	}
+}

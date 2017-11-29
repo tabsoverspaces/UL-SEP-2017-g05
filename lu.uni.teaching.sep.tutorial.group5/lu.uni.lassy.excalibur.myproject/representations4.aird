@@ -224,6 +224,42 @@
   <semanticResources>platform:/resource/lu.uni.lassy.excalibur.standard.specification.libraries/library/documentation/PrimaryType-Primitive-ptInteger.msrd</semanticResources>
   <semanticResources>platform:/resource/lu.uni.lassy.excalibur.standard.specification.libraries/library/documentation/PrimaryType-Primitive-ptReal.msrd</semanticResources>
   <semanticResources>platform:/resource/lu.uni.lassy.excalibur.standard.specification.libraries/library/documentation/PrimaryType-Primitive-ptString.msrd</semanticResources>
+  <semanticResources>documentation/View-uc-ugLibrarians.msrd</semanticResources>
+  <semanticResources>documentation/View-uc-suManageLibrarians.msrd</semanticResources>
+  <semanticResources>documentation/View-uc-suDeployAndRun.msrd</semanticResources>
+  <semanticResources>documentation/View-uci-ucisfAddLibrarian.msrd</semanticResources>
+  <semanticResources>usecases/usecaseinstance-suDeployAndRun-ucisuDeployAndRun.msr</semanticResources>
+  <semanticResources>documentation/View-uci-ucisuDeployAndRun.msrd</semanticResources>
+  <semanticResources>concepts/primarytypes-classes/documentation/PrimaryType-Class-ctState.msrd</semanticResources>
+  <semanticResources>concepts/primarytypes-classes/documentation/Operation-ctState-init.msrd</semanticResources>
+  <semanticResources>environment/documentation/Actor-actSysadmin.msrd</semanticResources>
+  <semanticResources>environment/documentation/Actor-actLibrarianManagementSystem.msrd</semanticResources>
+  <semanticResources>environment/documentation/Actor-actDatabaseManagementSystem.msrd</semanticResources>
+  <semanticResources>usecases/documentation/UseCaseInstance-ucisuDeployAndRun.msrd</semanticResources>
+  <semanticResources>usecases/documentation/UseCase-suManageLibrarians.msrd</semanticResources>
+  <semanticResources>usecases/documentation/UseCase-suDeployAndRun.msrd</semanticResources>
+  <semanticResources>usecases/documentation/UseCase-sfAddLibrarian.msrd</semanticResources>
+  <semanticResources>usecases/documentation/UseCase-sfDeleteLibrarian.msrd</semanticResources>
+  <semanticResources>usecases/documentation/UseCase-sfEditLibrarian.msrd</semanticResources>
+  <semanticResources>usecases/documentation/UseCase-sfLogin.msrd</semanticResources>
+  <semanticResources>usecases/documentation/UseCase-sfLogout.msrd</semanticResources>
+  <semanticResources>usecases/usecaseinstance-suManageLibrarians-ucisuManageLibrarians.msr</semanticResources>
+  <semanticResources>usecases/usecaseinstance-ugManageLibrarians-uciugManageLibrarians.msr</semanticResources>
+  <semanticResources>documentation/View-uc-ugManageLibrarians.msrd</semanticResources>
+  <semanticResources>usecases/usecaseinstance-ugManageMessages-uciugManageMessages.msr</semanticResources>
+  <semanticResources>documentation/View-uci-uciugManageLibrarians.msrd</semanticResources>
+  <semanticResources>documentation/View-uci-uciugManageMessages.msrd</semanticResources>
+  <semanticResources>environment/documentation/Actor-actSystemAdministrator.msrd</semanticResources>
+  <semanticResources>documentation/View-em-view1.msrd</semanticResources>
+  <semanticResources>usecases/documentation/UseCase-ugManageLibrarians.msrd</semanticResources>
+  <semanticResources>documentation/View-type-depency-clSystemAdministrator.msrd</semanticResources>
+  <semanticResources>documentation/View-cm-view3.msrd</semanticResources>
+  <semanticResources>documentation/View-cm-view4.msrd</semanticResources>
+  <semanticResources>documentation/View-cm-view5.msrd</semanticResources>
+  <semanticResources>documentation/View-cm-view6.msrd</semanticResources>
+  <semanticResources>documentation/View-cm-view7.msrd</semanticResources>
+  <semanticResources>documentation/View-cm-view8.msrd</semanticResources>
+  <semanticResources>documentation/View-em-view9.msrd</semanticResources>
   <ownedViews xmi:type="viewpoint:DView" xmi:id="_vUtksMP4EeeRL_uO5XCuPw">
     <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/lu.uni.lassy.excalibur.ui.viewer/description/excalibur_models.odesign#//@ownedViewpoints[name='msr-viewpoint']"/>
   </ownedViews>

@@ -9,59 +9,29 @@ import lu.uni.lassy.messir.libraries.calendar
 import lu.uni.lassy.messir.libraries.math
 import lu.uni.lassy.messir.libraries.primitives
 import lu.uni.lassy.messir.libraries.string
-import lu.uni.lassy.excalibur.myproject.concepts.primarytypes.datatypes
-import lu.uni.lassy.excalibur.myproject.concepts.primarytypes.classes
+
+
 
 Environment Model {
-			
 
-	
-	actor actClient role rnactClient cardinality[0 .. *] {
-			input interface inactClient {
-			
-			
-			
-			operation ieLoginStatus(AStatus : ptInteger):ptBoolean
-			operation ieShowPersonalSettingsPanel():ptBoolean
-			operation ieShowAddressEditPanel():ptBoolean
-			operation ieShowEmailEditPanel():ptBoolean
-			operation ieShowNumberEditPanel():ptBoolean
-			operation ieShowPasswordEditPanel():ptBoolean
-			operation ieShowPaymentEditPanel():ptBoolean
-			operation ieMessage(AMessage : dtString):ptBoolean
-			operation ieInformationChangeResponse(ATypeOfInformation : ptString, AStatus : ptInteger):ptBoolean
-			operation ieShowNotificationsPanel():ptBoolean
-			operation ieGetNotificationData():ptBoolean
-			operation ieSubmittionStatus(AStatus : ptString):ptBoolean
-			operation ieGetBookList():ptBoolean
-			operation ieGetBookInformation():ptBoolean
-			operation ieGetLoanList():ptBoolean
-			operation ieGetReservationList():ptBoolean
-			
-			operation ieRequestResponse(AType : ptString, AStatus : ptString):ptBoolean
+	actor actSystemAdministrator role rnactSystemAdministrator cardinality[1 .. *] {
+			input interface inactSystemAdministrator {
+				operation ieLogin(): ptBoolean
+				operation ieLibrarianAdded(): ptBoolean
+				operation ieLibrarianEdited(): ptBoolean
+				operation ieLibrarianDeleted(): ptBoolean
+				operation ieMessageSent(): ptBoolean
+				operation ieLogout(): ptBoolean
 			}
-			output interface outactClient {
-			operation oeRequestBookList():ptBoolean
-			operation oeRequestLoanList():ptBoolean
-			operation oeRequestReservationList():ptBoolean
-			operation oeRequestNotificationList():ptBoolean
-			
-			operation oeSendMessage(AMessage : dtString):ptBoolean
-			operation oeChangeEmail(ANewEmail : ptString):ptBoolean
-			operation oeChangeLivingAddress(line1 : ptString, line2 : ptString, line3 :ptString):ptBoolean
-			operation oeRemovePaymentMethod(APaymentOption : clPaymentOption):ptBoolean
-			operation oeLogin(AID:ptString, APwd:ptString):ptBoolean
-			operation oeSetDefaultPaymentOption(APaymentMethod : clPaymentOption):ptBoolean
-			operation oeInputChangePasswordData(AOldPassword : ptString, ANewPassword : ptString, ANewPasswordConfirmation : ptString):ptBoolean
-			operation oeInspectAnNotification(ANotification : clNotification):ptBoolean
-			}
-		}
-	actor actLibrarian role rnactLibrarian cardinality[0 .. *] {
-			input interface inactLibrarian {
-			operation ieGetMessageFromClient(ATitle : ptString, AContent : ptString):ptBoolean
-			}
-			output interface outactLibrarian {
-			operation oeGetIssue():ptBoolean
+			output interface outactSystemAdministrator {
+				operation sfCreateSystemEnvironment(): ptBoolean
+				operation sfLogin(): ptBoolean
+				operation sfAddLibrarian(): ptBoolean
+				operation sfEditLibrarian(): ptBoolean
+				operation sfDeleteLibrarian(): ptBoolean
+				operation sfSendMessage(): ptBoolean
+				operation sfReceiveMessage(): ptBoolean
+				operation sfLogout(): ptBoolean
 			}
 		}
 	}

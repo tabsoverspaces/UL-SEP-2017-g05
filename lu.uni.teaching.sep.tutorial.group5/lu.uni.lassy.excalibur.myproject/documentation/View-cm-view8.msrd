@@ -1,0 +1,13 @@
+/*
+@author lobfil
+@date Mon Nov 27 19:14:38 CET 2017
+*/
+
+
+@@view cm-view8-dtTime
+@model Concept
+@level Local
+@sublevel Primary Datatype
+@number 8
+@description "shows the dtTime primary data type"
+@caption ""

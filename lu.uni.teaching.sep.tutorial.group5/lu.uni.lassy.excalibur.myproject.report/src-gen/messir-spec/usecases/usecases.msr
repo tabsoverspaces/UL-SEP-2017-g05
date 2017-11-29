@@ -1,0 +1,94 @@
+/*
+* @author lobfil
+* @date Tue Nov 07 21:17:53 CET 2017
+*/
+
+package lu.uni.lassy.excalibur.myproject.usecases {
+
+import lu.uni.lassy.messir.libraries.calendar
+import lu.uni.lassy.messir.libraries.math
+import lu.uni.lassy.messir.libraries.primitives
+import lu.uni.lassy.messir.libraries.string
+
+	Use Case Model {
+		
+	
+	use case system summary suManageLibrarians() {
+		actor lu.uni.lassy.excalibur.myproject.environment.actSysadmin[primary, active]
+		actor lu.uni.lassy.excalibur.myproject.environment.actDatabaseManagementSystem[secondary, active]
+		actor lu.uni.lassy.excalibur.myproject.environment.actLibrarianManagementSystem[secondary, active]
+	
+		reuse lu.uni.lassy.excalibur.myproject.usecases.sfAddLibrarian[0..*]
+		reuse lu.uni.lassy.excalibur.myproject.usecases.sfEditLibrarian[0..*]
+		reuse lu.uni.lassy.excalibur.myproject.usecases.sfDeleteLibrarian[0..*]
+		
+		
+		step a: lu.uni.lassy.excalibur.myproject.environment.actSysadmin executes sfAddLibrarian
+		step b: lu.uni.lassy.excalibur.myproject.environment.actSysadmin executes sfEditLibrarian
+		step c: lu.uni.lassy.excalibur.myproject.environment.actSysadmin executes sfDeleteLibrarian 
+		
+		
+		
+		
+		}
+
+	use case system summary suDeployAndRun() {
+		actor lu.uni.lassy.excalibur.myproject.environment.actSysadmin[primary, active]
+		
+		reuse lu.uni.lassy.excalibur.myproject.usecases.suManageLibrarians[1..*]
+		reuse lu.uni.lassy.excalibur.myproject.usecases.sfLogin[0..1]
+		reuse lu.uni.lassy.excalibur.myproject.usecases.sfLogout[0..1]
+		
+		step a: lu.uni.lassy.excalibur.myproject.environment.actSysadmin executes sfLogin
+		step b: lu.uni.lassy.excalibur.myproject.environment.actSysadmin executes sfLogout
+		step c: lu.uni.lassy.excalibur.myproject.environment.actSysadmin executes suManageLibrarians
+		
+		}
+
+	use case system subfunction sfAddLibrarian() {
+			actor lu.uni.lassy.excalibur.myproject.environment.actSysadmin[primary, passive]
+			actor lu.uni.lassy.excalibur.myproject.environment.actDatabaseManagementSystem[secondary, passive]
+			actor lu.uni.lassy.excalibur.myproject.environment.actLibrarianManagementSystem[secondary, passive]
+			
+			returned messages{
+				ieAddLibrarian returned to lu.uni.lassy.excalibur.myproject.environment.actSysadmin
+			}
+		}
+		
+		
+	use case system subfunction sfDeleteLibrarian() {
+			actor lu.uni.lassy.excalibur.myproject.environment.actSysadmin[primary, active]
+			actor lu.uni.lassy.excalibur.myproject.environment.actDatabaseManagementSystem[secondary, passive]
+			actor lu.uni.lassy.excalibur.myproject.environment.actLibrarianManagementSystem[secondary, passive]
+			
+			returned messages{
+				ieDeleteLibrarian returned to lu.uni.lassy.excalibur.myproject.environment.actSysadmin
+			}
+		
+		}
+	use case system subfunction sfEditLibrarian() {
+			actor lu.uni.lassy.excalibur.myproject.environment.actSysadmin[primary, active]
+			actor lu.uni.lassy.excalibur.myproject.environment.actDatabaseManagementSystem[secondary, passive]
+			actor lu.uni.lassy.excalibur.myproject.environment.actLibrarianManagementSystem[secondary, passive]
+			
+			returned messages{
+				ieEditLibrarian returned to lu.uni.lassy.excalibur.myproject.environment.actSysadmin
+			}
+		}
+		
+	use case system subfunction sfLogin() {
+			actor lu.uni.lassy.excalibur.myproject.environment.actSysadmin[primary, active]
+			returned messages{
+				ieLogin returned to lu.uni.lassy.excalibur.myproject.environment.actSysadmin
+			}
+		}
+	use case system subfunction sfLogout() {
+			actor lu.uni.lassy.excalibur.myproject.environment.actSysadmin[primary, active]
+			returned messages{
+				ieLogout returned to lu.uni.lassy.excalibur.myproject.environment.actSysadmin
+		}	
+		
+	}
+
+}
+}

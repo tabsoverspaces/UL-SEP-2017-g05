@@ -1,0 +1,10 @@
+/*
+@author lobfil
+@date Wed Nov 22 12:07:16 CET 2017
+*/
+
+
+@@view uci-uciugManageLibrarians
+@instance Use-Case usecases.uciugManageLibrarians.uciugManageLibrarians 
+@description ""
+@caption ""

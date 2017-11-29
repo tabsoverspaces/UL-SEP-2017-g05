@@ -1,0 +1,13 @@
+/*
+@author lobfil
+@date Mon Nov 27 19:02:17 CET 2017
+*/
+
+
+@@view cm-view6-dtMessage
+@model Concept
+@level Local
+@sublevel Primary Datatype
+@number 6
+@description "shows the dtMessage primary data type"
+@caption ""

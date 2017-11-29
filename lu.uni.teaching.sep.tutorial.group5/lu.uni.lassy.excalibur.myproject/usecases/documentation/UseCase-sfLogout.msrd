@@ -1,0 +1,24 @@
+/*
+@author lobfil
+@date Wed Nov 08 01:31:01 CET 2017
+*/
+
+
+@@Use Case Subfunction lu.uni.lassy.excalibur.myproject.usecases.sfLogout
+@description ""
+@protocolCondition
+"
+"
+@endProtocolConditions
+@preCondition
+"
+"
+@endPreConditions
+@postCondition
+"
+"
+@endPostConditions
+@additionalInformation
+"
+none
+"
