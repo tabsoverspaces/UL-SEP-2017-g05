@@ -264,6 +264,13 @@
   <semanticResources>documentation/View-cm-view7.msrd</semanticResources>
   <semanticResources>documentation/View-cm-view8.msrd</semanticResources>
   <semanticResources>documentation/View-em-view9.msrd</semanticResources>
+  <semanticResources>usecases/documentation/UseCase-sfAuthenticated.msrd</semanticResources>
+  <semanticResources>usecases/usecaseinstance-ugChangePassword-uciugChangePassword.msr</semanticResources>
+  <semanticResources>usecases/usecaseinstance-ugReplyToLibrarian-uciugReplyToLibrarian.msr</semanticResources>
+  <semanticResources>usecases/usecaseinstance-ugSendBookLoanRequest-uciugSendBookLoanRequest.msr</semanticResources>
+  <semanticResources>concepts/primarytypes-classes/documentation/PrimaryType-Class-clAccountPaymentOption.msrd</semanticResources>
+  <semanticResources>documentation/View-em-view10.msrd</semanticResources>
+  <semanticResources>documentation/View-em-view10-actClient.msrd</semanticResources>
   <ownedViews xmi:type="viewpoint:DView" xmi:id="_vC6DAMP4EeeRL_uO5XCuPw">
     <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/lu.uni.lassy.excalibur.ui.viewer/description/excalibur_models.odesign#//@ownedViewpoints[name='msr-viewpoint']"/>
   </ownedViews>

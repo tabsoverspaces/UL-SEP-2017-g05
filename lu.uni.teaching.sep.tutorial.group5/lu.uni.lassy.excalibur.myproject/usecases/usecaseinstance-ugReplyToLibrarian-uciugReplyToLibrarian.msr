@@ -1,0 +1,33 @@
+package usecases.uciugReplyToLibrarian {
+	import lu.uni.lassy.excalibur.myproject.usecases
+	import lu.uni.lassy.excalibur.myproject.environment
+	import lu.uni.lassy.excalibur.myproject.concepts.primarytypes.datatypes
+
+	Use Case Model {
+
+		use case instance uciugReplyToLibrarian : ugReplyToLibrarian{
+			actors {
+				john : actClient
+				bob : actLibrarian
+			}
+			use case steps {
+				john executed instanceof subfunction sfShowNotificationsPanel() {
+						actClient.inactClient.ieShowNotificationsPanel() returned to john
+					}
+				john executed instanceof subfunction sfInspectAnNotification("Notification6") {
+						actClient.inactClient.ieGetNotificationData() returned to john
+					}
+				john executed instanceof subfunction sfInputReplyData("Loan extension" , "I would like a loan extension Mr.Bob") {
+								
+					}
+				john executed instanceof subfunction sfSubmitReply("bob") {
+						actClient.inactClient.ieSubmittionStatus("Message sent") returned to john	
+						actLibrarian.inactLibrarian.ieGetMessageFromClient("Loan extension","I would like a loan extension Mr.Bob") returned to bob
+					}
+
+
+
+			}
+		}
+	}
+}

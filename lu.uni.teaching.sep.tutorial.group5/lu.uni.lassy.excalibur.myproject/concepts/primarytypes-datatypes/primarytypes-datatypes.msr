@@ -20,12 +20,6 @@ Concept Model {
 			attribute value: ptString
 			}
 		
-		datatype dtDate {
-			attribute day: ptInteger
-			attribute month: ptInteger
-			attribute year: ptInteger
-			}
-		
 		datatype dtTime {
 			attribute hour: ptInteger
 			attribute minutes: ptInteger
@@ -35,6 +29,19 @@ Concept Model {
 			attribute first: ptString
 			attribute last: ptString
 			}
+			
+		datatype dtPerson {
+				attribute firstName : ptString
+				attribute lastName : ptString
+				
+			}
+			
+			datatype dtCardSecurityNumber {
+				attribute num1 : ptInteger
+				attribute num2 : ptInteger
+				attribute num3 : ptInteger
+			}
+		
 		}
 }
 }

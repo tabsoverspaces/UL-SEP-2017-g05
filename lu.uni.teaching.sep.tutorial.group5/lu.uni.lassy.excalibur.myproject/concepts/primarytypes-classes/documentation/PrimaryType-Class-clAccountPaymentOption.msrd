@@ -1,0 +1,19 @@
+/*
+@author lobfil
+@date Tue Dec 05 17:47:23 CET 2017
+*/
+
+
+@@Primary Type Class lu.uni.lassy.excalibur.myproject.concepts.primarytypes.classes.clAccountPaymentOption
+@description ""
+@attribute
+lu.uni.lassy.excalibur.myproject.concepts.primarytypes.classes.clAccountPaymentOption.accountName
+""
+@attribute
+lu.uni.lassy.excalibur.myproject.concepts.primarytypes.classes.clAccountPaymentOption.accountHolder
+""
+@endAttributes
+@operation
+lu.uni.lassy.excalibur.myproject.concepts.primarytypes.classes.clAccountPaymentOption.init
+""
+@endOperations

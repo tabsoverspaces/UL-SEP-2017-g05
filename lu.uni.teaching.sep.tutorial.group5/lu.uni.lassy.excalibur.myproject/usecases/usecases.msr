@@ -5,17 +5,21 @@ import lu.uni.lassy.messir.libraries.math
 import lu.uni.lassy.messir.libraries.primitives
 import lu.uni.lassy.messir.libraries.string
 
-	Use Case Model {
-		use case system summary suDeployAndRun() {
+import lu.uni.lassy.excalibur.myproject.environment
+import lu.uni.lassy.excalibur.myproject.concepts.primarytypes.datatypes
+import lu.uni.lassy.excalibur.myproject.concepts.primarytypes.classes
+
+Use Case Model{
+	use case system summary suDeployAndRun() {
 		actor lu.uni.lassy.excalibur.myproject.environment.actSystemAdministrator[primary, active]
 		
 		reuse lu.uni.lassy.excalibur.myproject.usecases.sfCreateSystemEnvironment[0..1]
 		reuse lu.uni.lassy.excalibur.myproject.usecases.ugManageLibrarians[1..*]
-		reuse lu.uni.lassy.excalibur.myproject.usecases.sfLogin[0..1]
+		reuse lu.uni.lassy.excalibur.myproject.usecases.sfAuthenticated[0..1]
 		reuse lu.uni.lassy.excalibur.myproject.usecases.sfLogout[0..1]
 		
 		step a: lu.uni.lassy.excalibur.myproject.environment.actSystemAdministrator executes sfCreateSystemEnvironment
-		step b: lu.uni.lassy.excalibur.myproject.environment.actSystemAdministrator executes sfLogin
+		step b: lu.uni.lassy.excalibur.myproject.environment.actSystemAdministrator executes sfAuthenticated
 		step c: lu.uni.lassy.excalibur.myproject.environment.actSystemAdministrator executes ugManageLibrarians
 		step d: lu.uni.lassy.excalibur.myproject.environment.actSystemAdministrator executes sfLogout
 		
@@ -85,7 +89,7 @@ import lu.uni.lassy.messir.libraries.string
 		}
 	
 		
-	use case system subfunction sfLogin() {
+	use case system subfunction sfAuthenticated() {
 			actor lu.uni.lassy.excalibur.myproject.environment.actSystemAdministrator[primary, active]
 			returned messages{
 				ieLogin returned to lu.uni.lassy.excalibur.myproject.environment.actSystemAdministrator
@@ -126,6 +130,163 @@ import lu.uni.lassy.messir.libraries.string
 		step a: lu.uni.lassy.excalibur.myproject.environment.actSystemAdministrator executes sfSendMessage
 		step b: lu.uni.lassy.excalibur.myproject.environment.actSystemAdministrator executes sfReceiveMessage	
 		
+		}
+	
+	
+	use case system subfunction sfLogin(AID:ptString, APwd:ptString) {
+			actor lu.uni.lassy.excalibur.myproject.environment.actClient[primary, active]
+			returned messages {
+			ieLoginStatus(AStatus) returned to lu.uni.lassy.excalibur.myproject.environment.actClient
+			ieMessage(AMessage) returned to lu.uni.lassy.excalibur.myproject.environment.actClient
+			}
+		}
+	use case system subfunction sfShowPersonalSettings() {
+			actor actClient[primary, active]
+			
+			returned messages {
+			ieShowPersonalSettingsPanel returned to actClient
+			}
+		}
+	use case system subfunction sfShowPasswordEditPanel() {
+			actor actClient[primary, active]
+			returned messages {
+			ieShowPasswordEditPanel returned to actClient
+			}
+		}
+	use case system subfunction sfShowNumberEditPanel() {
+			actor actClient[primary, active]
+			returned messages {
+			ieShowNumberEditPanel returned to actClient
+			}
+		}
+	use case system subfunction sfShowEmailEditPanel() {
+			actor actClient[primary, active]
+			returned messages {
+			ieShowEmailEditPanel returned to actClient
+			}
+		}
+	use case system subfunction sfShowAddressEditPanel() {
+			actor actClient[primary, active]
+			returned messages {
+			ieShowAddressEditPanel returned to actClient
+			}
+		}
+	use case system subfunction sfShowPaymentEditPanel() {
+			actor actClient[primary, active]
+			returned messages {
+			ieShowPaymentEditPanel returned to actClient
+			}
+		}
+		
+	use case system subfunction sfShowNotificationsPanel() {
+			actor actClient[primary, active]
+			returned messages {
+			actClient.inactClient.ieShowNotificationsPanel() returned to actClient
+			}
+		}
+	use case system subfunction sfInspectAnNotification() {
+			actor actClient[primary, active]
+			
+			returned messages {
+			actClient.inactClient.ieGetNotificationData() returned to actClient
+			}
+			
+		}
+	use case system subfunction sfInputReplyData(ATitle : ptString, AContent:ptString) {
+			actor actClient[primary, active]
+			
+			returned messages {
+			
+			}
+		}
+	use case system subfunction sfSubmitReply() {
+			actor actClient[primary, active]
+			actor actLibrarian[secondary]
+			
+			returned messages {
+			actClient.inactClient.ieSubmittionStatus(AStatus) returned to actClient
+			actLibrarian.inactLibrarian.ieGetMessageFromClient(ATitle,AContent) returned to actLibrarian
+			}
+		}	
+		
+		
+	use case system usergoal ugChangePassword() {
+			actor actClient[primary, active]
+			
+			reuse sfLogin
+			reuse sfShowPersonalSettings
+			reuse sfShowPasswordEditPanel
+			reuse sfInputChangePasswordData
+			
+			step a: actClient executes sfLogin
+			step b: actClient executes sfShowPersonalSettings
+			step c: actClient executes sfShowPasswordEditPanel
+			step d: actClient executes sfInputChangePasswordData
+			step e: actClient executes sfSubmitInformationChange
+		}
+
+	use case system subfunction sfInputChangePasswordData(AOldPassword : ptString, ANewPassword : ptString, ANewPasswordConfirm : ptString) {
+			actor actClient[primary, active]
+			
+			returned messages {
+			
+			}
+		}
+	use case system subfunction sfSubmitInformationChange() {
+			actor actClient[primary, active]
+			
+			returned messages {
+			ieInformationChangeResponse returned to actClient
+			ieMessage returned to actClient
+			}
+		}
+	use case system usergoal ugReplyToLibrarian() {
+		actor actClient[primary, active]
+		
+		reuse sfShowNotificationsPanel
+		reuse sfInspectAnNotification
+		reuse sfInputReplyData
+		reuse sfSubmitReply
+		
+		 step a: actClient executes sfShowNotificationsPanel
+		 step b: actClient executes sfInspectAnNotification
+		 step c: actClient executes sfInputReplyData
+		 step d: actClient executes sfSubmitReply
+		}
+	
+	use case system usergoal ugSendBookLoanRequest() {
+		actor actClient[primary,active]
+		
+		reuse sfShowBookList
+		reuse sfInspectABook
+		reuse sfSubmitLoanRequest
+		
+		step a: actClient executes sfShowBookList
+		step b: actClient executes sfInspectABook
+		step c: actClient executes sfSubmitLoanRequest
+		
+		}
+	use case system subfunction sfShowBookList() {
+			actor actClient[primary, active]
+			
+			returned messages {
+			actClient.inactClient.ieGetBookList() returned to actClient
+			}
+		}
+	use case system subfunction sfInspectABook(ABook : clBook) {
+			actor actClient[primary, active]
+			
+			returned messages{
+				actClient.inactClient.ieGetBookInformation() returned to actClient
+			}
+		}
+	use case system subfunction sfSubmitLoanRequest(ABook : clBook) {
+			actor actClient[primary, active]
+			
+			returned messages {
+			ieRequestResponse returned to actClient
+			ieMessage returned to actClient
+			}
 		}
 	}
 }

@@ -1,0 +1,29 @@
+package usecases.uciugSendBookLoanRequest {
+	import lu.uni.lassy.excalibur.myproject.usecases
+	import lu.uni.lassy.excalibur.myproject.environment
+
+	Use Case Model {
+
+		use case instance uciugSendBookLoanRequest : ugSendBookLoanRequest{
+			actors {
+				john : actClient
+			}
+			use case steps {
+				john executed instanceof subfunction sfShowBookList() 
+				{
+					actClient.inactClient.ieGetBookList() returned to john
+				}
+				john executed instanceof subfunction sfInspectABook("453-4531-32423", "Inferno", "Dan Brown")
+				{
+					actClient.inactClient.ieGetBookInformation() returned to john
+				}
+				john executed instanceof subfunction sfSubmitLoanRequest("453-4531-32423", "Inferno", "Dan Brown")
+				{
+					ieRequestReponse("Loan", "1") returned to john
+					ieMessage("Loan request sent successfully") returned to john
+				}
+
+			}
+		}
+	}
+}
