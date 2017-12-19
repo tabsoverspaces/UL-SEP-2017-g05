@@ -107,7 +107,7 @@ Environment Model {
 				
 			}
 			output interface outactLibrarian {
-				operation oeAddBook(AISBN : ptString, AName : ptString, AAuthor : ptString, AID : ptString):ptBoolean
+				operation oeAddBook(AISBN : ptString, AName : ptString, AAuthor : ptString): ptBoolean
 				operation oeRemoveBook(AID : ptString):ptBoolean
 				operation oeSearchBook(AName : ptString):ptBoolean
 				operation oeSearchCustomer(AID : ptString) : ptBoolean

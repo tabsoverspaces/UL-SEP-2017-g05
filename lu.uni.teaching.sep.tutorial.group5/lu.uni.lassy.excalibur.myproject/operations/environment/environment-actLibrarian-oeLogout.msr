@@ -1,4 +1,4 @@
-package lu.uni.lassy.excalibur.myproject.environment.operations.actLibrarian.outactLibrarian.oeAddBook {
+package lu.uni.lassy.excalibur.myproject.environment.operations.actLibrarian.outactLibrarian.oeLogout {
 
 import lu.uni.lassy.messir.libraries.primitives
 import lu.uni.lassy.messir.libraries.math
@@ -10,7 +10,7 @@ import lu.uni.lassy.excalibur.myproject.environment
 
 	Operation Model {
 
-		operation: lu.uni.lassy.excalibur.myproject.environment.actLibrarian.outactLibrarian.oeAddBook(AISBN:ptString, AName:ptString, AAuthor:ptString):ptBoolean{
+		operation: lu.uni.lassy.excalibur.myproject.environment.actLibrarian.outactLibrarian.oeLogout():ptBoolean{
 		// include below the specification information (pre,post or ocl or prolog)
 			preP{
 				let TheSystem: ctState in
@@ -22,21 +22,17 @@ import lu.uni.lassy.excalibur.myproject.environment
                 and TheActor.rnctAuthenticated.vpIsLogged = true
 			}
 			
-			preF {
+			preF{
 				true
 			}
 			
 			postF{
-				let TheSystem: ctState = self.rnActor in
-				let Books: OrderedSet(clBook) = OrderedSet{} in
-				let Book: clBook in
-				Books = TheSystem.rnclBook
-				Books.append(Book)
-				self.rnActor.rnInterfaceIN^ieBooks(Books)
+				true
 			}
 			
 			postP{
-				true
+				let TheActor: actSystemAdministrator in
+				TheActor.rnctAuthenticated.vpIsLogged = false
 			}
 		}
 	}

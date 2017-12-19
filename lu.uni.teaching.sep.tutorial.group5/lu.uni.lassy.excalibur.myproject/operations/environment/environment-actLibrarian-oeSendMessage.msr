@@ -1,4 +1,4 @@
-package lu.uni.lassy.excalibur.myproject.environment.operations.actLibrarian.outactLibrarian.oeAddBook {
+package lu.uni.lassy.excalibur.myproject.environment.operations.actLibrarian.outactLibrarian.oeSendMessage {
 
 import lu.uni.lassy.messir.libraries.primitives
 import lu.uni.lassy.messir.libraries.math
@@ -10,9 +10,9 @@ import lu.uni.lassy.excalibur.myproject.environment
 
 	Operation Model {
 
-		operation: lu.uni.lassy.excalibur.myproject.environment.actLibrarian.outactLibrarian.oeAddBook(AISBN:ptString, AName:ptString, AAuthor:ptString):ptBoolean{
+		operation: lu.uni.lassy.excalibur.myproject.environment.actLibrarian.outactLibrarian.oeSendMessage(AMessage:ptString):ptBoolean{
 		// include below the specification information (pre,post or ocl or prolog)
-			preP{
+			preP {
 				let TheSystem: ctState in
 				let TheActor: actLibrarian in
 				self.rnActor.rnSystem = TheSystem
@@ -22,20 +22,18 @@ import lu.uni.lassy.excalibur.myproject.environment
                 and TheActor.rnctAuthenticated.vpIsLogged = true
 			}
 			
-			preF {
+			preF{
 				true
 			}
 			
-			postF{
+			postF {
 				let TheSystem: ctState = self.rnActor in
-				let Books: OrderedSet(clBook) = OrderedSet{} in
-				let Book: clBook in
-				Books = TheSystem.rnclBook
-				Books.append(Book)
-				self.rnActor.rnInterfaceIN^ieBooks(Books)
+				let TheMessage: clMessage in
+				TheMessage.value = AdtMessage
+				self.rnActor.rninterfaceIN^ieMessageSent(TheMessage)
 			}
 			
-			postP{
+			postP {
 				true
 			}
 		}

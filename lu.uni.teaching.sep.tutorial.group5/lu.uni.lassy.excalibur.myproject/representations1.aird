@@ -305,6 +305,10 @@
     <semanticResources>documentation/View-uc-ugSetNote.msrd</semanticResources>
     <semanticResources>documentation/View-uc-ugSuspendCustomer.msrd</semanticResources>
     <semanticResources>operations/environment/environment-actLibrarian-oeAddBook.msr</semanticResources>
+    <semanticResources>operations/environment/environment-actLibrarian-oeRemoveBook.msr</semanticResources>
+    <semanticResources>operations/environment/environment-actLibrarian-AddBook.msr</semanticResources>
+    <semanticResources>operations/environment/environment-actLibrarian-oeSendMessage.msr</semanticResources>
+    <semanticResources>operations/environment/environment-actLibrarian-oeLogout.msr</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" xmi:id="_vUSG4MP4EeeRL_uO5XCuPw">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/lu.uni.lassy.excalibur.ui.viewer/description/excalibur_models.odesign#//@ownedViewpoints[name='msr-viewpoint']"/>
       <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" xmi:id="_f0ptKc9lEeeiIb7pvcIrvQ" name="uc-ugManageLibrarians" repPath="#_f0ptAM9lEeeiIb7pvcIrvQ">
