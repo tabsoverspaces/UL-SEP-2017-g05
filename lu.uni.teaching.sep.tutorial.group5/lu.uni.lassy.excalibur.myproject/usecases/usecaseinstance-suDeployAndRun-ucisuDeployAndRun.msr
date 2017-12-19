@@ -9,8 +9,8 @@ package usecases.ucisuDeployAndRun {
 			
 			use case steps {
 				filippoLobisch executed instanceof subfunction sfCreateSystemEnvironment() {}
-				filippoLobisch executed instanceof subfunction sfLogin("filippoLobisch", "password") {
-					ieLogin("Login successful") returned to filippoLobisch
+				filippoLobisch executed instanceof subfunction sfAuthenticated("filippolobisch", "password") {
+					ieAuthenticated("Login successful") returned to filippoLobisch
 				}
 				filippoLobisch executed instanceof subfunction sfLogout() {
 					ieLogout("Logout successful.") returned to filippoLobisch

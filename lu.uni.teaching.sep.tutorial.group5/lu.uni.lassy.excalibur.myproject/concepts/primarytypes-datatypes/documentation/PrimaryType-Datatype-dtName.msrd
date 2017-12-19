@@ -1,0 +1,15 @@
+/*
+@author lobfil
+@date Mon Dec 18 18:02:12 CET 2017
+*/
+
+
+@@Primary Type Datatype lu.uni.lassy.excalibur.myproject.concepts.primarytypes.datatypes.dtName
+@description ""
+@attribute
+lu.uni.lassy.excalibur.myproject.concepts.primarytypes.datatypes.dtName.first
+""
+@attribute
+lu.uni.lassy.excalibur.myproject.concepts.primarytypes.datatypes.dtName.last
+""
+@endAttributes

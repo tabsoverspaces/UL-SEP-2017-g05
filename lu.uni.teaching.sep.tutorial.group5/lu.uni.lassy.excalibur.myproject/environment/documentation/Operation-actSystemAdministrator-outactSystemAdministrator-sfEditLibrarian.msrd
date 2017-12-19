@@ -1,0 +1,41 @@
+/*
+@author lobfil
+@date Mon Dec 18 18:00:22 CET 2017
+*/
+
+
+@@Operation
+lu.uni.lassy.excalibur.myproject.environment.actSystemAdministrator.outactSystemAdministrator.sfEditLibrarian
+//parameters
+@parameter
+lu.uni.lassy.excalibur.myproject.environment.actSystemAdministrator.outactSystemAdministrator.sfEditLibrarian.AdtID
+"the long integer number representing a unique ID of the librarian used to uniquely identify the librarian when performing actions."
+@parameter
+lu.uni.lassy.excalibur.myproject.environment.actSystemAdministrator.outactSystemAdministrator.sfEditLibrarian.AdtName
+"the name of the librarian that is selected to be edited."
+@parameter
+lu.uni.lassy.excalibur.myproject.environment.actSystemAdministrator.outactSystemAdministrator.sfEditLibrarian.AdtDateOfDirth
+"the integer number representing the date of birth of a librarian."
+@endParameters
+
+@description "This is an operation that edits the details of a librarian.
+ "
+//preProtocol descriptions
+@preP
+"The vpStarted attribute of instance of class State must be equal to true signifying the system is running and that the system has been started (sfCreateSystemEnvironment). 
+Also the vpIsLogged attribute of instance of class Authenticated must be equal to false signifying that the System Administrator is not logged in and can execute operation Authenticated."
+@endPreP
+//preFunctional descriptions
+@preF
+"No restriction for this operation thus it will always be true."
+@endPreF
+//postFunctional descriptions
+@postF 
+"The value of variable Librarian.name should be set to AdtNewName if the condition "
+@endPostF
+//postProtocol descriptions
+@postP 
+"There is no change in the system therefore this will always be true, thus no restriction for this operation."
+@endPostP
+//example
+@example" "

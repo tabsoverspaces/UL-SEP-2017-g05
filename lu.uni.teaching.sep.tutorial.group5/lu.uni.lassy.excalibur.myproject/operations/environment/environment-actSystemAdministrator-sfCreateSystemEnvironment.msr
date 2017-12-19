@@ -1,0 +1,32 @@
+package lu.uni.lassy.excalibur.myproject.environment.operations.actSystemAdministrator.outactSystemAdministrator.sfCreateSystemEnvironment {
+
+import lu.uni.lassy.messir.libraries.primitives
+import lu.uni.lassy.messir.libraries.math
+import lu.uni.lassy.messir.libraries.string
+import lu.uni.lassy.messir.libraries.calendar
+
+import lu.uni.lassy.excalibur.myproject.concepts.primarytypes.classes
+import lu.uni.lassy.excalibur.myproject.environment
+
+	Operation Model {
+
+		operation: lu.uni.lassy.excalibur.myproject.environment.actSystemAdministrator.outactSystemAdministrator.sfCreateSystemEnvironment():ptBoolean{
+		// include below the specification information (pre,post or ocl or prolog)
+			preP {true}
+			preF {true}
+			postF {
+				let TheState: ctState in
+				let AactSystemAdministrator: actSystemAdministrator in
+				
+				TheState.init(true)
+				and TheState
+				and AactSystemAdministrator.init()
+			}
+			
+			postP {
+				let TheState: ctState in
+				TheState.vpStarted = true
+			}
+		}
+	}
+}

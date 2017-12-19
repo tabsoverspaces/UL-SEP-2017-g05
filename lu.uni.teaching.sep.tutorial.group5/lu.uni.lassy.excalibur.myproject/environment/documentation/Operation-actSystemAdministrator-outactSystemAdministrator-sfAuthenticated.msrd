@@ -1,0 +1,38 @@
+/*
+@author lobfil
+@date Mon Dec 18 21:23:04 CET 2017
+*/
+
+
+@@Operation
+lu.uni.lassy.excalibur.myproject.environment.actSystemAdministrator.outactSystemAdministrator.sfAuthenticated
+//parameters
+@parameter
+lu.uni.lassy.excalibur.myproject.environment.actSystemAdministrator.outactSystemAdministrator.sfAuthenticated.AdtID
+"the ID represents a unique identifier of the System Administrator."
+@parameter
+lu.uni.lassy.excalibur.myproject.environment.actSystemAdministrator.outactSystemAdministrator.sfAuthenticated.AdtPassword
+"the password represents a string which is used to authenticate the System Administrator into the System."
+@endParameters
+
+@description "This is an operation is used when the System Administrator wants to log in and Authenticate into the system. 
+ "
+//preProtocol descriptions
+@preP
+"The vpStarted attribute of instance of class State must be equal to true signifying the system is running and that the system has been started (sfCreateSystemEnvironment). 
+Also the vpIsLogged attribute of instance of class Authenticated must be equal to false signifying that the System Administrator is not logged in and can execute operation Authenticated."
+@endPreP
+//preFunctional descriptions
+@preF
+"Always true. Thus, no restriction for this operation."
+@endPreF
+//postFunctional descriptions
+@postF 
+"Always true. Thus, no restriction for this operation."
+@endPostF
+//postProtocol descriptions
+@postP 
+"The vpIsLogged attribute of instance of class Authenticated must be equal to true signifying that the System Administrator is logged in and can execute all the functionality of the system."
+@endPostP
+//example
+@example" "

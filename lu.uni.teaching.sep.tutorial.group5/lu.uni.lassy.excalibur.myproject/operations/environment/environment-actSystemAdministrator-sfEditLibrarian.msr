@@ -1,0 +1,57 @@
+package lu.uni.lassy.excalibur.myproject.environment.operations.actSystemAdministrator.outactSystemAdministrator.sfEditLibrarian {
+
+import lu.uni.lassy.messir.libraries.primitives
+import lu.uni.lassy.messir.libraries.math
+import lu.uni.lassy.messir.libraries.string
+import lu.uni.lassy.messir.libraries.calendar
+
+import lu.uni.lassy.excalibur.myproject.concepts.primarytypes.classes
+import lu.uni.lassy.excalibur.myproject.environment
+
+	Operation Model {
+
+		operation: lu.uni.lassy.excalibur.myproject.environment.actSystemAdministrator.outactSystemAdministrator.sfEditLibrarian(AdtID:ptInteger, 
+			AdtName: lu.uni.lassy.excalibur.myproject.concepts.primarytypes.datatypes.dtName, AdtDateOfDirth: dtDate):ptBoolean{
+		// include below the specification information (pre,post or ocl or prolog)
+			
+			preP {
+				let TheSystem: ctState in
+				let TheActor: actSystemAdministrator in
+				self.rnActor.rnSystem = TheSystem
+				and self.rnActor = TheActor
+				
+				and TheSystem.vpStarted = true
+                and TheActor.rnctAuthenticated.vpIsLogged = true
+			}
+			
+			preF{
+				true
+			}
+			
+			postF {
+				let TheSystem: ctState = self.rnActor in
+				let Libraraian: OrderedSet(clLibrarian) = OrderedSet{} in
+				let AdtNewName: lu.uni.lassy.excalibur.myproject.concepts.primarytypes.datatypes.dtName in
+					
+				Librarian = TheSystem.rnclLibrarian -> select(a:clLibrarian|a.AID=AdtID)
+				if (Librarian.name == AdtNewName)
+				then (Librarian.name = Librarian.name)
+				else (Librarian.name = AdtName)
+				endif
+				if (Librarian.dateOfBirth == AdtDateOfBirth)
+				then (Librarian.dateOfBirth = Librarian.dateOfBirth)
+				else (Librarian.dateOfBirth = AdtDateOfBirth) endif
+				
+				
+				let Librarians: Set(clLibrarian) = Set{} in
+				Librarians = TheSystem.rnclLibrarian
+				self.rnActor.rnInterfaceIN^ieGetLibrarians(Librarians)
+			}
+			
+			postP {
+				true
+			}
+			
+		}
+	}
+}

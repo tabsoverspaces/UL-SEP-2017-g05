@@ -89,10 +89,10 @@ Use Case Model{
 		}
 	
 		
-	use case system subfunction sfAuthenticated() {
+	use case system subfunction sfAuthenticated(AdtID: ptInteger, AdtPassword: ptString) {
 			actor lu.uni.lassy.excalibur.myproject.environment.actSystemAdministrator[primary, active]
 			returned messages{
-				ieLogin returned to lu.uni.lassy.excalibur.myproject.environment.actSystemAdministrator
+				ieAuthenticated returned to lu.uni.lassy.excalibur.myproject.environment.actSystemAdministrator
 			}
 		}
 	use case system subfunction sfLogout() {
@@ -102,6 +102,33 @@ Use Case Model{
 			}	
 		
 		}
+		
+	use case system usergoal ugManageBlockchain() {
+		actor lu.uni.lassy.excalibur.myproject.environment.actSystemAdministrator[primary, active]
+		actor lu.uni.lassy.excalibur.myproject.environment.actBlockchain[secondary, passive]
+		
+		reuse lu.uni.lassy.excalibur.myproject.usecases.sfGetBlockchain[0 .. *]
+		reuse lu.uni.lassy.excalibur.myproject.usecases.sfUpdateBlockchain[0 .. *]
+		
+		step a: lu.uni.lassy.excalibur.myproject.environment.actSystemAdministrator executes sfGetBlockchain
+		step b: lu.uni.lassy.excalibur.myproject.environment.actSystemAdministrator executes sfUpdateBlockchain
+	}
+
+	use case system subfunction sfGetBlockchain() {
+		actor lu.uni.lassy.excalibur.myproject.environment.actSystemAdministrator[primary, active]
+		actor lu.uni.lassy.excalibur.myproject.environment.actBlockchain[secondary, passive]
+		returned messages{
+			ieBlockchain returned to lu.uni.lassy.excalibur.myproject.environment.actSystemAdministrator
+		}
+	}
+	
+	use case system subfunction sfUpdateBlockchain() {
+		actor lu.uni.lassy.excalibur.myproject.environment.actSystemAdministrator[primary, active]
+		actor lu.uni.lassy.excalibur.myproject.environment.actBlockchain[secondary, passive]
+		returned messages{
+			ieBlockchainUpdated returned to lu.uni.lassy.excalibur.myproject.environment.actSystemAdministrator
+		}
+	}
 	
 	use case system subfunction sfSendMessage() {
 			actor lu.uni.lassy.excalibur.myproject.environment.actSystemAdministrator[primary, active]
@@ -110,8 +137,7 @@ Use Case Model{
 			}
 		}
 	
-	
-	use case system subfunction sfReceiveMessage() {
+	use case system subfunction sfGetMessage() {
 			actor lu.uni.lassy.excalibur.myproject.environment.actSystemAdministrator[primary, active]
 			returned messages{
 				ieMessageReceived returned to lu.uni.lassy.excalibur.myproject.environment.actSystemAdministrator
@@ -125,12 +151,33 @@ Use Case Model{
 		actor lu.uni.lassy.excalibur.myproject.environment.actSystemAdministrator[primary, active]
 		
 		reuse lu.uni.lassy.excalibur.myproject.usecases.sfSendMessage[0..*]
-		reuse lu.uni.lassy.excalibur.myproject.usecases.sfReceiveMessage[0..*]	
+		reuse lu.uni.lassy.excalibur.myproject.usecases.sfGetMessage[0..*]	
 		
 		step a: lu.uni.lassy.excalibur.myproject.environment.actSystemAdministrator executes sfSendMessage
-		step b: lu.uni.lassy.excalibur.myproject.environment.actSystemAdministrator executes sfReceiveMessage	
+		step b: lu.uni.lassy.excalibur.myproject.environment.actSystemAdministrator executes sfGetMessage	
 		
 		}
+	
+	use case system usergoal otherFunctionality() {
+		actor lu.uni.lassy.excalibur.myproject.environment.actSystemAdministrator[primary, active]
+		
+		reuse lu.uni.lassy.excalibur.myproject.usecases.sfGetBooks[0..*]
+		reuse lu.uni.lassy.excalibur.myproject.usecases.sfGetClients[0..*]
+		reuse lu.uni.lassy.excalibur.myproject.usecases.sfChangeSettings[0..*]
+	}
+	
+	use case system subfunction sfGetBooks() {
+		actor lu.uni.lassy.excalibur.myproject.environment.actSystemAdministrator[primary, active]
+	}
+	
+	use case system subfunction sfGetClients() {
+		actor lu.uni.lassy.excalibur.myproject.environment.actSystemAdministrator[primary, active]
+	}
+	
+	use case system subfunction sfChangeSettings() {
+		actor lu.uni.lassy.excalibur.myproject.environment.actSystemAdministrator[primary, active]
+	}
+	
 	
 	
 	use case system subfunction sfLogin(AID:ptString, APwd:ptString) {

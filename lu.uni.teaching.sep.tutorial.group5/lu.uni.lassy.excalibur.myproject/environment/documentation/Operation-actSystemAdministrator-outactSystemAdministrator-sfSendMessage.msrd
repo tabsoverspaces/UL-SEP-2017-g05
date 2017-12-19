@@ -1,0 +1,35 @@
+/*
+@author lobfil
+@date Tue Dec 19 11:16:35 CET 2017
+*/
+
+
+@@Operation
+lu.uni.lassy.excalibur.myproject.environment.actSystemAdministrator.outactSystemAdministrator.sfSendMessage
+//parameters
+@parameter
+lu.uni.lassy.excalibur.myproject.environment.actSystemAdministrator.outactSystemAdministrator.sfSendMessage.AdtMessage
+"the string that the System Administrator would like to send."
+@endParameters
+
+@description "This operation is used to send a message from the System Administrator to a given Librarian. 
+ "
+//preProtocol descriptions
+@preP
+" The vpStarted attribute of instance of class State must be equal to true signifying the system is running and that the system has been started (sfCreateSystemEnvironment). 
+Also the vpIsLogged attribute of instance of class Authenticated must be equal to false signifying that the System Administrator is not logged in and can execute operation Authenticated."
+@endPreP
+//preFunctional descriptions
+@preF
+"Always true. Thus, no restriction for this operation."
+@endPreF
+//postFunctional descriptions
+@postF 
+"The value of TheMessage of instance clMessage must be set equal to AdtMessage which is the message that the System Administrator would like to send to the librarian"
+@endPostF
+//postProtocol descriptions
+@postP 
+"Always true. Thus, no restriction for this operation."
+@endPostP
+//example
+@example" "

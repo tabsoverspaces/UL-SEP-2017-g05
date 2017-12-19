@@ -1,0 +1,55 @@
+/*
+@author lobfil
+@date Fri Dec 15 18:52:38 CET 2017
+*/
+
+
+@@Operation
+lu.uni.lassy.excalibur.myproject.environment.actSystemAdministrator.outactSystemAdministrator.sfAddLibrarian
+@description "This is an operation that adds a new librarian into the M.LIB system.
+ "
+//preProtocol descriptions
+@preP
+"The vpStarted attribute of instance of class State must be equal to true signifying the system is running and that the system has been started (sfCreateSystemEnvironment). 
+Also the vpIsLogged attribute of instance of class Authenticated must be equal to false signifying that the System Administrator is not logged in and can execute operation Authenticated."
+@endPreP
+//preFunctional descriptions
+@preF
+"No restriction for this operation thus it will always be true."
+@endPreF
+//postFunctional descriptions
+@postF 
+"The variable Librarians is an orderedset of clLibrarian containing the "
+@endPostF
+//postProtocol descriptions
+@postP 
+"There is no change in the system thus it will always be true."
+@endPostP
+//example
+@example" "
+
+
+
+/*
+			Operation sfAddLibrarian
+				This operation is to add a librarian. 
+				
+			Parameters:
+				AdtID: ptInteger - This represents a unique number (ID) which will be assigned to the librarian that is going to be added. 
+				AdtName: dtName - represents the name of the librarian to be added. 
+				AdtDateOfBirth: dtDate - Represents the dateofbirth of librarian to be added. 
+				
+			PreP:
+				The vpStarted attribute of instance of class State must be equal to true signifying the system is running and that the system has been started (sfCreateSystemEnvironment).
+				
+			PreF:
+				...
+				
+			PostF:
+				1:
+					The AdtID is the ID the librarian will get, and it will be the next possible integer in the list. 
+			
+			PostP:
+				There is no change to the system.
+				
+			*/

@@ -11,6 +11,7 @@ import lu.uni.lassy.messir.libraries.primitives
 import lu.uni.lassy.messir.libraries.string
 
 import lu.uni.lassy.excalibur.myproject.concepts.primarytypes.classes
+import lu.uni.lassy.excalibur.myproject.concepts.primarytypes.datatypes
 
 Environment Model {
 
@@ -20,18 +21,31 @@ Environment Model {
 				operation ieLibrarianAdded(): ptBoolean
 				operation ieLibrarianEdited(): ptBoolean
 				operation ieLibrarianDeleted(): ptBoolean
-				operation ieMessageSent(): ptBoolean
+				operation ieMessageSent(AdtMessage: ptString): ptBoolean
+				operation ieMessageReceived(): ptBoolean
 				operation ieLogout(): ptBoolean
 			}
 			output interface outactSystemAdministrator {
 				operation sfCreateSystemEnvironment(): ptBoolean
-				operation sfLogin(): ptBoolean
-				operation sfAddLibrarian(): ptBoolean
-				operation sfEditLibrarian(): ptBoolean
-				operation sfDeleteLibrarian(): ptBoolean
-				operation sfSendMessage(): ptBoolean
-				operation sfReceiveMessage(): ptBoolean
+				operation sfAuthenticated(AdtID: ptInteger, AdtPassword: ptString): ptBoolean
+				operation sfAddLibrarian(AdtID: ptInteger, AdtName: dtName, AdtDateOfDirth: dtDate): ptBoolean
+				operation sfEditLibrarian(AdtID: ptInteger, AdtName: dtName, AdtDateOfDirth: dtDate): ptBoolean
+				operation sfDeleteLibrarian(AdtID: ptInteger, AdtName: dtName, AdtDateOfDirth: dtDate): ptBoolean
+				operation sfSendMessage(AdtMessage: ptString): ptBoolean
+				operation sfGetMessage(): ptBoolean
+				operation sfViewBlockchain(): ptBoolean
+				operation sfUpdateBlockchain(): ptBoolean
 				operation sfLogout(): ptBoolean
+			}
+		}
+		
+		actor actBlockchain role rnactBlockchain cardinality[1 .. 1] {
+			input interface inactBlockchain {
+				operation ieBlockchain(): ptBoolean
+			}
+			output interface outactBlockchain {
+				operation sfAddToBlockchain(): ptBoolean
+				operation sfGetBlockchain(): ptBoolean
 			}
 		}
 		

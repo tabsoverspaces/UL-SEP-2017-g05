@@ -24,15 +24,34 @@ Concept Model {
 			attribute id: ptString
 			attribute name: lu.uni.lassy.excalibur.myproject.concepts.primarytypes.datatypes.dtName
 			}
+			
+		class clAuthenticated role rnclAuthenticated cardinality[0 .. 1] {
+			attribute vpIsLogged: ptBoolean
+		}
+			
+		class clGetBlockchain role rnclGetBlockchain cardinality[0 .. *] {
+			attribute information: lu.uni.lassy.excalibur.myproject.concepts.primarytypes.datatypes.dtInformation
+			}
+		
+		class clUpdateBlockchain role rnclUpdateBlockchain cardinality[0 .. *] {
+			attribute information: lu.uni.lassy.excalibur.myproject.concepts.primarytypes.datatypes.dtInformation
+			}
 
 		class clLibrarian role rnclLibrarian cardinality[0 .. *] {
 			attribute id: ptInteger
 			attribute name: lu.uni.lassy.excalibur.myproject.concepts.primarytypes.datatypes.dtName
 			attribute dateOfBirth: dtDate
 			
-			operation init(val1:ptInteger, val2:ptString):ptBoolean
-			operation librarianExists(): ptBoolean
+			operation librarianExists(AdtID: ptInteger): ptBoolean
 			}
+		
+		class clMessage role rnclMessage cardinality[0 .. *] {
+			attribute value: dtString
+		}
+		
+		class clGetClients role rnclGetClients cardinality[0 .. *] extends clClient {
+			operation init(): ptBoolean
+		}
 			
 		// main book class
 		class clBook role rnclBook cardinality[0 .. *] {

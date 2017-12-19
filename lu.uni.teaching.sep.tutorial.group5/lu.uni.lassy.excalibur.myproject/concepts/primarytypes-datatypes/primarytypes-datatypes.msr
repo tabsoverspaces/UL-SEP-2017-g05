@@ -15,31 +15,26 @@ import lu.uni.lassy.messir.libraries.string
 Concept Model {
 
 	Primary Types {
-   
-		datatype dtMessage {
-			attribute value: ptString
-			}
-		
-		datatype dtTime {
-			attribute hour: ptInteger
-			attribute minutes: ptInteger
-			}
 					
 		datatype dtName {
 			attribute first: ptString
 			attribute last: ptString
 			}
 			
-		datatype dtPerson {
-				attribute firstName : ptString
-				attribute lastName : ptString
-				
+		datatype dtInformation {
+			attribute information: ptString
+			attribute time: dtTime
 			}
 			
-			datatype dtCardSecurityNumber {
-				attribute num1 : ptInteger
-				attribute num2 : ptInteger
-				attribute num3 : ptInteger
+		datatype dtPerson {
+			attribute firstName : ptString
+			attribute lastName : ptString
+			}
+			
+		datatype dtCardSecurityNumber {
+			attribute num1 : ptInteger
+			attribute num2 : ptInteger
+			attribute num3 : ptInteger
 			}
 		
 		}

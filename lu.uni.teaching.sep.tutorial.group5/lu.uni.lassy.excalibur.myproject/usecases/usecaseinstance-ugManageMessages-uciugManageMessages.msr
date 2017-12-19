@@ -1,17 +1,19 @@
 package usecases.uciugManageMessages {
 	import lu.uni.lassy.excalibur.myproject.usecases
+	import lu.uni.lassy.excalibur.myproject.environment
 
 	Use Case Model {
 		use case instance uciugManageMessages : ugManageMessages{
 			actors {
-				filippoLobisch : lu.uni.lassy.excalibur.myproject.environment.actSystemAdministrator
+				filippoLobisch : actSystemAdministrator
 			}
 			use case steps {
 				filippoLobisch executed instanceof subfunction sfSendMessage("I need the librarian details in order to add them.", "Jon Snow", "100878171") {
 					ieMessageSent("Message successfully sent.") returned to filippoLobisch
 				}
-				filippoLobisch executed instanceof subfunction sfReceiveMessage() {
-					ieMessageReceived("Here is the librarian to add:", "100919181", "Mike Schmitz", "24/09/1993") returned to filippoLobisch
+				
+				filippoLobisch executed instanceof subfunction sfGetMessage() {
+					actSystem.Administrator.inactSystemAdministrator.ieMessageReceived("Here is the librarian to add:", "100919181", "Mike Schmitz", "24/09/1993") returned to filippoLobisch
 				}
 				
 			}
