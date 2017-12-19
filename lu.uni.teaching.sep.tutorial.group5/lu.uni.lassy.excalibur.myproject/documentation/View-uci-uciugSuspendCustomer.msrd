@@ -1,0 +1,10 @@
+/*
+@author nicentra
+@date Tue Dec 19 18:10:29 CET 2017
+*/
+
+
+@@view uci-uciugSuspendCustomer
+@instance Use-Case usecases.uciugManagingLoans.uciugSuspendCustomer 
+@description ""
+@caption ""

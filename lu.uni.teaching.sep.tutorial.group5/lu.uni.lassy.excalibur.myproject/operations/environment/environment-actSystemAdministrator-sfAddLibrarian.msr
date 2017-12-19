@@ -30,7 +30,7 @@ import lu.uni.lassy.excalibur.myproject.environment
 			
 			postF{
 				let TheSystem: ctState = self.rnActor in
-				let Libraraians: OrderedSet(clLibrarian) = OrderedSet{} in
+				let Libraians: OrderedSet(clLibrarian) = OrderedSet{} in
 				let Librarian: clLibrarian in
 				Librarians = TheSystem.rnclLibrarian
 				Librarians.append(Librarian)

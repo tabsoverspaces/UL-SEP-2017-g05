@@ -94,12 +94,32 @@ Environment Model {
 			operation oeInspectAnNotification(ANotification : clNotification):ptBoolean
 			}
 		}
-	actor actLibrarian role rnactLibrarian cardinality[0 .. *] {
+	actor actLibrarian role rnactLibrarian cardinality[1 .. *] {
 			input interface inactLibrarian {
-			operation ieGetMessageFromClient(ATitle : ptString, AContent : ptString):ptBoolean
+				operation ieLogin(): ptBoolean
+				operation ieBookAdded(): ptBoolean
+				operation ieBookDeleted(): ptBoolean
+				operation ieLogout(): ptBoolean
+				operation ieClients(): ptBoolean
+				operation ieBooks(): ptBoolean
+				operation ieGetMessageFromSysAdmin(AContent : ptString):ptBoolean
+				operation ieSendMessageToSysAdmin(AContent : ptString):ptBoolean
+				
 			}
 			output interface outactLibrarian {
-			
+				operation oeAddBook(AISBN : ptString, AName : ptString, AAuthor : ptString, AID : ptString):ptBoolean
+				operation oeRemoveBook(AID : ptString):ptBoolean
+				operation oeSearchBook(AName : ptString):ptBoolean
+				operation oeSearchCustomer(AID : ptString) : ptBoolean
+				operation oeSetNote(ACustomerID : ptString, ANote : ptString): ptBoolean
+				operation oeSuspendCustomer(AID : ptString) : ptBoolean
+				operation oeReinstateCustomer(AID: ptString) : ptBoolean
+				operation oeAddLoan(ABookID : ptString, ACustomerID : ptString) : ptBoolean
+				operation oeCloseLoan(ABookID : ptString, ACustomerID : ptString) : ptBoolean
+				operation oeRequestCustomerBan(ACustomerID : ptString, AReason : ptString) : ptBoolean
+				operation oeRequestCustomerUnban(ACustomerID : ptString, AReason : ptString) : ptBoolean
+				operation oeSendMessage(AMessage : ptString): ptBoolean
+				operation oeLogout(): ptBoolean
 			}
 		}
 	}

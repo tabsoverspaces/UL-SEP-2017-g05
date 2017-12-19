@@ -1,0 +1,18 @@
+package lu.uni.lassy.excalibur.myproject.environment.operations.actLibrarian.outactLibrarian.oeAddBook {
+
+import lu.uni.lassy.messir.libraries.primitives
+import lu.uni.lassy.messir.libraries.math
+import lu.uni.lassy.messir.libraries.string
+import lu.uni.lassy.messir.libraries.calendar
+
+	Operation Model {
+
+		operation: lu.uni.lassy.excalibur.myproject.environment.actLibrarian.outactLibrarian.oeAddBook(AISBN:ptString, AName:ptString, AAuthor:ptString, AID:ptString):ptBoolean{
+		// include below the specification information (pre,post or ocl or prolog)
+			preP{
+				let TheSystem: ctState in
+				let 
+			}
+		}
+	}
+}

@@ -44,6 +44,14 @@ Concept Model {
 			
 			operation librarianExists(AdtID: ptInteger): ptBoolean
 			}
+			
+		class clCustomer role rnclCustomer cardinality[0 .. *] {
+			attribute id: ptInteger
+			attribute name: lu.uni.lassy.excalibur.myproject.concepts.primarytypes.datatypes.dtName
+			attribute dateOfBirth: dtDate
+			
+			operation customerExists(AdtID: ptInteger): ptBoolean
+			}
 		
 		class clMessage role rnclMessage cardinality[0 .. *] {
 			attribute value: dtString
@@ -54,8 +62,10 @@ Concept Model {
 			attribute ISBN : ptString
 			attribute name : ptString
 			attribute author : ptString
+			attribute ID : ptString
+			attribute loanStatus : ptString
 			
-			operation init(val1:ptString, val2:ptString, val3:ptString):ptBoolean
+			operation init(val1:ptString, val2:ptString, val3:ptString, val4:ptString, val5:ptString):ptBoolean
 			
 			}
 			

@@ -1,0 +1,10 @@
+/*
+@author nicentra
+@date Tue Dec 19 18:16:44 CET 2017
+*/
+
+
+@@view uc-ugRemoveBook
+@model Use-Case lu.uni.lassy.excalibur.myproject.usecases.ugRemoveBook 
+@description ""
+@caption ""

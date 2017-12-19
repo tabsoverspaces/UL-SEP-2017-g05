@@ -289,6 +289,22 @@
     <semanticResources>concepts/primarytypes-classes/documentation/PrimaryType-Class-clClient.msrd</semanticResources>
     <semanticResources>concepts/primarytypes-classes/documentation/Operation-clLibrarian-librarianExists.msrd</semanticResources>
     <semanticResources>usecases/usecaseinstance-ugManagingLoans-uciugManagingLoans.msr</semanticResources>
+    <semanticResources>documentation/View-uci-uciugManagingLoans.msrd</semanticResources>
+    <semanticResources>documentation/View-uci-uciugAddBook.msrd</semanticResources>
+    <semanticResources>documentation/View-uci-uciugRemoveBook.msrd</semanticResources>
+    <semanticResources>documentation/View-uci-uciugRequestCustomerBan.msrd</semanticResources>
+    <semanticResources>documentation/View-uci-uciugRequestCustomerUnban.msrd</semanticResources>
+    <semanticResources>documentation/View-uci-uciugSetNote.msrd</semanticResources>
+    <semanticResources>documentation/View-uci-uciugSuspendCustomer.msrd</semanticResources>
+    <semanticResources>documentation/View-uc-ugManagingLoans.msrd</semanticResources>
+    <semanticResources>documentation/View-uc-ugAddBook.msrd</semanticResources>
+    <semanticResources>documentation/View-uc-ugReinstateCustomer.msrd</semanticResources>
+    <semanticResources>documentation/View-uc-ugRemoveBook.msrd</semanticResources>
+    <semanticResources>documentation/View-uc-ugRequestCustomerBan.msrd</semanticResources>
+    <semanticResources>documentation/View-uc-ugRequestCustomerUnban.msrd</semanticResources>
+    <semanticResources>documentation/View-uc-ugSetNote.msrd</semanticResources>
+    <semanticResources>documentation/View-uc-ugSuspendCustomer.msrd</semanticResources>
+    <semanticResources>operations/environment/environment-actLibrarian-oeAddBook.msr</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" xmi:id="_vUlB0MP4EeeRL_uO5XCuPw">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/lu.uni.lassy.excalibur.ui.viewer/description/excalibur_models.odesign#//@ownedViewpoints[name='msr-viewpoint']"/>
       <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" xmi:id="_yuTt0NndEeefi8gTPWVkdQ" name="em-view10-actClient" repPath="#_yuR4oNndEeefi8gTPWVkdQ">
