@@ -33,11 +33,11 @@ Concept Model {
 	datatype dtLoan {
 		attribute atCustomer : dtCustomer
 		attribute attBook: dtBook
-		attribute attLoanStart: dtDate
-		attribute attLoanEnd: dtDate
+		attribute attLoanStart: lu.uni.lassy.messir.libraries.calendar.dtDate
+		attribute attLoanEnd: lu.uni.lassy.messir.libraries.calendar.dtDate
 		attribute attOverdue: ptBoolean
 	}
-		}
+}
 		
 }
 }

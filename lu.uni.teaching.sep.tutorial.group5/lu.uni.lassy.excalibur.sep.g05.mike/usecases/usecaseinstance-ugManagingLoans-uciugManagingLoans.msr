@@ -1,11 +1,11 @@
 package usecases.uciugManagingLoans {
-	import lu.uni.lassy.excalibur.sep.g05.mike.usecases
+	import lu.uni.lassy.excalibur.myproject.usecases
 
 	Use Case Model {
 
 		use case instance uciugManagingLoans : ugManagingLoans{
 			actors {
-				mikeSchmitz : lu.uni.lassy.excalibur.sep.g05.mike.environment.actLibrarian
+				mikeSchmitz : lu.uni.lassy.excalibur.myproject.environment.actLibrarian
 			}
 			use case steps {
 				mikeSchmitz executed instanceof subfunction sfAddLoan("36958", "What if?", "003") {
@@ -20,7 +20,7 @@ package usecases.uciugManagingLoans {
 		
 		use case instance uciugAddBook : ugAddBook{
 			actors {
-				mikeSchmitz : lu.uni.lassy.excalibur.sep.g05.mike.environment.actLibrarian
+				mikeSchmitz : lu.uni.lassy.excalibur.myproject.environment.actLibrarian
 			}
 			use case steps {
 				mikeSchmitz executed instanceof subfunction sfAccessBookDatabase() {
@@ -35,7 +35,7 @@ package usecases.uciugManagingLoans {
 		
 		use case instance uciugReinstateCustomer : ugReinstateCustomer{
 			actors {
-				mikeSchmitz : lu.uni.lassy.excalibur.sep.g05.mike.environment.actLibrarian
+				mikeSchmitz : lu.uni.lassy.excalibur.myproject.environment.actLibrarian
 			}
 			use case steps {
 				mikeSchmitz executed instanceof subfunction sfAccessCustomerDatabase() {
@@ -58,7 +58,7 @@ package usecases.uciugManagingLoans {
 		
 		use case instance uciugRemoveBook : ugRemoveBook {
 			actors {
-				mikeSchmitz: lu.uni.lassy.excalibur.sep.g05.mike.environment.actLibrarian
+				mikeSchmitz: lu.uni.lassy.excalibur.myproject.environment.actLibrarian
 			}
 			use case steps {
 				mikeSchmitz executed instanceof subfunction sfAccessBookDatabase() {
@@ -72,7 +72,7 @@ package usecases.uciugManagingLoans {
 		
 		use case instance uciugRequestCustomerBan : ugRequestCustomerBan{
 			actors {
-				mikeSchmitz : lu.uni.lassy.excalibur.sep.g05.mike.environment.actLibrarian
+				mikeSchmitz : lu.uni.lassy.excalibur.myproject.environment.actLibrarian
 			}
 			use case steps {
 				mikeSchmitz executed instanceof subfunction sfAccessCustomerDatabase() {
@@ -95,7 +95,7 @@ package usecases.uciugManagingLoans {
 		
 		use case instance uciugRequestCustomerUnban : ugRequestCustomerUnban{
 			actors {
-				mikeSchmitz : lu.uni.lassy.excalibur.sep.g05.mike.environment.actLibrarian
+				mikeSchmitz : lu.uni.lassy.excalibur.myproject.environment.actLibrarian
 			}
 			use case steps {
 				mikeSchmitz executed instanceof subfunction sfAccessCustomerDatabase() {
@@ -118,7 +118,7 @@ package usecases.uciugManagingLoans {
 		
 		use case instance uciugSetNote : ugSetNote{
 			actors {
-				mikeSchmitz : lu.uni.lassy.excalibur.sep.g05.mike.environment.actLibrarian
+				mikeSchmitz : lu.uni.lassy.excalibur.myproject.environment.actLibrarian
 			}
 			use case steps {
 				mikeSchmitz executed instanceof subfunction sfAccessCustomerDatabase() {
@@ -141,7 +141,7 @@ package usecases.uciugManagingLoans {
 		
 		use case instance uciugSuspendCustomer : ugSuspendCustomer{
 			actors {
-				mikeSchmitz : lu.uni.lassy.excalibur.sep.g05.mike.environment.actLibrarian
+				mikeSchmitz : lu.uni.lassy.excalibur.myproject.environment.actLibrarian
 			}
 			use case steps {
 				mikeSchmitz executed instanceof subfunction sfAccessCustomerDatabase() {
