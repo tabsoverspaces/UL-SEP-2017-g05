@@ -1,0 +1,22 @@
+/*
+@author lobfil
+@date Tue Dec 19 17:56:59 CET 2017
+*/
+
+
+@@Operation
+lu.uni.lassy.excalibur.myproject.concepts.primarytypes.classes.clLibrarian.librarianExists
+//parameters
+@parameter
+lu.uni.lassy.excalibur.myproject.concepts.primarytypes.classes.clLibrarian.librarianExists.AdtID
+"represents the unique identifier of the librarian to be added/edited or deleted."
+@endParameters
+
+@description "This operation checks the value AdtID value against the database informing whether or not a librarian exists.
+ "
+//postFunctional descriptions
+@postF 
+"The AdtID is verified to the "
+@endPostF
+//example
+@example" "
