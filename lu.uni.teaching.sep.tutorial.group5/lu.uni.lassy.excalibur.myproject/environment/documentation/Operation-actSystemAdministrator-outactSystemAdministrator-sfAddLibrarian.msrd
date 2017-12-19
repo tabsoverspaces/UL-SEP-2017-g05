@@ -19,7 +19,8 @@ Also the vpIsLogged attribute of instance of class Authenticated must be equal t
 @endPreF
 //postFunctional descriptions
 @postF 
-"The variable Librarians is an orderedset of clLibrarian containing the "
+"The variable Librarians is an OrderedSet of clLibrarian containing a collection of the added users. The new created instance of clLibrarian is then added to the collection. 
+The collection is returned as the user is taken back to a previous panel."
 @endPostF
 //postProtocol descriptions
 @postP 

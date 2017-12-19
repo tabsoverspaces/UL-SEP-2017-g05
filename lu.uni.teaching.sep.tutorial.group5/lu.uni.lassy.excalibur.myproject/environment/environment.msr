@@ -26,6 +26,8 @@ Environment Model {
 				operation ieLogout(): ptBoolean
 				operation ieClients(): ptBoolean
 				operation ieBooks(): ptBoolean
+				operation ieSettingsChanged(): ptBoolean
+				operation ieBlockchain(): ptBoolean
 			}
 			output interface outactSystemAdministrator {
 				operation sfCreateSystemEnvironment(): ptBoolean
@@ -36,7 +38,7 @@ Environment Model {
 				operation sfSendMessage(AdtMessage: ptString): ptBoolean
 				operation sfGetMessage(): ptBoolean
 				operation sfViewBlockchain(): ptBoolean
-				operation sfUpdateBlockchain(): ptBoolean
+				operation sfUpdateBlockchain(AInformation: dtInformation): ptBoolean
 				operation sfGetClients(): ptBoolean
 				operation sfGetBooks(): ptBoolean
 				operation sfChangeSettings(): ptBoolean
@@ -49,7 +51,7 @@ Environment Model {
 				operation ieBlockchain(): ptBoolean
 			}
 			output interface outactBlockchain {
-				operation sfAddToBlockchain(): ptBoolean
+				operation sfAddToBlockchain(AInformation: dtInformation): ptBoolean
 				operation sfGetBlockchain(): ptBoolean
 			}
 		}
