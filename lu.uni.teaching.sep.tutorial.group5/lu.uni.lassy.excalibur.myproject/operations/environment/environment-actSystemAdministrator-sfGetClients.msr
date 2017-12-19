@@ -1,0 +1,40 @@
+package lu.uni.lassy.excalibur.myproject.environment.operations.actSystemAdministrator.outactSystemAdministrator.sfGetClients {
+
+import lu.uni.lassy.messir.libraries.primitives
+import lu.uni.lassy.messir.libraries.math
+import lu.uni.lassy.messir.libraries.string
+import lu.uni.lassy.messir.libraries.calendar
+
+import lu.uni.lassy.excalibur.myproject.concepts.primarytypes.classes
+import lu.uni.lassy.excalibur.myproject.environment
+
+	Operation Model {
+
+		operation: lu.uni.lassy.excalibur.myproject.environment.actSystemAdministrator.outactSystemAdministrator.sfGetClients():ptBoolean{
+		// include below the specification information (pre,post or ocl or prolog)
+			preP{
+				let TheSystem: ctState in
+				let TheActor: actSystemAdministrator in
+				self.rnActor.rnSystem = TheSystem
+				and self.rnActor = TheActor
+				
+				and TheSystem.vpStarted = true
+                and TheActor.rnctAuthenticated.vpIsLogged = true
+			}
+			
+			preF{
+				true
+			}
+			
+			postF{
+				let TheSystem: ctState = self.rnActor in
+				let Clients: OrderedSet(clClient) = OrderedSet{} in
+				Clients = TheSystem.rnclClient
+			}
+			
+			postP{
+				true
+			}
+		}
+	}
+}

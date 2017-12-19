@@ -24,6 +24,8 @@ Environment Model {
 				operation ieMessageSent(AdtMessage: ptString): ptBoolean
 				operation ieMessageReceived(): ptBoolean
 				operation ieLogout(): ptBoolean
+				operation ieClients(): ptBoolean
+				operation ieBooks(): ptBoolean
 			}
 			output interface outactSystemAdministrator {
 				operation sfCreateSystemEnvironment(): ptBoolean
@@ -35,6 +37,9 @@ Environment Model {
 				operation sfGetMessage(): ptBoolean
 				operation sfViewBlockchain(): ptBoolean
 				operation sfUpdateBlockchain(): ptBoolean
+				operation sfGetClients(): ptBoolean
+				operation sfGetBooks(): ptBoolean
+				operation sfChangeSettings(): ptBoolean
 				operation sfLogout(): ptBoolean
 			}
 		}

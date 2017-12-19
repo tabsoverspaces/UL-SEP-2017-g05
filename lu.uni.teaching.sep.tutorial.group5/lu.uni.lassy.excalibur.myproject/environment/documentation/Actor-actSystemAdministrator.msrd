@@ -5,7 +5,7 @@
 
 
 @@Actor lu.uni.lassy.excalibur.myproject.environment.actSystemAdministrator
-@description ""
+@description "This actor represents the System Administrator of the M.LIB organization."
 //input events
 
 //output events

@@ -283,6 +283,10 @@
     <semanticResources>operations/concepts/primarytypes-classes/primarytypes-classes-ctState-init.msr</semanticResources>
     <semanticResources>environment/documentation/Operation-actSystemAdministrator-outactSystemAdministrator-sfSendMessage.msrd</semanticResources>
     <semanticResources>environment/documentation/Operation-actSystemAdministrator-outactSystemAdministrator-sfLogout.msrd</semanticResources>
+    <semanticResources>operations/environment/environment-actSystemAdministrator-sfGetMessage.msr</semanticResources>
+    <semanticResources>operations/environment/environment-actSystemAdministrator-sfGetClients.msr</semanticResources>
+    <semanticResources>environment/documentation/Operation-actSystemAdministrator-outactSystemAdministrator-sfGetClients.msrd</semanticResources>
+    <semanticResources>concepts/primarytypes-classes/documentation/PrimaryType-Class-clClient.msrd</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" xmi:id="_vUSG4MP4EeeRL_uO5XCuPw">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/lu.uni.lassy.excalibur.ui.viewer/description/excalibur_models.odesign#//@ownedViewpoints[name='msr-viewpoint']"/>
       <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" xmi:id="_f0ptKc9lEeeiIb7pvcIrvQ" name="uc-ugManageLibrarians" repPath="#_f0ptAM9lEeeiIb7pvcIrvQ">

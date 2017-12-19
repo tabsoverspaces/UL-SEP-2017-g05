@@ -268,6 +268,25 @@
     <semanticResources>concepts/primarytypes-classes/documentation/PrimaryType-Class-clAccountPaymentOption.msrd</semanticResources>
     <semanticResources>documentation/View-em-view10.msrd</semanticResources>
     <semanticResources>documentation/View-em-view10-actClient.msrd</semanticResources>
+    <semanticResources>environment/documentation/Operation-actSystemAdministrator-outactSystemAdministrator-sfAddLibrarian.msrd</semanticResources>
+    <semanticResources>operations/environment/environment-actSystemAdministrator-sfDeleteLibrarian.msr</semanticResources>
+    <semanticResources>operations/environment/environment-actSystemAdministrator-sfSendMessage.msr</semanticResources>
+    <semanticResources>operations/environment/environment-actSystemAdministrator-sfEditLibrarian.msr</semanticResources>
+    <semanticResources>environment/documentation/Operation-actSystemAdministrator-outactSystemAdministrator-sfEditLibrarian.msrd</semanticResources>
+    <semanticResources>concepts/primarytypes-datatypes/documentation/PrimaryType-Datatype-dtName.msrd</semanticResources>
+    <semanticResources>operations/environment/environment-actSystemAdministrator-sfCreateSystemEnvironment.msr</semanticResources>
+    <semanticResources>operations/environment/environment-actSystemAdministrator-sfLogout.msr</semanticResources>
+    <semanticResources>operations/environment/environment-actSystemAdministrator-sfAuthenticated.msr</semanticResources>
+    <semanticResources>environment/documentation/Operation-actSystemAdministrator-outactSystemAdministrator-sfAuthenticated.msrd</semanticResources>
+    <semanticResources>operations/environment/environment-actSystemAdministrator-sfAddLibrarian.msr</semanticResources>
+    <semanticResources>operations/concepts/primarytypes-classes/primarytypes-classes-clLibrarian-librarianExists.msr</semanticResources>
+    <semanticResources>operations/concepts/primarytypes-classes/primarytypes-classes-ctState-init.msr</semanticResources>
+    <semanticResources>environment/documentation/Operation-actSystemAdministrator-outactSystemAdministrator-sfSendMessage.msrd</semanticResources>
+    <semanticResources>environment/documentation/Operation-actSystemAdministrator-outactSystemAdministrator-sfLogout.msrd</semanticResources>
+    <semanticResources>operations/environment/environment-actSystemAdministrator-sfGetMessage.msr</semanticResources>
+    <semanticResources>operations/environment/environment-actSystemAdministrator-sfGetClients.msr</semanticResources>
+    <semanticResources>environment/documentation/Operation-actSystemAdministrator-outactSystemAdministrator-sfGetClients.msrd</semanticResources>
+    <semanticResources>concepts/primarytypes-classes/documentation/PrimaryType-Class-clClient.msrd</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" xmi:id="_vUlB0MP4EeeRL_uO5XCuPw">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/lu.uni.lassy.excalibur.ui.viewer/description/excalibur_models.odesign#//@ownedViewpoints[name='msr-viewpoint']"/>
       <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" xmi:id="_yuTt0NndEeefi8gTPWVkdQ" name="em-view10-actClient" repPath="#_yuR4oNndEeefi8gTPWVkdQ">

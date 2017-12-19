@@ -50,13 +50,13 @@ Use Case Model{
 		}	
 	
 
-	use case system subfunction sfAddLibrarian() {
+	use case system subfunction sfAddLibrarian(AdtID: ptInteger, AdtName: dtName, AdtDateOfDirth: dtDate) {
 			actor lu.uni.lassy.excalibur.myproject.environment.actSystemAdministrator[primary, passive]
 			returned messages{
 				ieLibrarianAdded returned to lu.uni.lassy.excalibur.myproject.environment.actSystemAdministrator
 			}
 		}
-	use case system subfunction sfDeleteLibrarian() {
+	use case system subfunction sfDeleteLibrarian(AdtID: ptInteger, AdtName: dtName, AdtDateOfDirth: dtDate) {
 			actor lu.uni.lassy.excalibur.myproject.environment.actSystemAdministrator[primary, active]
 			
 			returned messages{
@@ -64,7 +64,7 @@ Use Case Model{
 			}
 		
 		}
-	use case system subfunction sfEditLibrarian() {
+	use case system subfunction sfEditLibrarian(AdtID: ptInteger, AdtName: dtName, AdtDateOfDirth: dtDate) {
 			actor lu.uni.lassy.excalibur.myproject.environment.actSystemAdministrator[primary, active]
 			
 			returned messages{
@@ -130,7 +130,7 @@ Use Case Model{
 		}
 	}
 	
-	use case system subfunction sfSendMessage() {
+	use case system subfunction sfSendMessage(AdtMessage: ptString) {
 			actor lu.uni.lassy.excalibur.myproject.environment.actSystemAdministrator[primary, active]
 			returned messages{
 				ieMessageSent returned to lu.uni.lassy.excalibur.myproject.environment.actSystemAdministrator

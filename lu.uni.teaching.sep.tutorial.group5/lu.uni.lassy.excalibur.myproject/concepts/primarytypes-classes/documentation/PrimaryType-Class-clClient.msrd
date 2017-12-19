@@ -1,0 +1,19 @@
+/*
+@author lobfil
+@date Tue Dec 19 17:25:04 CET 2017
+*/
+
+
+@@Primary Type Class lu.uni.lassy.excalibur.myproject.concepts.primarytypes.classes.clClient
+@description ""
+@attribute
+lu.uni.lassy.excalibur.myproject.concepts.primarytypes.classes.clClient.AID
+""
+@attribute
+lu.uni.lassy.excalibur.myproject.concepts.primarytypes.classes.clClient.name
+""
+@endAttributes
+@operation
+lu.uni.lassy.excalibur.myproject.concepts.primarytypes.classes.clClient.init
+""
+@endOperations
