@@ -25,7 +25,7 @@ Also the vpIsLogged attribute of instance of class Authenticated must be equal t
 @endPreF
 //postFunctional descriptions
 @postF 
-"The value of TheMessage of instance clMessage must be set equal to AdtMessage which is the message that the System Administrator would like to send to the librarian"
+"The value of TheMessage of instance clMessage must be set equal to AdtMessage which is the message that the System Administrator would like to send to the librarian."
 @endPostF
 //postProtocol descriptions
 @postP 

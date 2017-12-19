@@ -1,0 +1,28 @@
+/*
+@author lobfil
+@date Tue Dec 19 18:29:22 CET 2017
+*/
+
+
+@@Operation
+lu.uni.lassy.excalibur.myproject.environment.actSystemAdministrator.outactSystemAdministrator.sfCreateSystemEnvironment
+@description "This is an operation that creates the environment the application will be using when run.
+ "
+//preProtocol descriptions
+@preP
+"No restriction for this operation thus it will always be true."
+@endPreP
+//preFunctional descriptions
+@preF
+"No restriction for this operation thus it will always be true."
+@endPreF
+//postFunctional descriptions
+@postF 
+"TheState variable which corresponds to the ctState is initialised and executes the init method from the ctState class in order to initialise the System."
+@endPostF
+//postProtocol descriptions
+@postP 
+"The vpStarted attribute from instance ctState is set to true signifying that the system is functional and operational."
+@endPostP
+//example
+@example" "

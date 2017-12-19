@@ -1,4 +1,4 @@
-package lu.uni.lassy.excalibur.myproject.environment.operations.actSystemAdministrator.outactSystemAdministrator.sfGetClients {
+package lu.uni.lassy.excalibur.myproject.environment.operations.actBlockchain.outactBlockchain.sfAddToBlockchain {
 
 import lu.uni.lassy.messir.libraries.primitives
 import lu.uni.lassy.messir.libraries.math
@@ -7,14 +7,15 @@ import lu.uni.lassy.messir.libraries.calendar
 
 import lu.uni.lassy.excalibur.myproject.concepts.primarytypes.classes
 import lu.uni.lassy.excalibur.myproject.environment
+import lu.uni.lassy.excalibur.myproject.concepts.primarytypes.datatypes
 
 	Operation Model {
 
-		operation: lu.uni.lassy.excalibur.myproject.environment.actSystemAdministrator.outactSystemAdministrator.sfGetClients():ptBoolean{
+		operation: lu.uni.lassy.excalibur.myproject.environment.actBlockchain.outactBlockchain.sfAddToBlockchain(AInformation: dtInformation):ptBoolean{
 		// include below the specification information (pre,post or ocl or prolog)
 			preP{
 				let TheSystem: ctState in
-				let TheActor: actSystemAdministrator in
+				let TheActor: actBlockchain in
 				self.rnActor.rnSystem = TheSystem
 				and self.rnActor = TheActor
 				
@@ -28,13 +29,16 @@ import lu.uni.lassy.excalibur.myproject.environment
 			
 			postF{
 				let TheSystem: ctState = self.rnActor in
-				let Clients: Set(clClient) = Set{} in
-				Clients = TheSystem.rnclClient
+				let Blockchain: OrderedSet(clBlockchain) = OrderedSet{} in
+				let newBlockchain: clBlockchain in
+				newBlockchain.information = AInformation
+				Blockchain.append(newBlockchain)
 			}
 			
 			postP{
 				true
 			}
+
 		}
 	}
 }

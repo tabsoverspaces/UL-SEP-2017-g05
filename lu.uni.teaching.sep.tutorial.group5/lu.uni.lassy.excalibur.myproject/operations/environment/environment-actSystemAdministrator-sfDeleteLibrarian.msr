@@ -34,7 +34,8 @@ import lu.uni.lassy.excalibur.myproject.environment
 					
 				Librarian = TheSystem.rnclLibrarian -> select(a:clLibrarian|a.AID=AdtID)							
 				let Librarians: OrderedSet(clLibrarian) = OrderedSet{} in
-				Librarians = TheSystem.rnclLibrarian - Librarian
+				Librarians = TheSystem.rnclLibrarian
+				Librarians.remove(Librarian)
 				self.rnActor.rnInterfaceIN^ieGetLibrarians(Librarians)
 			}
 			

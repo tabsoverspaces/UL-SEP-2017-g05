@@ -8,5 +8,5 @@
 @model Environment
 @level Local
 @number 9
-@description ""
+@description "Shows the view of actSystemAdministrator and all its input and output events."
 @caption ""

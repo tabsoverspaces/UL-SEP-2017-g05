@@ -602,6 +602,11 @@
     <semanticResources>concepts/primarytypes-classes/documentation/PrimaryType-Class-clClient.msrd</semanticResources>
     <semanticResources>concepts/primarytypes-classes/documentation/Operation-clLibrarian-librarianExists.msrd</semanticResources>
     <semanticResources>usecases/usecaseinstance-ugManagingLoans-uciugManagingLoans.msr</semanticResources>
+    <semanticResources>environment/documentation/Operation-actBlockchain-outactBlockchain-sfAddToBlockchain.msrd</semanticResources>
+    <semanticResources>environment/documentation/Operation-actSystemAdministrator-outactSystemAdministrator-sfCreateSystemEnvironment.msrd</semanticResources>
+    <semanticResources>operations/environment/environment-actBlockchain-sfAddToBlockchain.msr</semanticResources>
+    <semanticResources>usecases/documentation/UseCase-otherFunctionality.msrd</semanticResources>
+    <semanticResources>concepts/primarytypes-classes/documentation/PrimaryType-Class-clGetBlockchain.msrd</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" xmi:id="_vUeUIMP4EeeRL_uO5XCuPw">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/lu.uni.lassy.excalibur.ui.viewer/description/excalibur_models.odesign#//@ownedViewpoints[name='msr-viewpoint']"/>
     </ownedViews>

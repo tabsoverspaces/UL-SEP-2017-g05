@@ -29,11 +29,7 @@ Concept Model {
 			attribute vpIsLogged: ptBoolean
 		}
 			
-		class clGetBlockchain role rnclGetBlockchain cardinality[0 .. *] {
-			attribute information: lu.uni.lassy.excalibur.myproject.concepts.primarytypes.datatypes.dtInformation
-			}
-		
-		class clUpdateBlockchain role rnclUpdateBlockchain cardinality[0 .. *] {
+		class clBlockchain role rnclBlockchain cardinality[0 .. *] {
 			attribute information: lu.uni.lassy.excalibur.myproject.concepts.primarytypes.datatypes.dtInformation
 			}
 

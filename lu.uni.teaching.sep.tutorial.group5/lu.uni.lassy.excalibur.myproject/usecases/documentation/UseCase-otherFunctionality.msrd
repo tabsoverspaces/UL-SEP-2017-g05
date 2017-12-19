@@ -1,0 +1,24 @@
+/*
+@author lobfil
+@date Tue Dec 19 22:29:13 CET 2017
+*/
+
+
+@@Use Case lu.uni.lassy.excalibur.myproject.usecases.otherFunctionality
+@description "This functionality is for get a list of books and clients and also gives the system administrator to change the settings. "
+@protocolCondition
+"
+"
+@endProtocolConditions
+@preCondition
+"
+"
+@endPreConditions
+@postCondition
+"
+"
+@endPostConditions
+@additionalInformation
+"
+none
+"

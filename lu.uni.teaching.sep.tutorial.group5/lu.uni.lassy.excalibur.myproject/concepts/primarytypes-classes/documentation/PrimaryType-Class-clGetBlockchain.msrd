@@ -1,0 +1,12 @@
+/*
+@author lobfil
+@date Tue Dec 19 22:33:31 CET 2017
+*/
+
+
+@@Primary Type Class lu.uni.lassy.excalibur.myproject.concepts.primarytypes.classes.clGetBlockchain
+@description ""
+@attribute
+lu.uni.lassy.excalibur.myproject.concepts.primarytypes.classes.clGetBlockchain.information
+""
+@endAttributes

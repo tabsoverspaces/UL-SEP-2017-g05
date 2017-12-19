@@ -309,6 +309,11 @@
     <semanticResources>operations/environment/environment-actLibrarian-AddBook.msr</semanticResources>
     <semanticResources>operations/environment/environment-actLibrarian-oeSendMessage.msr</semanticResources>
     <semanticResources>operations/environment/environment-actLibrarian-oeLogout.msr</semanticResources>
+    <semanticResources>environment/documentation/Operation-actBlockchain-outactBlockchain-sfAddToBlockchain.msrd</semanticResources>
+    <semanticResources>environment/documentation/Operation-actSystemAdministrator-outactSystemAdministrator-sfCreateSystemEnvironment.msrd</semanticResources>
+    <semanticResources>operations/environment/environment-actBlockchain-sfAddToBlockchain.msr</semanticResources>
+    <semanticResources>usecases/documentation/UseCase-otherFunctionality.msrd</semanticResources>
+    <semanticResources>concepts/primarytypes-classes/documentation/PrimaryType-Class-clGetBlockchain.msrd</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" xmi:id="_vUSG4MP4EeeRL_uO5XCuPw">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/lu.uni.lassy.excalibur.ui.viewer/description/excalibur_models.odesign#//@ownedViewpoints[name='msr-viewpoint']"/>
       <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" xmi:id="_f0ptKc9lEeeiIb7pvcIrvQ" name="uc-ugManageLibrarians" repPath="#_f0ptAM9lEeeiIb7pvcIrvQ">
@@ -2614,9 +2619,29 @@
               <styles xmi:type="notation:FontStyle" xmi:id="_trnCQdnYEeevI8wA8XBN7A" fontName="Segoe UI" fontHeight="14"/>
               <layoutConstraint xmi:type="notation:Location" xmi:id="_trnCQtnYEeevI8wA8XBN7A"/>
             </children>
+            <children xmi:type="notation:Node" xmi:id="_QRfJcOUDEeenz9x8CoquSg" type="3010" element="_QP9fcOUDEeenz9x8CoquSg">
+              <styles xmi:type="notation:FontStyle" xmi:id="_QRfJceUDEeenz9x8CoquSg" fontName="Segoe UI" fontHeight="14"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_QRfJcuUDEeenz9x8CoquSg"/>
+            </children>
             <children xmi:type="notation:Node" xmi:id="_trnCQ9nYEeevI8wA8XBN7A" type="3010" element="_s1lZMdnYEeevI8wA8XBN7A">
               <styles xmi:type="notation:FontStyle" xmi:id="_trnCRNnYEeevI8wA8XBN7A" fontName="Segoe UI" fontHeight="14"/>
               <layoutConstraint xmi:type="notation:Location" xmi:id="_trnCRdnYEeevI8wA8XBN7A"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_QRja4OUDEeenz9x8CoquSg" type="3010" element="_QP_7sOUDEeenz9x8CoquSg">
+              <styles xmi:type="notation:FontStyle" xmi:id="_QRja4eUDEeenz9x8CoquSg" fontName="Segoe UI" fontHeight="14"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_QRja4uUDEeenz9x8CoquSg"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_QRkB8OUDEeenz9x8CoquSg" type="3010" element="_QP_7suUDEeenz9x8CoquSg">
+              <styles xmi:type="notation:FontStyle" xmi:id="_QRkB8eUDEeenz9x8CoquSg" fontName="Segoe UI" fontHeight="14"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_QRkB8uUDEeenz9x8CoquSg"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_QRkB8-UDEeenz9x8CoquSg" type="3010" element="_QQAiweUDEeenz9x8CoquSg">
+              <styles xmi:type="notation:FontStyle" xmi:id="_QRkB9OUDEeenz9x8CoquSg" fontName="Segoe UI" fontHeight="14"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_QRkB9eUDEeenz9x8CoquSg"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_QRkpAOUDEeenz9x8CoquSg" type="3010" element="_QQBJ0eUDEeenz9x8CoquSg">
+              <styles xmi:type="notation:FontStyle" xmi:id="_QRkpAeUDEeenz9x8CoquSg" fontName="Segoe UI" fontHeight="14"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_QRkpAuUDEeenz9x8CoquSg"/>
             </children>
             <styles xmi:type="notation:SortingStyle" xmi:id="_trfGctnYEeevI8wA8XBN7A"/>
             <styles xmi:type="notation:FilteringStyle" xmi:id="_trfGc9nYEeevI8wA8XBN7A"/>
@@ -2631,9 +2656,9 @@
               <styles xmi:type="notation:FontStyle" xmi:id="_trnpUdnYEeevI8wA8XBN7A" fontName="Segoe UI" fontHeight="14"/>
               <layoutConstraint xmi:type="notation:Location" xmi:id="_trnpUtnYEeevI8wA8XBN7A"/>
             </children>
-            <children xmi:type="notation:Node" xmi:id="_trnpU9nYEeevI8wA8XBN7A" type="3010" element="_s1q4wdnYEeevI8wA8XBN7A">
-              <styles xmi:type="notation:FontStyle" xmi:id="_trnpVNnYEeevI8wA8XBN7A" fontName="Segoe UI" fontHeight="14"/>
-              <layoutConstraint xmi:type="notation:Location" xmi:id="_trnpVdnYEeevI8wA8XBN7A"/>
+            <children xmi:type="notation:Node" xmi:id="_QRo6cOUDEeenz9x8CoquSg" type="3010" element="_QQttYOUDEeenz9x8CoquSg">
+              <styles xmi:type="notation:FontStyle" xmi:id="_QRo6ceUDEeenz9x8CoquSg" fontName="Segoe UI" fontHeight="14"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_QRo6cuUDEeenz9x8CoquSg"/>
             </children>
             <children xmi:type="notation:Node" xmi:id="_troQYNnYEeevI8wA8XBN7A" type="3010" element="_s1rf0NnYEeevI8wA8XBN7A">
               <styles xmi:type="notation:FontStyle" xmi:id="_troQYdnYEeevI8wA8XBN7A" fontName="Segoe UI" fontHeight="14"/>
@@ -2651,9 +2676,29 @@
               <styles xmi:type="notation:FontStyle" xmi:id="_trqFlNnYEeevI8wA8XBN7A" fontName="Segoe UI" fontHeight="14"/>
               <layoutConstraint xmi:type="notation:Location" xmi:id="_trqFldnYEeevI8wA8XBN7A"/>
             </children>
-            <children xmi:type="notation:Node" xmi:id="_trqsoNnYEeevI8wA8XBN7A" type="3010" element="_s1tVANnYEeevI8wA8XBN7A">
-              <styles xmi:type="notation:FontStyle" xmi:id="_trqsodnYEeevI8wA8XBN7A" fontName="Segoe UI" fontHeight="14"/>
-              <layoutConstraint xmi:type="notation:Location" xmi:id="_trqsotnYEeevI8wA8XBN7A"/>
+            <children xmi:type="notation:Node" xmi:id="_QRphgOUDEeenz9x8CoquSg" type="3010" element="_QQwJoOUDEeenz9x8CoquSg">
+              <styles xmi:type="notation:FontStyle" xmi:id="_QRphgeUDEeenz9x8CoquSg" fontName="Segoe UI" fontHeight="14"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_QRphguUDEeenz9x8CoquSg"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_QRqIkOUDEeenz9x8CoquSg" type="3010" element="_QQwwseUDEeenz9x8CoquSg">
+              <styles xmi:type="notation:FontStyle" xmi:id="_QRqIkeUDEeenz9x8CoquSg" fontName="Segoe UI" fontHeight="14"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_QRqIkuUDEeenz9x8CoquSg"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_QRqvoOUDEeenz9x8CoquSg" type="3010" element="_QQxXwOUDEeenz9x8CoquSg">
+              <styles xmi:type="notation:FontStyle" xmi:id="_QRqvoeUDEeenz9x8CoquSg" fontName="Segoe UI" fontHeight="14"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_QRqvouUDEeenz9x8CoquSg"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_QRrWsOUDEeenz9x8CoquSg" type="3010" element="_QQxXwuUDEeenz9x8CoquSg">
+              <styles xmi:type="notation:FontStyle" xmi:id="_QRrWseUDEeenz9x8CoquSg" fontName="Segoe UI" fontHeight="14"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_QRrWsuUDEeenz9x8CoquSg"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_QRrWs-UDEeenz9x8CoquSg" type="3010" element="_QQx-0OUDEeenz9x8CoquSg">
+              <styles xmi:type="notation:FontStyle" xmi:id="_QRrWtOUDEeenz9x8CoquSg" fontName="Segoe UI" fontHeight="14"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_QRrWteUDEeenz9x8CoquSg"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_QRr9wOUDEeenz9x8CoquSg" type="3010" element="_QQx-0uUDEeenz9x8CoquSg">
+              <styles xmi:type="notation:FontStyle" xmi:id="_QRr9weUDEeenz9x8CoquSg" fontName="Segoe UI" fontHeight="14"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_QRr9wuUDEeenz9x8CoquSg"/>
             </children>
             <children xmi:type="notation:Node" xmi:id="_trqso9nYEeevI8wA8XBN7A" type="3010" element="_s1tVAtnYEeevI8wA8XBN7A">
               <styles xmi:type="notation:FontStyle" xmi:id="_trqspNnYEeevI8wA8XBN7A" fontName="Segoe UI" fontHeight="14"/>
@@ -2755,10 +2800,18 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/lu.uni.lassy.excalibur.ui.viewer/description/excalibur_models.odesign#//@ownedViewpoints[name='msr-viewpoint']/@ownedRepresentations[name='Messir%20Diagram']/@defaultLayer/@containerMappings[name='Input_Interface']/@subNodeMappings[name='Input_Interface_Operation']"/>
       </ownedElements>
-      <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_s1kyIdnYEeevI8wA8XBN7A" name="ieMessageSent(): ptBoolean    ">
+      <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_s1kyIdnYEeevI8wA8XBN7A" name="ieMessageSent(AdtMessage: ptString): ptBoolean    ">
         <target xmi:type="messir:OperationDeclaration" href="environment/environment.msr#lu.uni.lassy.excalibur.myproject.environment.actSystemAdministrator.inactSystemAdministrator.ieMessageSent"/>
         <semanticElements xmi:type="messir:OperationDeclaration" href="environment/environment.msr#lu.uni.lassy.excalibur.myproject.environment.actSystemAdministrator.inactSystemAdministrator.ieMessageSent"/>
         <ownedStyle xmi:type="diagram:Square" xmi:id="_s1lZMNnYEeevI8wA8XBN7A" labelSize="14" iconPath="/lu.uni.lassy.excalibur.dsl.messir.ui/icons/operation.png" labelAlignment="LEFT">
+          <description xmi:type="style:SquareDescription" href="platform:/plugin/lu.uni.lassy.excalibur.ui.viewer/description/excalibur_models.odesign#//@ownedViewpoints[name='msr-viewpoint']/@ownedRepresentations[name='Messir%20Diagram']/@defaultLayer/@containerMappings[name='Input_Interface']/@subNodeMappings[name='Input_Interface_Operation']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/lu.uni.lassy.excalibur.ui.viewer/description/excalibur_models.odesign#//@ownedViewpoints[name='msr-viewpoint']/@ownedRepresentations[name='Messir%20Diagram']/@defaultLayer/@containerMappings[name='Input_Interface']/@subNodeMappings[name='Input_Interface_Operation']"/>
+      </ownedElements>
+      <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_QP9fcOUDEeenz9x8CoquSg" name="ieMessageReceived(): ptBoolean    ">
+        <target xmi:type="messir:OperationDeclaration" href="environment/environment.msr#lu.uni.lassy.excalibur.myproject.environment.actSystemAdministrator.inactSystemAdministrator.ieMessageReceived"/>
+        <semanticElements xmi:type="messir:OperationDeclaration" href="environment/environment.msr#lu.uni.lassy.excalibur.myproject.environment.actSystemAdministrator.inactSystemAdministrator.ieMessageReceived"/>
+        <ownedStyle xmi:type="diagram:Square" xmi:id="_QP-tkOUDEeenz9x8CoquSg" labelSize="14" iconPath="/lu.uni.lassy.excalibur.dsl.messir.ui/icons/operation.png" labelAlignment="LEFT">
           <description xmi:type="style:SquareDescription" href="platform:/plugin/lu.uni.lassy.excalibur.ui.viewer/description/excalibur_models.odesign#//@ownedViewpoints[name='msr-viewpoint']/@ownedRepresentations[name='Messir%20Diagram']/@defaultLayer/@containerMappings[name='Input_Interface']/@subNodeMappings[name='Input_Interface_Operation']/@style"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/lu.uni.lassy.excalibur.ui.viewer/description/excalibur_models.odesign#//@ownedViewpoints[name='msr-viewpoint']/@ownedRepresentations[name='Messir%20Diagram']/@defaultLayer/@containerMappings[name='Input_Interface']/@subNodeMappings[name='Input_Interface_Operation']"/>
@@ -2767,6 +2820,38 @@
         <target xmi:type="messir:OperationDeclaration" href="environment/environment.msr#lu.uni.lassy.excalibur.myproject.environment.actSystemAdministrator.inactSystemAdministrator.ieLogout"/>
         <semanticElements xmi:type="messir:OperationDeclaration" href="environment/environment.msr#lu.uni.lassy.excalibur.myproject.environment.actSystemAdministrator.inactSystemAdministrator.ieLogout"/>
         <ownedStyle xmi:type="diagram:Square" xmi:id="_s1mAQNnYEeevI8wA8XBN7A" labelSize="14" iconPath="/lu.uni.lassy.excalibur.dsl.messir.ui/icons/operation.png" labelAlignment="LEFT">
+          <description xmi:type="style:SquareDescription" href="platform:/plugin/lu.uni.lassy.excalibur.ui.viewer/description/excalibur_models.odesign#//@ownedViewpoints[name='msr-viewpoint']/@ownedRepresentations[name='Messir%20Diagram']/@defaultLayer/@containerMappings[name='Input_Interface']/@subNodeMappings[name='Input_Interface_Operation']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/lu.uni.lassy.excalibur.ui.viewer/description/excalibur_models.odesign#//@ownedViewpoints[name='msr-viewpoint']/@ownedRepresentations[name='Messir%20Diagram']/@defaultLayer/@containerMappings[name='Input_Interface']/@subNodeMappings[name='Input_Interface_Operation']"/>
+      </ownedElements>
+      <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_QP_7sOUDEeenz9x8CoquSg" name="ieClients(): ptBoolean    ">
+        <target xmi:type="messir:OperationDeclaration" href="environment/environment.msr#lu.uni.lassy.excalibur.myproject.environment.actSystemAdministrator.inactSystemAdministrator.ieClients"/>
+        <semanticElements xmi:type="messir:OperationDeclaration" href="environment/environment.msr#lu.uni.lassy.excalibur.myproject.environment.actSystemAdministrator.inactSystemAdministrator.ieClients"/>
+        <ownedStyle xmi:type="diagram:Square" xmi:id="_QP_7seUDEeenz9x8CoquSg" labelSize="14" iconPath="/lu.uni.lassy.excalibur.dsl.messir.ui/icons/operation.png" labelAlignment="LEFT">
+          <description xmi:type="style:SquareDescription" href="platform:/plugin/lu.uni.lassy.excalibur.ui.viewer/description/excalibur_models.odesign#//@ownedViewpoints[name='msr-viewpoint']/@ownedRepresentations[name='Messir%20Diagram']/@defaultLayer/@containerMappings[name='Input_Interface']/@subNodeMappings[name='Input_Interface_Operation']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/lu.uni.lassy.excalibur.ui.viewer/description/excalibur_models.odesign#//@ownedViewpoints[name='msr-viewpoint']/@ownedRepresentations[name='Messir%20Diagram']/@defaultLayer/@containerMappings[name='Input_Interface']/@subNodeMappings[name='Input_Interface_Operation']"/>
+      </ownedElements>
+      <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_QP_7suUDEeenz9x8CoquSg" name="ieBooks(): ptBoolean    ">
+        <target xmi:type="messir:OperationDeclaration" href="environment/environment.msr#lu.uni.lassy.excalibur.myproject.environment.actSystemAdministrator.inactSystemAdministrator.ieBooks"/>
+        <semanticElements xmi:type="messir:OperationDeclaration" href="environment/environment.msr#lu.uni.lassy.excalibur.myproject.environment.actSystemAdministrator.inactSystemAdministrator.ieBooks"/>
+        <ownedStyle xmi:type="diagram:Square" xmi:id="_QQAiwOUDEeenz9x8CoquSg" labelSize="14" iconPath="/lu.uni.lassy.excalibur.dsl.messir.ui/icons/operation.png" labelAlignment="LEFT">
+          <description xmi:type="style:SquareDescription" href="platform:/plugin/lu.uni.lassy.excalibur.ui.viewer/description/excalibur_models.odesign#//@ownedViewpoints[name='msr-viewpoint']/@ownedRepresentations[name='Messir%20Diagram']/@defaultLayer/@containerMappings[name='Input_Interface']/@subNodeMappings[name='Input_Interface_Operation']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/lu.uni.lassy.excalibur.ui.viewer/description/excalibur_models.odesign#//@ownedViewpoints[name='msr-viewpoint']/@ownedRepresentations[name='Messir%20Diagram']/@defaultLayer/@containerMappings[name='Input_Interface']/@subNodeMappings[name='Input_Interface_Operation']"/>
+      </ownedElements>
+      <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_QQAiweUDEeenz9x8CoquSg" name="ieSettingsChanged(): ptBoolean    ">
+        <target xmi:type="messir:OperationDeclaration" href="environment/environment.msr#lu.uni.lassy.excalibur.myproject.environment.actSystemAdministrator.inactSystemAdministrator.ieSettingsChanged"/>
+        <semanticElements xmi:type="messir:OperationDeclaration" href="environment/environment.msr#lu.uni.lassy.excalibur.myproject.environment.actSystemAdministrator.inactSystemAdministrator.ieSettingsChanged"/>
+        <ownedStyle xmi:type="diagram:Square" xmi:id="_QQBJ0OUDEeenz9x8CoquSg" labelSize="14" iconPath="/lu.uni.lassy.excalibur.dsl.messir.ui/icons/operation.png" labelAlignment="LEFT">
+          <description xmi:type="style:SquareDescription" href="platform:/plugin/lu.uni.lassy.excalibur.ui.viewer/description/excalibur_models.odesign#//@ownedViewpoints[name='msr-viewpoint']/@ownedRepresentations[name='Messir%20Diagram']/@defaultLayer/@containerMappings[name='Input_Interface']/@subNodeMappings[name='Input_Interface_Operation']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/lu.uni.lassy.excalibur.ui.viewer/description/excalibur_models.odesign#//@ownedViewpoints[name='msr-viewpoint']/@ownedRepresentations[name='Messir%20Diagram']/@defaultLayer/@containerMappings[name='Input_Interface']/@subNodeMappings[name='Input_Interface_Operation']"/>
+      </ownedElements>
+      <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_QQBJ0eUDEeenz9x8CoquSg" name="ieBlockchain(): ptBoolean    ">
+        <target xmi:type="messir:OperationDeclaration" href="environment/environment.msr#lu.uni.lassy.excalibur.myproject.environment.actSystemAdministrator.inactSystemAdministrator.ieBlockchain"/>
+        <semanticElements xmi:type="messir:OperationDeclaration" href="environment/environment.msr#lu.uni.lassy.excalibur.myproject.environment.actSystemAdministrator.inactSystemAdministrator.ieBlockchain"/>
+        <ownedStyle xmi:type="diagram:Square" xmi:id="_QQBJ0uUDEeenz9x8CoquSg" labelSize="14" iconPath="/lu.uni.lassy.excalibur.dsl.messir.ui/icons/operation.png" labelAlignment="LEFT">
           <description xmi:type="style:SquareDescription" href="platform:/plugin/lu.uni.lassy.excalibur.ui.viewer/description/excalibur_models.odesign#//@ownedViewpoints[name='msr-viewpoint']/@ownedRepresentations[name='Messir%20Diagram']/@defaultLayer/@containerMappings[name='Input_Interface']/@subNodeMappings[name='Input_Interface_Operation']/@style"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/lu.uni.lassy.excalibur.ui.viewer/description/excalibur_models.odesign#//@ownedViewpoints[name='msr-viewpoint']/@ownedRepresentations[name='Messir%20Diagram']/@defaultLayer/@containerMappings[name='Input_Interface']/@subNodeMappings[name='Input_Interface_Operation']"/>
@@ -2791,15 +2876,15 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/lu.uni.lassy.excalibur.ui.viewer/description/excalibur_models.odesign#//@ownedViewpoints[name='msr-viewpoint']/@ownedRepresentations[name='Messir%20Diagram']/@defaultLayer/@containerMappings[name='Output_Interface']/@subNodeMappings[name='Output_Interface_Operation']"/>
       </ownedElements>
-      <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_s1q4wdnYEeevI8wA8XBN7A" name="sfLogin(): ptBoolean    ">
-        <target xmi:type="messir:OperationDeclaration" href="environment/environment.msr#lu.uni.lassy.excalibur.myproject.environment.actSystemAdministrator.outactSystemAdministrator.sfLogin"/>
-        <semanticElements xmi:type="messir:OperationDeclaration" href="environment/environment.msr#lu.uni.lassy.excalibur.myproject.environment.actSystemAdministrator.outactSystemAdministrator.sfLogin"/>
-        <ownedStyle xmi:type="diagram:Square" xmi:id="_s1q4wtnYEeevI8wA8XBN7A" labelSize="14" iconPath="/lu.uni.lassy.excalibur.dsl.messir.ui/icons/operation.png" labelAlignment="LEFT">
+      <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_QQttYOUDEeenz9x8CoquSg" name="sfAuthenticated(AdtID: ptInteger, AdtPassword: ptString): ptBoolean    ">
+        <target xmi:type="messir:OperationDeclaration" href="environment/environment.msr#lu.uni.lassy.excalibur.myproject.environment.actSystemAdministrator.outactSystemAdministrator.sfAuthenticated"/>
+        <semanticElements xmi:type="messir:OperationDeclaration" href="environment/environment.msr#lu.uni.lassy.excalibur.myproject.environment.actSystemAdministrator.outactSystemAdministrator.sfAuthenticated"/>
+        <ownedStyle xmi:type="diagram:Square" xmi:id="_QQttYeUDEeenz9x8CoquSg" labelSize="14" iconPath="/lu.uni.lassy.excalibur.dsl.messir.ui/icons/operation.png" labelAlignment="LEFT">
           <description xmi:type="style:SquareDescription" href="platform:/plugin/lu.uni.lassy.excalibur.ui.viewer/description/excalibur_models.odesign#//@ownedViewpoints[name='msr-viewpoint']/@ownedRepresentations[name='Messir%20Diagram']/@defaultLayer/@containerMappings[name='Output_Interface']/@subNodeMappings[name='Output_Interface_Operation']/@style"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/lu.uni.lassy.excalibur.ui.viewer/description/excalibur_models.odesign#//@ownedViewpoints[name='msr-viewpoint']/@ownedRepresentations[name='Messir%20Diagram']/@defaultLayer/@containerMappings[name='Output_Interface']/@subNodeMappings[name='Output_Interface_Operation']"/>
       </ownedElements>
-      <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_s1rf0NnYEeevI8wA8XBN7A" name="sfAddLibrarian(): ptBoolean    ">
+      <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_s1rf0NnYEeevI8wA8XBN7A" name="sfAddLibrarian(AdtID: ptInteger, AdtName: dtName, AdtDateOfDirth: dtDate): ptBoolean    ">
         <target xmi:type="messir:OperationDeclaration" href="environment/environment.msr#lu.uni.lassy.excalibur.myproject.environment.actSystemAdministrator.outactSystemAdministrator.sfAddLibrarian"/>
         <semanticElements xmi:type="messir:OperationDeclaration" href="environment/environment.msr#lu.uni.lassy.excalibur.myproject.environment.actSystemAdministrator.outactSystemAdministrator.sfAddLibrarian"/>
         <ownedStyle xmi:type="diagram:Square" xmi:id="_s1rf0dnYEeevI8wA8XBN7A" labelSize="14" iconPath="/lu.uni.lassy.excalibur.dsl.messir.ui/icons/operation.png" labelAlignment="LEFT">
@@ -2807,7 +2892,7 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/lu.uni.lassy.excalibur.ui.viewer/description/excalibur_models.odesign#//@ownedViewpoints[name='msr-viewpoint']/@ownedRepresentations[name='Messir%20Diagram']/@defaultLayer/@containerMappings[name='Output_Interface']/@subNodeMappings[name='Output_Interface_Operation']"/>
       </ownedElements>
-      <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_s1sG4NnYEeevI8wA8XBN7A" name="sfEditLibrarian(): ptBoolean    ">
+      <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_s1sG4NnYEeevI8wA8XBN7A" name="sfEditLibrarian(AdtID: ptInteger, AdtName: dtName, AdtDateOfDirth: dtDate): ptBoolean    ">
         <target xmi:type="messir:OperationDeclaration" href="environment/environment.msr#lu.uni.lassy.excalibur.myproject.environment.actSystemAdministrator.outactSystemAdministrator.sfEditLibrarian"/>
         <semanticElements xmi:type="messir:OperationDeclaration" href="environment/environment.msr#lu.uni.lassy.excalibur.myproject.environment.actSystemAdministrator.outactSystemAdministrator.sfEditLibrarian"/>
         <ownedStyle xmi:type="diagram:Square" xmi:id="_s1sG4dnYEeevI8wA8XBN7A" labelSize="14" iconPath="/lu.uni.lassy.excalibur.dsl.messir.ui/icons/operation.png" labelAlignment="LEFT">
@@ -2815,7 +2900,7 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/lu.uni.lassy.excalibur.ui.viewer/description/excalibur_models.odesign#//@ownedViewpoints[name='msr-viewpoint']/@ownedRepresentations[name='Messir%20Diagram']/@defaultLayer/@containerMappings[name='Output_Interface']/@subNodeMappings[name='Output_Interface_Operation']"/>
       </ownedElements>
-      <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_s1sG4tnYEeevI8wA8XBN7A" name="sfDeleteLibrarian(): ptBoolean    ">
+      <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_s1sG4tnYEeevI8wA8XBN7A" name="sfDeleteLibrarian(AdtID: ptInteger, AdtName: dtName, AdtDateOfDirth: dtDate): ptBoolean    ">
         <target xmi:type="messir:OperationDeclaration" href="environment/environment.msr#lu.uni.lassy.excalibur.myproject.environment.actSystemAdministrator.outactSystemAdministrator.sfDeleteLibrarian"/>
         <semanticElements xmi:type="messir:OperationDeclaration" href="environment/environment.msr#lu.uni.lassy.excalibur.myproject.environment.actSystemAdministrator.outactSystemAdministrator.sfDeleteLibrarian"/>
         <ownedStyle xmi:type="diagram:Square" xmi:id="_s1st8NnYEeevI8wA8XBN7A" labelSize="14" iconPath="/lu.uni.lassy.excalibur.dsl.messir.ui/icons/operation.png" labelAlignment="LEFT">
@@ -2823,7 +2908,7 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/lu.uni.lassy.excalibur.ui.viewer/description/excalibur_models.odesign#//@ownedViewpoints[name='msr-viewpoint']/@ownedRepresentations[name='Messir%20Diagram']/@defaultLayer/@containerMappings[name='Output_Interface']/@subNodeMappings[name='Output_Interface_Operation']"/>
       </ownedElements>
-      <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_s1st8dnYEeevI8wA8XBN7A" name="sfSendMessage(): ptBoolean    ">
+      <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_s1st8dnYEeevI8wA8XBN7A" name="sfSendMessage(AdtMessage: ptString): ptBoolean    ">
         <target xmi:type="messir:OperationDeclaration" href="environment/environment.msr#lu.uni.lassy.excalibur.myproject.environment.actSystemAdministrator.outactSystemAdministrator.sfSendMessage"/>
         <semanticElements xmi:type="messir:OperationDeclaration" href="environment/environment.msr#lu.uni.lassy.excalibur.myproject.environment.actSystemAdministrator.outactSystemAdministrator.sfSendMessage"/>
         <ownedStyle xmi:type="diagram:Square" xmi:id="_s1st8tnYEeevI8wA8XBN7A" labelSize="14" iconPath="/lu.uni.lassy.excalibur.dsl.messir.ui/icons/operation.png" labelAlignment="LEFT">
@@ -2831,10 +2916,50 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/lu.uni.lassy.excalibur.ui.viewer/description/excalibur_models.odesign#//@ownedViewpoints[name='msr-viewpoint']/@ownedRepresentations[name='Messir%20Diagram']/@defaultLayer/@containerMappings[name='Output_Interface']/@subNodeMappings[name='Output_Interface_Operation']"/>
       </ownedElements>
-      <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_s1tVANnYEeevI8wA8XBN7A" name="sfReceiveMessage(): ptBoolean    ">
-        <target xmi:type="messir:OperationDeclaration" href="environment/environment.msr#lu.uni.lassy.excalibur.myproject.environment.actSystemAdministrator.outactSystemAdministrator.sfReceiveMessage"/>
-        <semanticElements xmi:type="messir:OperationDeclaration" href="environment/environment.msr#lu.uni.lassy.excalibur.myproject.environment.actSystemAdministrator.outactSystemAdministrator.sfReceiveMessage"/>
-        <ownedStyle xmi:type="diagram:Square" xmi:id="_s1tVAdnYEeevI8wA8XBN7A" labelSize="14" iconPath="/lu.uni.lassy.excalibur.dsl.messir.ui/icons/operation.png" labelAlignment="LEFT">
+      <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_QQwJoOUDEeenz9x8CoquSg" name="sfGetMessage(): ptBoolean    ">
+        <target xmi:type="messir:OperationDeclaration" href="environment/environment.msr#lu.uni.lassy.excalibur.myproject.environment.actSystemAdministrator.outactSystemAdministrator.sfGetMessage"/>
+        <semanticElements xmi:type="messir:OperationDeclaration" href="environment/environment.msr#lu.uni.lassy.excalibur.myproject.environment.actSystemAdministrator.outactSystemAdministrator.sfGetMessage"/>
+        <ownedStyle xmi:type="diagram:Square" xmi:id="_QQwwsOUDEeenz9x8CoquSg" labelSize="14" iconPath="/lu.uni.lassy.excalibur.dsl.messir.ui/icons/operation.png" labelAlignment="LEFT">
+          <description xmi:type="style:SquareDescription" href="platform:/plugin/lu.uni.lassy.excalibur.ui.viewer/description/excalibur_models.odesign#//@ownedViewpoints[name='msr-viewpoint']/@ownedRepresentations[name='Messir%20Diagram']/@defaultLayer/@containerMappings[name='Output_Interface']/@subNodeMappings[name='Output_Interface_Operation']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/lu.uni.lassy.excalibur.ui.viewer/description/excalibur_models.odesign#//@ownedViewpoints[name='msr-viewpoint']/@ownedRepresentations[name='Messir%20Diagram']/@defaultLayer/@containerMappings[name='Output_Interface']/@subNodeMappings[name='Output_Interface_Operation']"/>
+      </ownedElements>
+      <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_QQwwseUDEeenz9x8CoquSg" name="sfViewBlockchain(): ptBoolean    ">
+        <target xmi:type="messir:OperationDeclaration" href="environment/environment.msr#lu.uni.lassy.excalibur.myproject.environment.actSystemAdministrator.outactSystemAdministrator.sfViewBlockchain"/>
+        <semanticElements xmi:type="messir:OperationDeclaration" href="environment/environment.msr#lu.uni.lassy.excalibur.myproject.environment.actSystemAdministrator.outactSystemAdministrator.sfViewBlockchain"/>
+        <ownedStyle xmi:type="diagram:Square" xmi:id="_QQwwsuUDEeenz9x8CoquSg" labelSize="14" iconPath="/lu.uni.lassy.excalibur.dsl.messir.ui/icons/operation.png" labelAlignment="LEFT">
+          <description xmi:type="style:SquareDescription" href="platform:/plugin/lu.uni.lassy.excalibur.ui.viewer/description/excalibur_models.odesign#//@ownedViewpoints[name='msr-viewpoint']/@ownedRepresentations[name='Messir%20Diagram']/@defaultLayer/@containerMappings[name='Output_Interface']/@subNodeMappings[name='Output_Interface_Operation']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/lu.uni.lassy.excalibur.ui.viewer/description/excalibur_models.odesign#//@ownedViewpoints[name='msr-viewpoint']/@ownedRepresentations[name='Messir%20Diagram']/@defaultLayer/@containerMappings[name='Output_Interface']/@subNodeMappings[name='Output_Interface_Operation']"/>
+      </ownedElements>
+      <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_QQxXwOUDEeenz9x8CoquSg" name="sfUpdateBlockchain(AInformation: dtInformation): ptBoolean    ">
+        <target xmi:type="messir:OperationDeclaration" href="environment/environment.msr#lu.uni.lassy.excalibur.myproject.environment.actSystemAdministrator.outactSystemAdministrator.sfUpdateBlockchain"/>
+        <semanticElements xmi:type="messir:OperationDeclaration" href="environment/environment.msr#lu.uni.lassy.excalibur.myproject.environment.actSystemAdministrator.outactSystemAdministrator.sfUpdateBlockchain"/>
+        <ownedStyle xmi:type="diagram:Square" xmi:id="_QQxXweUDEeenz9x8CoquSg" labelSize="14" iconPath="/lu.uni.lassy.excalibur.dsl.messir.ui/icons/operation.png" labelAlignment="LEFT">
+          <description xmi:type="style:SquareDescription" href="platform:/plugin/lu.uni.lassy.excalibur.ui.viewer/description/excalibur_models.odesign#//@ownedViewpoints[name='msr-viewpoint']/@ownedRepresentations[name='Messir%20Diagram']/@defaultLayer/@containerMappings[name='Output_Interface']/@subNodeMappings[name='Output_Interface_Operation']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/lu.uni.lassy.excalibur.ui.viewer/description/excalibur_models.odesign#//@ownedViewpoints[name='msr-viewpoint']/@ownedRepresentations[name='Messir%20Diagram']/@defaultLayer/@containerMappings[name='Output_Interface']/@subNodeMappings[name='Output_Interface_Operation']"/>
+      </ownedElements>
+      <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_QQxXwuUDEeenz9x8CoquSg" name="sfGetClients(): ptBoolean    ">
+        <target xmi:type="messir:OperationDeclaration" href="environment/environment.msr#lu.uni.lassy.excalibur.myproject.environment.actSystemAdministrator.outactSystemAdministrator.sfGetClients"/>
+        <semanticElements xmi:type="messir:OperationDeclaration" href="environment/environment.msr#lu.uni.lassy.excalibur.myproject.environment.actSystemAdministrator.outactSystemAdministrator.sfGetClients"/>
+        <ownedStyle xmi:type="diagram:Square" xmi:id="_QQxXw-UDEeenz9x8CoquSg" labelSize="14" iconPath="/lu.uni.lassy.excalibur.dsl.messir.ui/icons/operation.png" labelAlignment="LEFT">
+          <description xmi:type="style:SquareDescription" href="platform:/plugin/lu.uni.lassy.excalibur.ui.viewer/description/excalibur_models.odesign#//@ownedViewpoints[name='msr-viewpoint']/@ownedRepresentations[name='Messir%20Diagram']/@defaultLayer/@containerMappings[name='Output_Interface']/@subNodeMappings[name='Output_Interface_Operation']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/lu.uni.lassy.excalibur.ui.viewer/description/excalibur_models.odesign#//@ownedViewpoints[name='msr-viewpoint']/@ownedRepresentations[name='Messir%20Diagram']/@defaultLayer/@containerMappings[name='Output_Interface']/@subNodeMappings[name='Output_Interface_Operation']"/>
+      </ownedElements>
+      <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_QQx-0OUDEeenz9x8CoquSg" name="sfGetBooks(): ptBoolean    ">
+        <target xmi:type="messir:OperationDeclaration" href="environment/environment.msr#lu.uni.lassy.excalibur.myproject.environment.actSystemAdministrator.outactSystemAdministrator.sfGetBooks"/>
+        <semanticElements xmi:type="messir:OperationDeclaration" href="environment/environment.msr#lu.uni.lassy.excalibur.myproject.environment.actSystemAdministrator.outactSystemAdministrator.sfGetBooks"/>
+        <ownedStyle xmi:type="diagram:Square" xmi:id="_QQx-0eUDEeenz9x8CoquSg" labelSize="14" iconPath="/lu.uni.lassy.excalibur.dsl.messir.ui/icons/operation.png" labelAlignment="LEFT">
+          <description xmi:type="style:SquareDescription" href="platform:/plugin/lu.uni.lassy.excalibur.ui.viewer/description/excalibur_models.odesign#//@ownedViewpoints[name='msr-viewpoint']/@ownedRepresentations[name='Messir%20Diagram']/@defaultLayer/@containerMappings[name='Output_Interface']/@subNodeMappings[name='Output_Interface_Operation']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/lu.uni.lassy.excalibur.ui.viewer/description/excalibur_models.odesign#//@ownedViewpoints[name='msr-viewpoint']/@ownedRepresentations[name='Messir%20Diagram']/@defaultLayer/@containerMappings[name='Output_Interface']/@subNodeMappings[name='Output_Interface_Operation']"/>
+      </ownedElements>
+      <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_QQx-0uUDEeenz9x8CoquSg" name="sfChangeSettings(): ptBoolean    ">
+        <target xmi:type="messir:OperationDeclaration" href="environment/environment.msr#lu.uni.lassy.excalibur.myproject.environment.actSystemAdministrator.outactSystemAdministrator.sfChangeSettings"/>
+        <semanticElements xmi:type="messir:OperationDeclaration" href="environment/environment.msr#lu.uni.lassy.excalibur.myproject.environment.actSystemAdministrator.outactSystemAdministrator.sfChangeSettings"/>
+        <ownedStyle xmi:type="diagram:Square" xmi:id="_QQyl4OUDEeenz9x8CoquSg" labelSize="14" iconPath="/lu.uni.lassy.excalibur.dsl.messir.ui/icons/operation.png" labelAlignment="LEFT">
           <description xmi:type="style:SquareDescription" href="platform:/plugin/lu.uni.lassy.excalibur.ui.viewer/description/excalibur_models.odesign#//@ownedViewpoints[name='msr-viewpoint']/@ownedRepresentations[name='Messir%20Diagram']/@defaultLayer/@containerMappings[name='Output_Interface']/@subNodeMappings[name='Output_Interface_Operation']/@style"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/lu.uni.lassy.excalibur.ui.viewer/description/excalibur_models.odesign#//@ownedViewpoints[name='msr-viewpoint']/@ownedRepresentations[name='Messir%20Diagram']/@defaultLayer/@containerMappings[name='Output_Interface']/@subNodeMappings[name='Output_Interface_Operation']"/>

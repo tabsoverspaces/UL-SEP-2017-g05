@@ -31,7 +31,8 @@ Also the vpIsLogged attribute of instance of class Authenticated must be equal t
 @endPreF
 //postFunctional descriptions
 @postF 
-"The value of variable Librarian.name should be set to AdtNewName if the condition "
+"The value of variable Librarian.name should be set to AdtNewName if the condition is equals to false otherwise the name will continue to be the same.
+The same goes with the librarian date of birth."
 @endPostF
 //postProtocol descriptions
 @postP 

@@ -18,6 +18,7 @@
 \usepackage{./../lu.uni.lassy.excalibur.standard.report.libraries/styles/style-messir-common}
 \usepackage{./../lu.uni.lassy.excalibur.standard.report.libraries/styles/style-messir-report-post}
 \usepackage{breakurl}
+\usepackage{graphicx}
 %--------------------------------------------
   
 % DOCUMENT BEGIN
@@ -63,11 +64,44 @@
 
 % User guide
 \input{doc/user-guide/user-guide.tex}
-%%\input{doc/librarian/usage-guide.tex}
-%%\input{doc/client/usage-guide.tex}
+\input{doc/system-administrator/usage-guide.tex}
+\input{doc/librarian/usage-guide.tex}
+\input{doc/client/usage-guide.tex}
 \newpage
 
 % Software operations
+\chapter{Software operations}
+\label{chap:soptware_operations}
+
+This section explains the different operations and functionalities of the system
+and how to attain them.
+
+\section{System Administrator}
+\label{operation:System Administrator}
+
+This subsection provides a detailed description of system administrator specific functionalities.
+
+\input{doc/system-administrator/AddLibrarianSysOp.tex}
+
+\subsection{Add Librarian Example 1}
+In this example the librarian with id: \emph{100900100}, name: \emph{John Smith}
+and date of birth: \emph{10/10/1990}
+\begin{enumerate}
+\item To initialise the add librarian process press the \emph{Users} button.
+\begin{figure}
+ \centering
+ \input{doc/images/AddLib1.png}
+ \caption{Image of the main menu}
+ \label{figure:main_menu}
+\end{figure}
+\item Press the \emph{Add Librarian} button.
+\item Fill the field with the appropriate id, name and date of birth as shown in the image below. Once done click the \emph{NEW} button.
+\item The new window appears. Here you can check if the details of the librarian are correct. If they are correct press the \emph{Confirm} button.
+\item The new librarian is now in the system as shown below.
+\end{enumerate}
+
+
+\input{doc/system-administrator/systemoperations-sysadmin.tex}
 \input{doc/software-operations/software-operations.tex}
 \newpage
   

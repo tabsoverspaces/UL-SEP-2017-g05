@@ -6,7 +6,7 @@
 
 @@view uci-ucisuDeployAndRun
 @instance Use-Case usecases.ucisuDeployAndRun.ucisuDeployAndRun 
-@description ""
+@description "This represent the deploy and run situation."
 @caption ""
 
 

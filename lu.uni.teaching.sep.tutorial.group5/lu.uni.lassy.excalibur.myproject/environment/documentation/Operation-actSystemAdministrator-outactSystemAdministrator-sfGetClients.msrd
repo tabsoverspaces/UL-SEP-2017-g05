@@ -6,23 +6,24 @@
 
 @@Operation
 lu.uni.lassy.excalibur.myproject.environment.actSystemAdministrator.outactSystemAdministrator.sfGetClients
-@description "
+@description "This operation is utilised when the System Administrator wants to get a list of all the users in the system. 
  "
 //preProtocol descriptions
 @preP
-" "
+"The vpStarted attribute of instance of class State must be equal to true signifying the system is running and that the system has been started (sfCreateSystemEnvironment). 
+Also the vpIsLogged attribute of instance of class Authenticated must be equal to false signifying that the System Administrator is not logged in and can execute operation Authenticated."
 @endPreP
 //preFunctional descriptions
 @preF
-" "
+"No restriction for this operation thus it will always be true."
 @endPreF
 //postFunctional descriptions
 @postF 
-" "
+"When this operation is executed, it will return a set of clients which is a list of all the clients registered in the M.LIB system. "
 @endPostF
 //postProtocol descriptions
 @postP 
-" "
+"There is no change in the system therefore this will always be true, thus no restriction for this operation."
 @endPostP
 //example
 @example" "

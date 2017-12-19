@@ -1,0 +1,34 @@
+/*
+@author lobfil
+@date Tue Dec 19 19:05:31 CET 2017
+*/
+
+
+@@Operation
+lu.uni.lassy.excalibur.myproject.environment.actBlockchain.outactBlockchain.sfAddToBlockchain
+//parameters
+@parameter
+lu.uni.lassy.excalibur.myproject.environment.actBlockchain.outactBlockchain.sfAddToBlockchain.AInformation
+"this parameter represents the information to be added to the Block chain"
+@endParameters
+
+@description "
+ "
+//preProtocol descriptions
+@preP
+" "
+@endPreP
+//preFunctional descriptions
+@preF
+" "
+@endPreF
+//postFunctional descriptions
+@postF 
+" "
+@endPostF
+//postProtocol descriptions
+@postP 
+" "
+@endPostP
+//example
+@example" "
